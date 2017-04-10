@@ -1,59 +1,31 @@
-
 	$(document).ready(function() {
 
-		cargarSelect("COMPRAR_CASA");
-		calculaPor("this.value")
-		$("#sueldo").hide();
-		$("#tablaProductos").hide();
-		$("#productos").hide();
-		$("#tablaAmortizacion").hide();
-		$("#tablaDatos").hide();
-		$("#CAT").hide();
-		cargaProgramas("INFONAVIT");
-	})
-
+	
 
 	/* Interaciones de para cada seccion */
 	
-	function muestraTabla() {
+	function btnCalcularCredito() {
 		$("#simulador").hide();
 		$("#productos").hide();
 		$("#seccionTablaDatos").hide();
 		$("#btnCalcular").hide();
 		$("#tablaProductos").show();
-		
-		$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-down");
-		$("#ingresarDatos-flecha").addClass("glyphicon glyphicon-menu-right");
-		$("#ingresarDatos-flecha").removeClass("flecha-1-color");
-		$("#ingresarDatos-flecha").addClass("flecha-2-color");
-		
-		$("#ingresarDatos").removeClass("flecha-1");
-		$("#ingresarDatos").addClass("flecha-2");
-		$("#ingresarDatos").removeClass("frame-tab-border-1");
-		$("#ingresarDatos").addClass("frame-tab-border-2");
-
-		$("#programas").removeClass("flecha-1");
-		$("#programas").addClass("flecha-2");
-		$("#programas").removeClass("frame-tab-border-1");
-		$("#programas").addClass("frame-tab-border-2");
-		
-		$("#programas-flecha").removeClass("glyphicon glyphicon-menu-down");
-		$("#programas-flecha").addClass("glyphicon glyphicon-menu-right");
-		$("#programas-flecha").removeClass("flecha-1-color");
-		$("#programas-flecha").addClass("flecha-2-color");
-
+		muestraIngresarDatos();
+		ocultaProgramas();
 	}
 	
-	function mostrar(){
-		$("#ingresarDatos-flecha","#programas-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
-		$("#ingresarDatos-flecha","#programas-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-		
+	function muestraIngresarDatos(){
+		$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
+		$("#ingresarDatos-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
+		$("#ingresarDatos").removeClass("flecha-1").addClass("flecha-2");
+		$("#ingresarDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 	}
 	
-	function ocultar(){
-		$("#ingresarDatos-flecha","#programas-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
-		$("#ingresarDatos-flecha","#programas-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
-		
+	function ocultaProgramas(){
+		$("#programas-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
+		$("#programas-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
+		$("#programas").removeClass("flecha-1").addClass("flecha-2");
+		$("#programas").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 	}
 
 	function desplegarDatos() {
@@ -62,7 +34,6 @@
 			
 			$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#ingresarDatos-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-			
 			$("#ingresarDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#ingresarDatos").removeClass("flecha-2").addClass("flecha-1");
 
@@ -71,16 +42,11 @@
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
 			$("#CAT").hide();
-
+			
 		} else {
 			$("#simulador").hide();
 			
-			$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
-			$("#ingresarDatos-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
-
-			$("#ingresarDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
-			$("#ingresarDatos").removeClass("flecha-1").addClass("flecha-2");
-
+			muestraIngresarDatos();
 		}
 	}
 
@@ -90,7 +56,6 @@
 			
 			$("#programas-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#programas-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-			
 			$("#programas").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#programas").removeClass("flecha-2").addClass("flecha-1");
 
@@ -102,10 +67,7 @@
 		} else {
 			$("#productos").hide();
 			
-			$("#programas-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
-			$("#programas-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
-			$("#programas").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
-			$("#programas").removeClass("flecha-1").addClass("flecha-2").addClass("flecha-delgada");
+			ocultaProgramas();
 		}
 	}
 
@@ -114,10 +76,7 @@
 			$("#seccionTabla").show();
 	
 			$("#flechaTabla").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
-			$("#flechaTabla");
 			$("#flechaTabla").removeClass("flecha-2-color").addClass("flecha-1-color");
-			$("#flechaTabla");
-			
 			$("#tablaProductos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#tablaProductos").removeClass("flecha-2").addClass("flecha-1");
 			
@@ -129,10 +88,8 @@
 			
 			$("#flechaTabla").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#flechaTabla").removeClass("flecha-1-color").addClass("flecha-2-color");
-			
 			$("#tablaProductos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 			$("#tablaProductos").removeClass("flecha-1").addClass("flecha-2");
-			
 		}
 	}
 	
@@ -142,8 +99,7 @@
 			
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#tabAmort-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-			
-			$("#tablaAmortizacion").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
+			$("#tablaAmorizacion").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#tablaAmortizacion").removeClass("flecha-2").addClass("flecha-1");
 			
 		} else {
@@ -152,10 +108,8 @@
 			
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabAmort-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
-			
 			$("#tablaAmortizacion").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 			$("#tablaAmortizacion").removeClass("flecha-1").addClass("flecha-2");
-			
 		}
 	}
 	
@@ -165,7 +119,6 @@
 			
 			$("#tabDatos-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#tabDatos-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-			
 			$("#tablaDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#tablaDatos").removeClass("flecha-2").addClass("flecha-1");
 			
@@ -176,13 +129,18 @@
 		
 			$("#tabDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabDatos-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
-			
 			$("#tablaDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 			$("#tablaDatos").removeClass("flecha-1").addClass("flecha-2");
 
 			$("#CAT").hide();
-			
 		}
+	}
+	
+	function muestraTablas(){
+		
+		desplegarTabProductos();
+		$("#tablaAmortizacion").show();
+		$("#tablaDatos").show();
 	}
 	
 	/* End Interaciones de para cada seccion */
@@ -486,10 +444,8 @@
 		}
 
 		var producto = $("#selectApoyo").val();
-		console.log("Hola " + producto);
 
 		if (producto == "FOVISSSTE") {
-			console.log("Hola " + producto);
 
 			$("#sueldo").hide();
 			$("#porcentaje").hide();
@@ -541,14 +497,17 @@
 		}
 		
 	}
-	/* End Inicializa los valores de los programas*/
-
-	/* Seccion Tabla de Amortizacion*/
-
-	function muestraTablas(){
-		
-		desplegarTabProductos();
-		$("#tablaAmortizacion").show();
-		$("#tablaDatos").show();
 	
-	}
+	
+	
+			cargarSelect("COMPRAR_CASA");
+		cargaProgramas("INFONAVIT");
+		calculaPor("COMPRAR_CASA");
+		$("#sueldo").hide();
+		$("#tablaProductos").hide();
+		$("#productos").hide();
+		$("#tablaAmortizacion").hide();
+		$("#tablaDatos").hide();
+		$("#CAT").hide();
+
+	});
