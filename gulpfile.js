@@ -30,14 +30,20 @@ gulp.task('html',function(){
   gulp.src('./dev/**/**.html')
   .pipe(gulp.dest('./public'))
    .pipe(connect.reload());
-})
+});
 
 
 gulp.task('fonts',function(){
   gulp.src('./dev/fonts/**/**.*')
   .pipe(gulp.dest('./public/fonts'))
    .pipe(connect.reload());
-})
+});
+
+gulp.task('img',function(){
+  gulp.src('./dev/img/**/**.*')
+  .pipe(gulp.dest('./public/img'))
+   .pipe(connect.reload());
+});
 
 
 
