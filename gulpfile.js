@@ -33,10 +33,18 @@ gulp.task('html',function(){
 })
 
 
+gulp.task('fonts',function(){
+  gulp.src('./dev/fonts/**/**.*')
+  .pipe(gulp.dest('./public/fonts'))
+   .pipe(connect.reload());
+})
+
+
+
 
 gulp.task('js',function(){
   gulp.src('./dev/js/app.js')
-  .pipe(browserify())
+  //.pipe(browserify())
   .pipe(gulp.dest('./public/js'))
   .pipe(connect.reload());
 });

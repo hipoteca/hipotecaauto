@@ -15,7 +15,6 @@
 
 	/* Interaciones de para cada seccion */
 	
-	
 	function muestraTabla() {
 		$("#simulador").hide();
 		$("#productos").hide();
