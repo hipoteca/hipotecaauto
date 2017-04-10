@@ -1,4 +1,4 @@
-	$(document).ready(function() {
+
 
 	
 
@@ -312,19 +312,7 @@
 		}
 	}
 
-	$("#barra-1").change(
-			function() {
-				var barraValue = $(this).val();
-				barraValue = barraValue.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
-				$("#valBarra1").val("$" + barraValue);
-			});
-
-	$("#barra-2").change(
-			function() {
-				var barraValue = $(this).val();
-				barraValue = barraValue.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
-				$("#valBarra2").val("$" + barraValue);
-			});
+	
 
 	function setValueInSlider(sliderId, value) {
 		value = value.replace(/,/gi, "")
@@ -498,9 +486,27 @@
 		
 	}
 	
+
 	
-	
-			cargarSelect("COMPRAR_CASA");
+	$(document).ready(function() {
+		
+		
+	$("#barra-1").change(
+		function() {
+			var barraValue = $(this).val();
+			barraValue = barraValue.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+			$("#valBarra1").val("$" + barraValue);
+		});
+
+	$("#barra-2").change(
+			function() {
+				var barraValue = $(this).val();
+				barraValue = barraValue.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+				$("#valBarra2").val("$" + barraValue);
+			});
+			
+			
+		cargarSelect("COMPRAR_CASA");
 		cargaProgramas("INFONAVIT");
 		calculaPor("COMPRAR_CASA");
 		$("#sueldo").hide();
