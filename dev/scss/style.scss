@@ -1,0 +1,385 @@
+
+
+@import "bootstrap/bootstrap";
+
+$border-color: #D3457E;
+
+
+
+	.input-group-addon-inset {
+    background-color: transparent !important;
+    border: 0 none;
+	color: #009EE5;
+    height: 32px;
+    left: 1px;
+    padding: 2px 0;
+    position: absolute;
+    top: 1px;
+    width: 32px;
+    z-index: 9;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1)
+	}
+
+	.input-group-addon-inset+.form-control {
+    padding-left: 32px
+	}
+
+	#simulador .slider-handle {
+		width: 34px;
+		height: 36px;
+		top: -10px;
+		margin-left: -8px !important;
+		padding: 0px 0;
+		background-color: transparent;
+		box-shadow: inset 0 0px 0 transparent;
+		background-image: url(../img/Drag.png) !important;
+		background-repeat: repeat-x
+	}
+
+	#simulador .slider.slider-horizontal {
+		width: 100%
+	}
+	#simulador .slider.slider-horizontal .slider-track {
+		height: 5px
+	}
+	#simulador .slider-track {
+		background: #cccccc;
+		box-shadow: none
+	}
+	#simulador .slider-selection {
+		background: none
+	}
+	#simulador .slider-handle.round {
+		border-radius: 5px
+	}
+	
+	#simulador .slider-handle:after {
+		color: #fff;
+		font-size: 20px;
+		font-family: Open Sans
+	}
+	
+	
+	
+	
+	#simulador {
+		background-color: #FFF;
+		padding-bottom: 0px
+	}
+	
+	#simulador .slider-selection {
+	
+		background-color : #52BCEC;
+	}
+	
+	#contenedor {
+		color: #ff0000;
+		border: 1px #solid #ff0000;
+		display: none;
+	}
+
+	.slider.slider-horizontal .slider-selection,
+	.slider.slider-horizontal .slider-track-high,
+	.slider.slider-horizontal .slider-track-low {
+		height: 100%;
+		top: 0;
+		bottom: 0
+	}
+	
+	#simulador2 {
+    background-color: #f4f4f4;
+	}
+	#simulador2>.container {
+		min-height: 400px
+	}
+	#simulador2>.container h1 {
+		color: #006ec1;
+		font-size: 30px
+	}
+	#simulador2 .nav-tabs {
+		border: none;
+		font-family: Open Sans, sans-serif;
+		font-size: 15px
+	}
+	#simulador2 .nav-tabs li {
+		width: 20% ; 
+		float: left;
+		border-radius: 0;
+	
+	}
+	
+	#simulador2 .nav-tabs li .active{
+	
+		border: solid 0.3px #d8d8d8;
+	}
+	
+	#simulador2 .nav-tabs li a {
+		border: 0 none;
+		
+		color: #c6c6c6;
+		border-radius: 0
+	}
+	#simulador2 .nav-tabs li a:hover {
+		background: none;
+		color: #094fa4
+	}
+
+	#simulador2 .nav-tabs li.active a {
+		color: #009ee5;
+		font-size: 15px;
+		font-weight: 600;
+		border-top: 5px solid #009ee5;
+		border-left: 1px solid #d8d8d8;
+		background: #FFFFFF;
+	}
+	#simulador2 .select-large {
+		font-size: 18px
+	}
+	#simulador2 .slider-left p,
+	#simulador2 .slider-right p {
+		font-size: 12px;
+		color: #c6c6c6;
+		padding-bottom: 10px
+	}
+	#simulador2 .slider-left p {
+		text-align: left
+	}
+	#simulador2 .slider-left p span {
+		-webkit-filter: grayscale(1);
+		-moz-filter: grayscale(1);
+		-ms-filter: grayscale(1);
+		-o-filter: grayscale(1);
+		filter: grayscale(1)
+	}
+	#simulador2 .slider-right p {
+		text-align: right
+	}
+	#simulador2 .slider-right button {
+		width: 100%;
+		height: 40px;
+		font-size: 18px
+	}
+	#simulador2 .slider.slider-horizontal {
+		width: calc(100% - 150px)
+	}
+	#simulador2 .slider.slider-horizontal .slider-track {
+		height: 5px
+	}
+	#simulador2 .slider-track {
+		background: #d8d8d8;
+		box-shadow: none
+	}
+	#simulador2 .slider-selection {
+		background: none
+	}
+	#simulador2 .slider-handle.round {
+		border-radius: 5px
+	}
+	#simulador2 .slider-handle {
+		width: 150px;
+		height: 40px;
+		top: -13px;
+		margin-left: -75px!important;
+		padding: 6px 0;
+		background-color: #094fa4;
+		box-shadow: inset 0 -2px 0 #063874;
+		background-image: linear-gradient(180deg, #0c66d4, #094fa4);
+		background-repeat: repeat-x
+	}
+	#simulador2 .slider-handle:after {
+		color: #fff;
+		font-size: 20px;
+		font-family: Open Sans
+	}
+	#simulador2 .conocemas {
+		font-size: 16px
+	}
+	#simulador2 .conocemas a {
+		color: #c6c6c6;
+		-webkit-filter: grayscale(1);
+		-moz-filter: grayscale(1);
+		-ms-filter: grayscale(1);
+		-o-filter: grayscale(1);
+		filter: grayscale(1)
+	}
+	#simulador2 .tabDestinos{
+		position: relative;
+		min-height: 1px;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	
+	#tablaAmortizacion{
+		#seccionTabla- {
+		padding:10px;
+		}
+	}
+	
+	.mostrar{
+		height:100%;
+		/*padding-left:10px;*/
+		/*padding-right:10px*/
+		}
+	.select-hd{	
+		height: 36px; 
+		font-family: Open Sans, sans-serif; 
+		font-size: 15px ; 
+		color:#009ee5
+	}	
+	.oculto{
+		max-height:0;
+		overflow:hidden;
+		}
+	.seccion{
+		border-style: solid;
+		border-width: 1px;
+		border-color: #52bcec;
+		/*overflow:auto;*/
+		height:100%;
+		background-image:url(../img/barra.png);
+		background-repeat: repeat-y;
+		background-size: 32px;
+	}
+	.flechaDesplegado{
+		background-image: url(../img/select-down.png);
+		}
+	.flechaCerrado{
+		background-image: url(../img/select-right.png);
+		}
+		
+		
+	.flecha-1{
+		background-size: 32px;
+	}
+	.flecha-1-color{
+		color:#fff;
+		
+	}
+	
+	.flecha-2{
+		background-size: 3px;
+	}
+	.flecha-2-color{
+		color:#006ec1;
+	}
+	
+	
+	.bordeIzquierdo{
+		border-left-style: solid;
+		border-left-color: #dddddd;
+		border-width: 1px
+	}
+	.bordeDerecho{
+		border-right-style: solid;
+		border-right-color: #dddddd;
+		border-width: 1px
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+.frame-nav-tabs{
+	border: solid 0.3px #d8d8d8;
+	background-color: #fff;
+}
+
+.frame-tab-border-1{
+border: solid 0.3px #006ec1;
+}
+.frame-tab-border-2{
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: solid 0.3px #ccc;
+}
+.frame-tab{
+	margin: 5px;
+	
+	background-color: #fff;
+	display: block;
+	
+	
+	
+	    background-image: url(../img/barra.png);
+    background-repeat: repeat-y;
+    /*background-size: 32px;*/
+	
+	
+	h4 {
+		background-color: #f9f9f9;
+		margin: 0px;
+		padding-top: 10px;
+		padding-right: 0px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+}
+
+
+	.frame-bar-left{
+	display: block;
+	width: 3%;
+	float: left;
+	/*background: #006ec1;
+	width: 20px;*/
+	}
+	.frame-bar-right{
+	display: block;
+	width: 97%;
+	float: left;
+	background: #FFF;
+	padding-left: 0px
+	}
+	.frame-content{
+	padding: 10px;
+	}
+
+	
+	
+	.encabezadoTabla {
+	  color: #006ec1;
+	}
+	.tamanioCeldasEncabezado{
+		table-layout: fixed;
+		width: 110px;
+		vertical-align: middle !important;
+	}
+	.contenidoTabla{
+	  color:#666666;
+	}
+
+	.bordeTabla{
+		border: solid 0.5px #cccccc;
+	}
+	.sombraAmortizacion{
+		background-color: #f9f9f9;
+		margin: 0px;
+		padding-top: 10px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+		padding-left: 10px;
+	}
+	
+		
+		
+		
