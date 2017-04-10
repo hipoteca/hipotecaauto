@@ -4,6 +4,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var connect     = require('gulp-connect');
 var browserify  = require('gulp-browserify');
 
+
+
+gulp.task('default',['html','js','server','watch']);
+
 gulp.task('server', function() {
   connect.server({
     root: './public',
@@ -42,6 +46,6 @@ gulp.task('js',function(){
 
 gulp.task('watch', function () {
   gulp.watch(['./dev/scss/**/**.scss'], ['sass']);
-  //gulp.watch(['./src/js/**/**.js'], ['js']);
-  //gulp.watch(['./src/styles/**/**.scss'], ['sass']);
+  gulp.watch(['./dev/js/**/**.js'], ['js']);
+  gulp.watch(['./**/**.html'], ['html']);
 });

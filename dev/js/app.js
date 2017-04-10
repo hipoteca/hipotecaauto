@@ -12,6 +12,7 @@
 		cargaProgramas("INFONAVIT");
 	})
 
+
 	/* Interaciones de para cada seccion */
 	
 	function muestraTabla() {
