@@ -1,7 +1,4 @@
 
-
-	
-
 	/* Interaciones de para cada seccion */
 	
 	function btnCalcularCredito() {
@@ -104,7 +101,6 @@
 			
 		} else {
 			$("#seccionTablaAmort").hide();
-			$("#seccionTablaAmort").addClass("oculto");
 			
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabAmort-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
