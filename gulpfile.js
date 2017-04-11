@@ -6,7 +6,7 @@ var browserify  = require('gulp-browserify');
 
 
 
-gulp.task('default',['html','sass','js','server','watch']);
+gulp.task('default',['html','sass','js','fonts','img','server','watch']);
 
 gulp.task('server', function() {
   connect.server({

@@ -1,7 +1,5 @@
-
-
 @import "bootstrap/bootstrap";
-
+@import "_Fonts";
 $border-color: #D3457E;
 
 
@@ -379,7 +377,303 @@ border-bottom: solid 0.3px #ccc;
 		padding-bottom: 0px;
 		padding-left: 10px;
 	}
-	
-		
-		
+
+	.header-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 11px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+
+@media (min-width: $screen-sm-min) {
+    .header-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 14px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+}
+@media (min-width: $screen-md-min) {
+  .header-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 17px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+}
+@media (min-width: $screen-lg-min) {
+  .header-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 20px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+}
+
+.questions-text label{
+	font-family: "StagSans-Book";
+    font-size: 8px;
+    color: #141414;
+}
+
+@media (min-width: $screen-sm-min) {
+   .questions-text label{
+	    font-family: "StagSans-Book";
+        font-size: 11px;
+        color: #141414;
+    }   
+}
+
+@media (min-width: $screen-md-min) {
+   .questions-text label{
+	    font-family: "StagSans-Book";
+        font-size: 14px;
+        color: #141414;
+    }   
+  
+}
+
+@media (min-width: $screen-lg-min) {
+   .questions-text label{
+	    font-family: "StagSans-Book";
+        font-size: 17px;
+        color: #141414;
+    }   
+  
+}
+
+.select-hd {
+          font-family: "StagSans-Book";
+          font-size: 7px;
+          line-height: 20px;
+          color: #009ee5;
+}
+
+@media (min-width: $screen-sm-min) {
+    .select-hd {
+         font-family: "StagSans-Book";
+         font-size: 10px;
+         line-height: 20px;
+         color: #009ee5; 
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .select-hd {
+         font-family: "StagSans-Book";
+         font-size: 13px;
+         line-height: 20px;
+         color: #009ee5; 
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .select-hd {
+         font-family: "StagSans-Book";
+         font-size: 16px;
+         line-height: 20px;
+         color: #009ee5; 
+    }
+}
+
+.button-text{
+     font-family: "StagSans-Book";
+     font-size: 8px;
+     color: #ffffff;
+}
+
+@media (min-width: $screen-sm-min) {
+    .button-text{
+         font-family: "StagSans-Book";
+         font-size: 11px;
+         color: #ffffff;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .button-text{
+         font-family: "StagSans-Book";
+         font-size: 14px;
+         color: #ffffff;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .button-text{
+         font-family: "StagSans-Book";
+         font-size: 17px;
+         color: #ffffff;
+    }
+}
+
+.header-table-product{
+      font-family: "StagSans-Book";
+      font-size: 7px;
+      color: #006ec1;	
+}
+
+@media (min-width: $screen-sm-min) {
+    .header-table-product{
+        font-family: "StagSans-Book";
+        font-size: 10px;
+        color: #006ec1;	
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .header-table-product{
+        font-family: "StagSans-Book";
+        font-size: 13px;
+        color: #006ec1;	
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .header-table-product{
+        font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #006ec1;	
+    }
+}
+
+.content-table td{
+	font-family: "StagSans-Book";
+    font-size: 7px;
+    color: #666666;
+}
+
+@media (min-width: $screen-sm-min) {
+    .content-table td{
+	    font-family: "StagSans-Book";
+        font-size: 10px;
+        color: #666666;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .content-table td{
+	    font-family: "StagSans-Book";
+        font-size: 13px;
+        color: #666666;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .content-table td{
+	    font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #666666;
+    }
+}
+
+.link-table-product{
+	font-family: "StagSans-Book";
+    font-size: 7px;
+    color: #006ec1;
+    text-decoration: underline;
+}
+
+@media (min-width: $screen-sm-min) {
+    .link-table-product{
+	    font-family: "StagSans-Book";
+        font-size: 10px;
+        color: #006ec1;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .link-table-product{
+	    font-family: "StagSans-Book";
+        font-size: 13px;
+        color: #006ec1;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .link-table-product{
+	    font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #006ec1;
+        text-decoration: underline;
+    }
+}
+
+.text-amortizacion{
+    font-family: "StagSans-Book";
+    font-size: 8px;
+    line-height: 11px;
+    letter-spacing: -0.1px;
+    color: #363636;
+}
+
+@media (min-width: $screen-sm-min) {
+    .text-amortizacion{
+        font-family: "StagSans-Book";
+        font-size: 11px;
+        line-height: 11px;
+        letter-spacing: -0.1px;
+        color: #363636;
+    }	
+}
+
+@media (min-width: $screen-md-min) {
+    .text-amortizacion{
+        font-family: "StagSans-Book";
+        font-size: 14px;
+        line-height: 11px;
+        letter-spacing: -0.1px;
+        color: #363636;
+    }	
+}
+
+@media (min-width: $screen-lg-min) {
+    .text-amortizacion{
+        font-family: "StagSans-Book";
+        font-size: 17px;
+        line-height: 11px;
+        letter-spacing: -0.1px;
+        color: #363636;
+    }	
+}
+
+.small-text-amortizacion{
+	font-family: StagSans-Book;
+    font-size: 6px;
+    line-height: 8px;
+    color: #363636;
+}			
+
+@media (min-width: $screen-sm-min) {
+    .small-text-amortizacion{
+	    font-family: StagSans-Book;
+        font-size: 9px;
+        line-height: 8px;
+        color: #363636;
+    }				
+}
+
+@media (min-width: $screen-md-min) {
+    .small-text-amortizacion{
+	    font-family: StagSans-Book;
+        font-size: 12px;
+        line-height: 8px;
+        color: #363636;
+    }	
+}
+
+@media (min-width: $screen-lg-min) {
+    .small-text-amortizacion{
+	    font-family: StagSans-Book;
+        font-size: 15px;
+        line-height: 8px;
+        color: #363636;
+    }	
+}
+
 		
