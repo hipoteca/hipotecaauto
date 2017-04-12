@@ -20,22 +20,27 @@
 <body id="body">
 	<div class="container">
 	
-	<section class="tabDestinos" id="simulador2" >
+	<section id="tabDestinos1" class="hidden-xs hidden-sm hidden-md" >
   		<ul class="nav nav-tabs">
-    		<li class="active"><a id="comprarCasa" href="#buyHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
-    		<li><a id="comprarTerreno" href="#buyLand" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
-    		<li><a id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  style="text-align:center;" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
-    		<li><a id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
-   			<li><a id="obtenerLiquidez" href="#money" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
+    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
+    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
+    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  style="text-align:center;" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
+    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
+   			<li><a class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
   		</ul>
-    </section> <!--  END tabDestinos -->
+    </section> <!--  1 tabDestinos -->
     
-    
+    <section id="tabDestinos2" class="hidden-lg">
+  		<ul class="nav nav-pills nav-stacked">
+    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
+    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
+    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  style="text-align:center;" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
+    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
+   			<li><a  class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
+  		</ul>
+    </section> <!--  2 tabDestinos -->
     
     <div class="frame-nav-tabs">
-		<br class="visible-xs" /> <br class="visible-xs" /> 
-		<br class="visible-xs" /> <br class="visible-xs" /> 
-		<br class="visible-xs" />
 		
  		<div  id="ingresarDatos" class="frame-tab row flecha-1 frame-tab-border-1" > 	
  			<section class="frame-bar-left hidden-xs">

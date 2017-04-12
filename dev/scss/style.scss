@@ -88,129 +88,6 @@ $border-color: #D3457E;
 		bottom: 0
 	}
 	
-	#simulador2 {
-    background-color: #f4f4f4;
-	}
-	#simulador2>.container {
-		min-height: 400px
-	}
-	#simulador2>.container h1 {
-		color: #006ec1;
-		font-size: 30px
-	}
-	#simulador2 .nav-tabs {
-		border: none;
-		font-family: Open Sans, sans-serif;
-		font-size: 15px
-	}
-	#simulador2 .nav-tabs li {
-		width: 20% ; 
-		float: left;
-		border-radius: 0;
-	
-	}
-	
-	#simulador2 .nav-tabs li .active{
-	
-		border: solid 0.3px #d8d8d8;
-	}
-	
-	#simulador2 .nav-tabs li a {
-		border: 0 none;
-		
-		color: #c6c6c6;
-		border-radius: 0
-	}
-	#simulador2 .nav-tabs li a:hover {
-		background: none;
-		color: #094fa4
-	}
-
-	#simulador2 .nav-tabs li.active a {
-		color: #009ee5;
-		font-size: 15px;
-		font-weight: 600;
-		border-top: 5px solid #009ee5;
-		border-left: 1px solid #d8d8d8;
-		background: #FFFFFF;
-	}
-	#simulador2 .select-large {
-		font-size: 18px
-	}
-	#simulador2 .slider-left p,
-	#simulador2 .slider-right p {
-		font-size: 12px;
-		color: #c6c6c6;
-		padding-bottom: 10px
-	}
-	#simulador2 .slider-left p {
-		text-align: left
-	}
-	#simulador2 .slider-left p span {
-		-webkit-filter: grayscale(1);
-		-moz-filter: grayscale(1);
-		-ms-filter: grayscale(1);
-		-o-filter: grayscale(1);
-		filter: grayscale(1)
-	}
-	#simulador2 .slider-right p {
-		text-align: right
-	}
-	#simulador2 .slider-right button {
-		width: 100%;
-		height: 40px;
-		font-size: 18px
-	}
-	#simulador2 .slider.slider-horizontal {
-		width: calc(100% - 150px)
-	}
-	#simulador2 .slider.slider-horizontal .slider-track {
-		height: 5px
-	}
-	#simulador2 .slider-track {
-		background: #d8d8d8;
-		box-shadow: none
-	}
-	#simulador2 .slider-selection {
-		background: none
-	}
-	#simulador2 .slider-handle.round {
-		border-radius: 5px
-	}
-	#simulador2 .slider-handle {
-		width: 150px;
-		height: 40px;
-		top: -13px;
-		margin-left: -75px!important;
-		padding: 6px 0;
-		background-color: #094fa4;
-		box-shadow: inset 0 -2px 0 #063874;
-		background-image: linear-gradient(180deg, #0c66d4, #094fa4);
-		background-repeat: repeat-x
-	}
-	#simulador2 .slider-handle:after {
-		color: #fff;
-		font-size: 20px;
-		font-family: Open Sans
-	}
-	#simulador2 .conocemas {
-		font-size: 16px
-	}
-	#simulador2 .conocemas a {
-		color: #c6c6c6;
-		-webkit-filter: grayscale(1);
-		-moz-filter: grayscale(1);
-		-ms-filter: grayscale(1);
-		-o-filter: grayscale(1);
-		filter: grayscale(1)
-	}
-	#simulador2 .tabDestinos{
-		position: relative;
-		min-height: 1px;
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-	
 	#tablaAmortizacion{
 		#seccionTabla- {
 		padding:10px;
@@ -276,25 +153,6 @@ $border-color: #D3457E;
 		border-right-color: #dddddd;
 		border-width: 1px
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 .frame-nav-tabs{
 	border: solid 0.3px #d8d8d8;
@@ -676,4 +534,128 @@ border-bottom: solid 0.3px #ccc;
     }	
 }
 
+.menu-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 9px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+
+@media (min-width: $screen-sm-min) {
+    .menu-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 12px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}	
+}
+
+@media (min-width: $screen-md-min) {
+    .menu-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 15px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+    .menu-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 18px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+}
+
+#tabDestinos1 {
+    background-color: #f4f4f4;
+}
+#tabDestinos1 .nav-tabs {
+		border: none;
+		font-family: Open Sans, sans-serif;
+		font-size: 15px
+}
+	#tabDestinos1 .nav-tabs li {
+		width: 20% ; 
+		float: left;
+		border-radius: 0;
+	}	
+	#tabDestinos1 .nav-tabs li .active{
+	
+		border: solid 0.3px #d8d8d8;
+	}
+	
+	#tabDestinos1 .nav-tabs li a {
+		border: 0 none;
 		
+		color: #c6c6c6;
+		border-radius: 0
+	}
+	#tabDestinos1 .nav-tabs li a:hover {
+		background: none;
+		color: #094fa4
+	}
+
+	#tabDestinos1 .nav-tabs li.active a {
+		color: #009ee5;
+		font-size: 15px;
+		font-weight: 600;
+		border-top: 5px solid #009ee5;
+		border-left: 1px solid #d8d8d8;
+		background: #FFFFFF;
+	}
+
+	#tabDestinos2{
+       li{
+       	background-color: white;
+       	color:black;
+       	border: solid 1px #d8d8d8;
+       	margin:0px;
+       }
+	}
+
+	#tabDestinos2 .nav-pills li.active a {
+		color: #009ee5;
+		font-size: 9px;
+		font-weight: 600;
+		border: 2px solid #009ee5;
+		background: #FFFFFF;
+		border-radius: 0px;
+	}
+	@media (min-width: $screen-sm-min) {
+        #tabDestinos2 .nav-pills li.active a {
+		    color: #009ee5;
+		    font-size: 9px;
+		    font-weight: 600;
+		    border: 2px solid #009ee5;
+		    background: #FFFFFF;
+		    border-radius: 0px;
+	    }
+    }
+
+    @media (min-width: $screen-md-min) {
+        #tabDestinos2 .nav-pills li.active a {
+		    color: #009ee5;
+		    font-size: 9px;
+		    font-weight: 600;
+		    border: 2px solid #009ee5;
+		    background: #FFFFFF;
+		    border-radius: 0px;
+	    }
+    }
+
+    @media (min-width: $screen-lg-min) {
+        #tabDestinos2 .nav-pills li.active a {
+		    color: #009ee5;
+		    font-size: 9px;
+		    font-weight: 600;
+		    border: 2px solid #009ee5;
+		    background: #FFFFFF;
+		    border-radius: 0px;
+	    }
+    }

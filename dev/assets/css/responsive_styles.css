@@ -403,12 +403,12 @@ float:left;
         margin-top: 5px;
     }
 
-    .nav-pills>li, .nav-tabs>li {
+   /* .nav-pills>li, .nav-tabs>li {
         float: none;
         display: inline-block;
         width: 50%;
         height: 30px;
-    }
+    }*/
 
     .modal .modal-body{
         padding: 15px;
