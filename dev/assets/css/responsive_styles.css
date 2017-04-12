@@ -1,0 +1,966 @@
+#simulador .nav-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+#simulador .nav-tabs li {
+width:20%;
+float:left;
+}
+.conocemas{
+    margin-top: 20px;
+}
+
+.margin-t20{
+    margin-top: 20px;
+}
+.padding-t20{
+    padding-top: 20px;
+}
+
+#linea{
+    display: none;
+}
+
+#btnCalcular_credito {
+        width: 100% !important;
+    }
+
+.cell-expand{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid #52bcec;
+    padding-top: 3px;
+    padding-left: 1px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.control-btn{
+    font-size: 14px;
+    color: #009ee5;
+    height: 20px;
+    font-weight: normal;
+    width: 33.33333%
+}
+
+.control-btn.reload{
+    background: url(../../images/iconos/reload-ico.png) center left no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.control-btn.download{
+    background: url(../../images/iconos/download-ico.png) 9px no-repeat;
+    background-size: 10px;
+    padding-left: 13px;
+    text-align: center;
+}
+
+.control-btn.close {
+    margin: 0px !important;
+    float: none !important;
+    line-height: normal;
+    opacity: 1 !important;
+    padding-top: 2px;
+    text-align:right;
+}
+
+.accordion-section{
+    width: 100%;
+}
+
+#myModal .modal-dialog {
+    top:0;
+    left:0;
+    outline: none;
+    position: absolute;
+    width: 100% !important;
+    margin:0px !important;
+}
+
+.modal-control{
+    display: none
+}
+
+.modal-close-btn{
+    position: absolute;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #006ec1;
+    /* padding: 5px; */
+    padding-top: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #006ec1;
+    z-index:9999
+}
+
+/*precalificador step-1*/
+
+#progressbar{
+    position: relative
+}
+
+#progressbar li{
+    z-index: 1000;
+}
+
+#progressbar li span:last-of-type{
+    font-size: 16px;
+}
+
+#progressbar li .progress-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#f8f8f8;
+}
+
+#progressbar li:after{
+    display: none;
+}
+
+.progress-row{
+    width: 56%;
+    position: absolute;
+    top: 35%;
+    left: 22%;
+    border-top: 1px solid #c5c5c5;
+}
+
+
+.step-2 #captcha{
+        width: 50% !important;
+    }
+
+.step-2 #captcha table{
+    width: 100%;
+}
+
+.step-2 #captcha{
+    background-color: #9BD6F7 !important;
+    border-radius: 5px;
+    overflow: hidden;
+    border: none !important;
+}
+
+.step-2 #captcha tr{
+    background: none !important;
+}
+
+.submit-captcha
+{
+    height: 30px !important;
+    margin-top:10px;
+    width: 75% !important;
+    padding-top:2px;
+}
+
+.margin-b20.closed{
+    margin:0 !important;
+}
+
+#precalificador .panel .panel-body {
+    min-height: 234px;
+}
+
+/*paginador tabla amortización*/
+.pager-wrapper{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content:center;
+    width: 100%
+}
+
+.pager-button{
+    width: 40px;
+    height: 40px;
+    background: #0059B9;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 8px;
+    float: left;
+    cursor: pointer;
+}
+
+.page-button{
+    float: left;
+    width: 40px;
+    height: 40px;
+    color: #333;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.pager-wrapper .button-wrapper{
+	height:40px;
+	overflow-y:scroll
+}
+
+.page-button.active{
+    color: #50bbdb;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+
+/*Mobile breakpoint*/
+
+@media (max-width: 420px) {
+	
+	.estados{
+		line-height: normal !important;
+	}
+	
+	.only-web{
+		display:none;
+	}
+
+	.cell-expand.with-support{
+	    width: 15px;
+	    height: 15px;
+	    border-radius: 20px;
+	    border: 1px solid #52bcec;
+	    padding-top: 3px;
+	    padding-left: 1px;
+	    display: block;
+	    float: left;
+	    cursor: pointer;
+	    font-size: 7px;
+	}
+    .modal-control{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        float: left;
+    }
+    #simulador .nav-tabs li {
+        width: 120px;
+        float: left;
+    }
+    .main-nav-wrapper {
+        width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 15px;
+        height: 91px;
+        position: relative;
+    }
+    #menuPrincipal {
+        width: 600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .nav-accordion-ctrl {
+        height: 45px;
+        padding-top: 10px;
+        text-align: left;
+        font-size: 18px;
+        border-top: 1px solid #C6C6C6;
+    }
+    .nav-accordion-ctrl .glyphicon {
+        margin-top: 3px;
+        color: #9fa0a0;
+    }
+    .accordion-panel{
+      padding-bottom: 20px;
+    }
+    .accordion-panel select {
+        width: 100% !important;
+        font-size: 13px !important;
+    }
+    .slider-instructions {
+        color: #c1c2c2;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    #simulador .slider-wrapper-casa .slider.slider-horizontal,
+    #linea .slider.slider-horizontal,
+    #wrapper-5 .slider.slider-horizontal,
+    #wrapper-6 .slider.slider-horizontal,
+    #simulador .slider-wrapper-terreno .slider.slider-horizontal,
+    #simulador .slider-wrapper-remodelar .slider.slider-horizontal,
+    #simulador .slider-wrapper-hipoteca .slider.slider-horizontal,
+    #simulador .slider-wrapper-liquidez .slider.slider-horizontal {
+        float: left !important;
+        width: 95% !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+    .input-group.res-fix {
+        width: 100% !important;
+        float: left !important;
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin-bottom: 5px !important;
+    }
+    #simulador .slider-left p,
+    #simulador .slider-right p {
+        padding-bottom: 0px;
+        margin-bottom: 0px
+    }
+    a[href="#infonavitt"] {
+        color: #337ab7;
+        text-decoration: none;
+        height: 30px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+    }
+    #btnCalcular_credito {
+        width: 100% !important;
+    }
+    .options-divider {
+        text-align: center;
+        width: 100%;
+        float: left;
+        color: #007bc9;
+        margin-top: 20px;
+        position: relative;
+        display: none;
+    }
+    .options-divider hr:first-of-type {
+        width: 10%;
+        position: absolute;
+        top: -5px;
+    }
+    .options-divider hr:last-of-type {
+        width: 10%;
+        position: absolute;
+        top: -5px;
+        right: 0px;
+    }
+    a[href="https://www.bancomer.com/personas/credito-hipotecario.jsp"] {
+        text-align: left;
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+    a[href="https://www.bancomer.com/personas/credito-hipotecario.jsp"] span {
+        float: left;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+    #linea p:first-of-type {
+        float: left;
+        margin-top: 20px;
+    }
+    .accordion-panel label,
+    label[for="default"] {
+        font-weight: bold;
+        color: #505050;
+    }
+    #Infonavit1, #Fovissste1{
+      margin-top:20px;
+    }
+    .credit-support-control{
+      padding-top: 20px;
+      border-top: 1px solid #DADADA;
+    }
+    #simulador .credit-support-control p{
+      margin-bottom:20px;
+    }
+    .blockInput{
+      margin-bottom: 10px;
+    }
+    .amount-question{
+      float: left;
+      margin-top: 20px;
+    }
+    
+    .nav-tabs{
+       text-align: center;
+        float: left;
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .modal .modal-header ul li a{
+        font-size: 12px !important;
+        padding: 0px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .nav-pills>li, .nav-tabs>li {
+        float: none;
+        display: inline-block;
+        width: 50%;
+        height: 30px;
+    }
+
+    .modal .modal-body{
+        padding: 15px;
+    }
+
+    .accordion-control{
+        float: left;
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        padding: 10px 0 10px 0;
+        color: #505050;
+    }
+
+    .accordion-control.open span{
+        color: #505050;
+        margin-top:2px;
+    }
+
+    .border-bottom-da{
+        border-bottom: 1px solid #DADADA;
+    }
+
+    .border-top-da{
+        border-top: 1px solid #DADADA;
+    }
+
+    .anticipated-payment{
+        margin-left: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .anticipated-payment .input-group-addon{
+        float: left;
+        width: 20px;
+        height: 20px;
+        padding-left: 5px !important;
+        padding-top: 2px;
+    }
+
+    #anticipated-payment .pp-input{
+        float: left;
+        width: 90px;
+        height: 20px;
+        font-size: 12px !important
+    }
+
+    .modal-content .nav-tabs li{
+        width: 50% !important;
+        height: 40px;
+        display: block;
+    }
+
+    .modal-footer .btn-info{
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    #datos{
+        padding:0px;
+        background:#FFF
+    }
+    
+    #datos .accordion-control{
+        font-size: 14px;
+        font-weight: bold;
+        color: #009ee5;
+    }
+    #interesdehipoteca{
+        margin-top:20px;
+    }
+
+    /*precalificador step-1*/
+
+    #progressbar{
+        position: relative
+    }
+
+    #progressbar li{
+        z-index: 1000;
+    }
+
+    #progressbar li .progress-icon{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:#f8f8f8;
+    }
+
+    #progressbar li:after{
+        display: none;
+    }
+
+    .progress-row{
+        width: 56%;
+        position: absolute;
+        top: 35%;
+        left: 22%;
+        border-top: 1px solid #c5c5c5;
+    }
+
+    #progressbar li span:last-of-type{
+        font-size: 11px;
+    }
+    /*precalificador*/
+    
+    .checkbox-awesome .text-medium{
+        text-align: justify;
+        font-size: 12px;
+        line-height: 150%;
+    }
+    
+    .panel-body legend{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    fieldset[name="#DatosPersonales"] legend, 
+    fieldset[name="#DatosDomicilio"] legend,
+    fieldset[name="#tipoCredito"] legend{
+        border-bottom: 1px solid #dadada !important;
+        padding-top:0px;
+    }
+
+    fieldset[name="#DatosPersonales"] label, 
+    fieldset[name="#DatosDomicilio"] label,
+    fieldset[name="#tipoCredito"] label{
+        font-size: 14px;
+        color:#333;
+    }
+    
+     /*step-2*/
+    
+    #editar1{
+		display:none
+	}
+    
+    .gray header h1{
+        font-size:16px;
+    }
+
+    .step-2 header{
+        padding-bottom: 20px;
+    }
+
+    #set1 .form-group label, #set2 .form-group label{
+        float: left;
+        padding-top: 10px;
+        width: 45%;
+        font-weight: normal !important;
+    }
+     #set1 .form-group input, #set2 .form-group input{
+        float: left;
+        font-size: 12px !important;
+        width: 55%;
+        margin-bottom: 10px !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        padding-left: 2px !important;
+    }
+
+    .step-2 .form-ctrl button.btn, .step-2 .form-ctrl input.btn{
+        height: 30px !important;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+
+    .step-2 .modal-dialog{
+        width: 100%;
+    }
+
+    .step-2 #captcha table, .step-2 #captcha{
+        width: 100% !important;
+    }
+
+    .step-2 #captcha{
+        background-color: #9BD6F7 !important;
+        border-radius: 5px;
+        overflow: hidden;
+        border: none !important;
+    }
+
+    .step-2 #captcha tr{
+        background: none !important;
+    }
+
+    .submit-captcha
+    {
+        height: 30px !important;
+        margin-top:10px;
+        width: 75% !important;
+        padding-top:2px;
+    }
+
+    .margin-b20.closed{
+        margin:0 !important;
+    }
+
+    .titulo-con-padding{
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /*step 5*/
+    #felicidades{
+        padding: 0 15px
+    }
+
+    #felicidades .panel-title h1{
+        margin-top:0px !important;
+        font-size:20px !important;
+        line-height: 1;
+    }
+
+    #felicidades .panel-title h2{
+            font-size: 25px !important;
+    font-weight: 600 !important;
+    margin: 20px auto !important;
+    padding: 10px !important;
+    background: #fff !important;
+    border-radius: 10px !important;
+    }
+
+    .panel-body.whats-next{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .whats-next p{
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .checkbox-awesome label{
+        font-size: 12px !important;
+        line-height:1.6;
+    }
+    
+    .schedule-wrapper{
+    	height:350px
+    }
+}
+
+@media (min-width: 421px) and (max-width: 929px){
+	#correoParrafo, #coloniaParrafo {
+		width:167px;
+	}
+	
+    .only-web{
+		display:none;
+	}
+    
+    #interesdehipoteca{
+        margin-top: 20px;
+    }
+
+    #simulador .nav-tabs li {
+        width: 146px;
+        float: left;
+    }
+
+    #simulador .slider.slider-horizontal {
+        width: 100% !important;
+    }
+            
+    .input-group.res-fix {
+        width: 100% !important;
+        left: auto !important;
+        top: auto !important;
+        margin-top: 30px;
+    }    
+
+    .control-btn.download{
+        background: url(../../../images/iconos/download-ico.png) 80px no-repeat;
+        background-size: 10px;
+        padding-left: 13px;
+        text-align: center;
+    }
+
+    .anticipated-payment{
+        margin-left: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .anticipated-payment .input-group-addon{
+        float: left;
+        width: 20px;
+        height: 20px;
+        padding-left: 5px !important;
+        padding-top: 2px;
+    }
+
+    #anticipated-payment .pp-input{
+        float: left;
+        width: 90px;
+        height: 20px;
+        font-size: 12px !important
+    }
+    
+
+    .modal-content .nav-tabs li{
+        width: 50% !important;
+        height: 60px;
+        display: block;
+    }
+    
+    #datos .accordion-control{
+        font-size: 16px;
+        font-weight: bold;
+        color: #009ee5;
+        border-top:1px solid #dadada;
+        padding-top:10px;
+        padding-bottom:10px;
+        
+    }    
+    .accordion-panel select {
+        font-size: 16px !important;
+    }
+    
+    #simulador .slider-right {
+        float:right
+    }
+
+    /*precalificador step-1*/
+    
+    .altura-campos{
+        margin-top: -92px !important;
+    }
+    
+     #progressbar{
+        position: relative
+    }
+
+    #progressbar li{
+        z-index: 1000;
+    }
+
+    #progressbar li span:last-of-type{
+        font-size: 16px;
+    }
+
+    #progressbar li .progress-icon{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:#f8f8f8;
+    }
+
+    #progressbar li:after{
+        display: none;
+    }
+
+    .progress-row{
+        width: 56%;
+        position: absolute;
+        top: 35%;
+        left: 22%;
+        border-top: 1px solid #c5c5c5;
+    }
+
+    /*Precalificador*/
+    
+    .checkbox-awesome .text-medium{
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .checkbox-awesome label{
+        margin-top: 30px !important;
+    }
+    
+    .panel-body legend{
+        font-size: 21px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .precalificador.panel-body{
+        padding:30px !important;
+    }
+
+    fieldset[name="#DatosPersonales"] legend, 
+    fieldset[name="#DatosDomicilio"] legend,
+    fieldset[name="#tipoCredito"] legend{
+        border-bottom: 1px solid #dadada !important;
+        padding-top:0px;
+    }
+
+    fieldset[name="#DatosPersonales"] label, 
+    fieldset[name="#DatosDomicilio"] label,
+    fieldset[name="#tipoCredito"] label{
+        font-size: 14px;
+        color:#333;
+    }
+
+    #precalificador .panel{
+        min-height: 220px !important
+    }
+
+    /*step-2*/
+    #editar1{
+		display:none
+	}
+	
+    .gray header h1{
+        font-size:24px;
+    }
+
+    .step-2 header{
+        padding-bottom: 20px;
+    }
+
+     #set1 .form-group input, #set2 .form-group input{
+        font-weight: bold !important;
+    }
+
+    .step-2 .modal-dialog{
+        width: 100%;
+    }
+
+    .step-2 #captcha{
+        width: 50% !important;
+    }
+
+    .step-2 #captcha table{
+        width: 100%;
+    }
+
+    .step-2 #captcha{
+        background-color: #9BD6F7 !important;
+        border-radius: 5px;
+        overflow: hidden;
+        border: none !important;
+    }
+
+    .step-2 #captcha tr{
+        background: none !important;
+    }
+
+    .submit-captcha
+    {
+        height: 30px !important;
+        margin-top:10px;
+        width: 75% !important;
+        padding-top:2px;
+    }
+
+    .margin-b20.closed{
+        margin:0 !important;
+    }
+    
+    .schedule-wrapper{
+    	height:350px
+ 	}
+}
+
+#set1 .form-group input, #set2 .form-group input{
+        font-weight: bold !important;
+    }
+
+.schedule-panel{
+    display: none;
+}
+
+#precalificador .panel{
+        min-height: 220px !important
+    }
+    
+.schedule-panel td{
+    background: #f7f7f7 !important;
+    text-align:left;
+    border-bottom: 1px solid #dadada !important 
+}
+
+.schedule-panel div{
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 100%;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.schedule-panel b{
+    float: left;
+    width: 50%;
+}
+
+.schedule-panel span{
+    float: left;
+    color:#505050 !important;
+
+}
+
+.prepayment-wrapper{
+    float: left !important;
+    width: 45% !important;
+    padding: 0px !important;
+    margin:0px !important;
+    text-align: left !important;
+}
+
+tr.schedule-row:nth-of-child(odd){
+    background-color:#f7f7f7;
+}
+
+tr.schedule-row:nth-of-child(even){
+    background-color:#E8E8E8;
+}
+
+.step-2 .accordion-control{
+        float: left;
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        padding: 10px 0 10px 0;
+        font-weight: bold;
+        color: #009ee5;
+        border-top:1px solid #dadada;
+    }
+.step-2 .accordion-control.open span{
+        color: #505050;
+        margin-top:2px;
+    }
+
+.margin-b20{
+    margin-bottom: 20px;
+}
+
+#felicidades .product-description{
+    font-size: 18px;
+}
+
+@media (min-width: 930px){
+	 #datos .accordion-control{
+        font-size: 16px;
+        font-weight: bold;
+        color: #009ee5;
+        border-top:1px solid #dadada;
+        padding-top:10px;
+        padding-bottom:10px;
+    }   
+    
+    .schedule-wrapper{
+    	height:650px
+    }
+    
+    #myModal{
+    	width:91%;
+    	margin-left:auto;
+    	margin-right:auto;
+    	margin-top: 40px
+    }	
+}
