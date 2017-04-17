@@ -93,6 +93,16 @@ $border-color: #D3457E;
 		padding:10px;
 		}
 	}
+	#tablaProductos{
+	table{
+		td{
+			white-space: normal !important;
+		}
+		.pagination{
+			margin: 0px !important;
+		}
+	}
+	}
 	
 	.mostrar{
 		height:100%;
@@ -238,11 +248,36 @@ border-bottom: solid 0.3px #ccc;
 
 	.header-text{
 	    font-family: "BentonSansBBVA-Book";
-        font-size: 11px;
+        font-size: 14px;
         line-height: 1.11;
         text-align: left;
         color: #363636;
 	}
+
+	.questions-text label{
+	font-family: "StagSans-Book";
+    font-size: 12px;
+    color: #141414;
+	}
+
+	.tasa-interes{
+		color: #009ee5 !important;
+	}
+
+
+.cell-expand {
+   width: 20px;
+   height: 20px;
+   border-radius: 20px;
+   border: 1px solid #52bcec;
+   padding-top: 4px;
+   padding-left: 1px;
+   display: block;
+   float: left;
+   cursor: pointer;
+   font-size: 10px;
+}
+
 
 @media (min-width: $screen-sm-min) {
     .header-text{
@@ -272,11 +307,6 @@ border-bottom: solid 0.3px #ccc;
 	}
 }
 
-.questions-text label{
-	font-family: "StagSans-Book";
-    font-size: 8px;
-    color: #141414;
-}
 
 @media (min-width: $screen-sm-min) {
    .questions-text label{
