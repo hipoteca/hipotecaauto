@@ -1,4 +1,32 @@
 
+
+	var productoPagina = 1;
+	var maxProductoPagina = 3;
+	var minProductoPagina = 1;
+	
+	function sigPage() {
+		console.info("productoPagina" + productoPagina)
+		if (productoPagina < maxProductoPagina) {
+			$('td.prod-col-' + productoPagina).addClass("hidden-xs")
+			productoPagina++;
+			$('td.prod-col-' + productoPagina).removeClass("hidden-xs")
+
+		}
+		$("#pagina" ).text(productoPagina);
+	}
+	
+	function antPage() {
+		console.info("productoPagina" + productoPagina)
+		if (productoPagina > minProductoPagina) {
+			$('td.prod-col-' + productoPagina).addClass("hidden-xs")
+			productoPagina--;
+			$('td.prod-col-' + productoPagina).removeClass("hidden-xs")
+
+		}
+		$("#pagina" ).text(productoPagina);
+	}
+	
+	
 	/* Interaciones de para cada seccion */
 	
 	function btnCalcularCredito() {
@@ -527,6 +555,8 @@
 
 	
 	$(document).ready(function() {
+		
+		$("#pagina" ).text(productoPagina);
 		
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip()

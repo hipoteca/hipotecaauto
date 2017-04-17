@@ -237,15 +237,15 @@
 					<table class="table table-striped">
 						<tr class="bordeTabla" >
 							<td class="header-table-product">Caracteristicas</td>
-							<td class="header-table-product prod-col-1" >Nombre del producto aqui tambien</td>
-							<td class="header-table-product prod-col-2 hidden-xs">Nombre del producto aqui tambien</td>
-							<td class="header-table-product prod-col-3  hidden-xs">Nombre del producto aqui tambien</td>
+							<td class="header-table-product prod-col-1" >1 Nombre del producto aqui tambien</td>
+							<td class="header-table-product prod-col-2 hidden-xs">2 Nombre del producto aqui tambien</td>
+							<td class="header-table-product prod-col-3  hidden-xs">3 Nombre del producto aqui tambien</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Pagarias al Mes + seguros y comisiones</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2  hidden-xs">$00,000.00</td>
-							<td class="prod-col-3  hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">$10,000.00</td>
+							<td class="prod-col-2  hidden-xs">$20,000.00</td>
+							<td class="prod-col-3  hidden-xs">$30,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table ">
 							<td >Tu tasa de interés</td>
@@ -267,9 +267,9 @@
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>El credito que te prestamos</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">$10,000.00</td>
+							<td class="prod-col-2 hidden-xs">$20,000.00</td>
+							<td class="prod-col-3 hidden-xs">$30,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Te financiamos</td>
@@ -299,27 +299,25 @@
 						<tr>
 							<td>
 								<div class="row hidden-lg hidden-md hidden-sm">
-								<div class="col-xs-12">  
-									<nav aria-label="Page navigation">
-									  <ul class="pagination">
-									    <li>
-									      <a href="#" aria-label="Previous">
-									        <span aria-hidden="true">&laquo;</span>
-									      </a>
-									    </li>
-									    <li><a href="#">1</a></li>
-									    
-									    <li>
-									      <a href="#" aria-label="Next">
-									        <span aria-hidden="true">&raquo;</span>
-									      </a>
-									    </li>
-									  </ul>
-									</nav>
-
+									<div class="col-xs-12">  
+										<nav aria-label="Page navigation">
+										  <ul class="pagination">
+										    <li>
+										      <a href="#" aria-label="Previous" onclick="antPage()">
+										        <span aria-hidden="true">&laquo;</span>
+										      </a>
+										    </li>
+										    <li><a href="#"><span id="pagina"></span></a></li>
+										    <li>
+										      <a href="#" aria-label="Next" onclick="sigPage()">
+										        <span aria-hidden="true">&raquo;</span>
+										      </a>
+										    </li>
+										  </ul>
+										</nav>
+	
+									</div>
 								</div>
-								</div>
-		
 							</td>
 							<td class="prod-col-1">
 								<a href="javascript:muestraTablas()" class="link-table-product" role="button">Tabla de amortización</a>
