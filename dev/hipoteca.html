@@ -247,11 +247,11 @@
 							<td class="prod-col-2  hidden-xs">$00,000.00</td>
 							<td class="prod-col-3  hidden-xs">$00,000.00</td>
 						</tr>
-						<tr class="bordeTabla content-table tasa-interes">
-							<td class="tasa-interes">Tu tasa de interés</td>
-							<td class="prod-col-1 tasa-interes">$00,000.00</td>
-							<td class="prod-col-2  hidden-xs tasa-interes">$00,000.00</td>
-							<td class="prod-col-3  hidden-xs tasa-interes">$00,000.00</td>
+						<tr class="bordeTabla content-table ">
+							<td >Tu tasa de interés</td>
+							<td class="prod-col-1 tasa-interes">XX.XX %</td>
+							<td class="prod-col-2  hidden-xs tasa-interes">XX.XX %</td>
+							<td class="prod-col-3  hidden-xs tasa-interes">XX.XX %</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Tu tipo de tasa es</td>
@@ -298,7 +298,7 @@
 						</tr>
 						<tr>
 							<td>
-								<div class="row">
+								<div class="row hidden-lg hidden-md hidden-sm">
 								<div class="col-xs-12">  
 									<nav aria-label="Page navigation">
 									  <ul class="pagination">
@@ -322,20 +322,22 @@
 		
 							</td>
 							<td class="prod-col-1">
-								<a href="javascript:muestraTablas()" class="link-table-product">Tabla de amortización</a>
-								
-								
+								<a href="javascript:muestraTablas()" class="link-table-product" role="button">Tabla de amortización</a>
+								<br/>
+								<br class="hidden-xs" />
 								<input class="btn btn-primary button-text" type="button" value="Precalificar AHORA"> 
 							</td>
 							<td class="prod-col-2  hidden-xs">
 								<a href="javascript:muestraTablas()" class="link-table-product">Tabla de amortización</a>
-								
+								<br/>
+								<br class="hidden-xs" />
 								
 								<input class="btn btn-primary button-text" type="button" value="Precalificar AHORA">
 							</td>
 							<td class="prod-col-3  hidden-xs">
 								<a href="javascript:muestraTablas()" class="link-table-product">Tabla de amortización</a>
-								
+								<br/>
+								<br class="hidden-xs" />
 								
 								<input class="btn btn-primary button-text" type="button" value="Precalificar AHORA">
 							</td>
@@ -808,9 +810,9 @@
  	                                <p style="font-weight:600">Plazo:</p>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
- 	                           <div class="col-md-3">
+ 	                           <div class="col-md-3 ">
  	                                <p style="font-weight:600">Tasa Fija Anual:</p>
- 	                                <p>xxxxxxxxxx</p>
+ 	                                <p class="tasa-interes">xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
  	                                <p style="font-weight:600">Pago por mil:</p>
@@ -832,7 +834,7 @@
  	                           </div>
  	                           <div class="col-md-3">
  	                                <p style="font-weight:600">CAT:</p>
- 	                                <p>xxxxxxxxxx</p>
+ 	                                <p class="tasa-interes">xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
  	                                <p style="font-weight:600">Valor destructible:</p>
