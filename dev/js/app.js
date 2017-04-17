@@ -7,6 +7,8 @@
 		$("#seccionTablaDatos").hide();
 		$("#btnCalcular").hide();
 		$("#tablaProductos").show();
+		$("#seccionTabla").show();
+		muestraTablaProductos();
 		muestraIngresarDatos();
 		ocultaProgramas();
 	}
@@ -28,6 +30,13 @@
 		$("#ingresarDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 	}
 	
+	function ocultaIngresarDatos(){
+		$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
+		$("#ingresarDatos-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
+		$("#ingresarDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
+		$("#ingresarDatos").removeClass("flecha-2").addClass("flecha-1");
+	}
+	
 	function ocultaProgramas(){
 		$("#programas-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 		$("#programas-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
@@ -35,14 +44,25 @@
 		$("#programas").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 	}
 
+	function muestraTablaProductos(){
+		$("#flechaTabla").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
+		$("#flechaTabla").removeClass("flecha-2-color").addClass("flecha-1-color");
+		$("#tablaProductos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
+		$("#tablaProductos").removeClass("flecha-2").addClass("flecha-1");
+	}
+	
+	function ocultaTablaProductos(){
+		$("#flechaTabla").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
+		$("#flechaTabla").removeClass("flecha-1-color").addClass("flecha-2-color");
+		$("#tablaProductos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
+		$("#tablaProductos").removeClass("flecha-1").addClass("flecha-2");
+	}
+
 	function desplegarDatos() {
 		if ($("#simulador").is(':hidden')) {			
 			$("#simulador").show();
 			
-			$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
-			$("#ingresarDatos-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
-			$("#ingresarDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
-			$("#ingresarDatos").removeClass("flecha-2").addClass("flecha-1");
+			ocultaIngresarDatos();
 
 			$("#btnCalcular").show();
 			$("#tablaProductos").hide();
@@ -82,10 +102,7 @@
 		if ($("#seccionTabla").is(':hidden')) {
 			$("#seccionTabla").show();
 	
-			$("#flechaTabla").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
-			$("#flechaTabla").removeClass("flecha-2-color").addClass("flecha-1-color");
-			$("#tablaProductos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
-			$("#tablaProductos").removeClass("flecha-2").addClass("flecha-1");
+			muestraTablaProductos();
 			
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
@@ -93,10 +110,7 @@
 		} else {
 			$("#seccionTabla").hide();
 			
-			$("#flechaTabla").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
-			$("#flechaTabla").removeClass("flecha-1-color").addClass("flecha-2-color");
-			$("#tablaProductos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
-			$("#tablaProductos").removeClass("flecha-1").addClass("flecha-2");
+			ocultaTablaProductos();
 		}
 	}
 	
@@ -333,10 +347,28 @@
 
 		if (valor == "COMPRAR_CASA") {
 			$("#programas").show();
+			$("#tablaProductos").hide();
+			$("#tablaAmortizacion").hide();
+			$("#tablaDatos").hide();
+			$("#CAT").hide();
+			$("#simulador").show();
+			$("#btnCalcular").show();
+			ocultaIngresarDatos();
+			
 
-		} else {
+		} else if (valor == "COMPRAR_TERRENO" || valor == "REMODELAR_CASA" || valor == "CAMBIAR_HIPOTECA" || valor == "OBTENER_LIQUIDEZ") {
+			$("#tablaProductos").hide();
 			$("#programas").hide();
-		}
+			$("#productos").hide();
+			$("#tablaAmortizacion").hide();
+			$("#tablaDatos").hide();
+			$("#programas").hide();
+			$("#CAT").hide();
+			$("#simulador").show();
+			$("#btnCalcular").show();
+			ocultaIngresarDatos();
+			
+		} 
 
 		var arrayCalcularPor = new Array(
 				new Array("COMPRAR_CASA","precioCasa", "Cuánto cuesta la casa que quiero comprar"),
@@ -495,6 +527,10 @@
 
 	
 	$(document).ready(function() {
+		
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
 		
 		
 	$("#barra-1").change(
