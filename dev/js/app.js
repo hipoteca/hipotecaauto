@@ -14,14 +14,14 @@
 	}
 	
 	function despliegaPanel(selectedRow) {
-	if ($(selectedRow).hasClass("glyphicon-plus")) {
-		$(selectedRow).closest("tr").next("tr").show()
-		$(selectedRow).removeClass("glyphicon-plus").addClass("glyphicon-minus")
-	} else if ($(selectedRow).hasClass("glyphicon-minus")) {
-		$(selectedRow).closest("tr").next("tr").hide()
-		$(selectedRow).removeClass("glyphicon-minus").addClass("glyphicon-plus")
+		if ($(selectedRow).hasClass("glyphicon-plus")) {
+			$(selectedRow).closest("tr").next("tr").show()
+			$(selectedRow).removeClass("glyphicon-plus").addClass("glyphicon-minus")
+		} else if ($(selectedRow).hasClass("glyphicon-minus")) {
+			$(selectedRow).closest("tr").next("tr").hide()
+			$(selectedRow).removeClass("glyphicon-minus").addClass("glyphicon-plus")
+		}
 	}
-}
 	
 	function muestraIngresarDatos(){
 		$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
