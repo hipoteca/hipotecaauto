@@ -206,18 +206,17 @@ border-bottom: solid 0.3px #ccc;
 	display: block;
 	width: 3%;
 	float: left;
-	/*background: #006ec1;
-	width: 20px;*/
 	}
 	.frame-bar-right{
 	display: block;
-	width: 97%;
+	width: 100%;
 	float: left;
 	background: #FFF;
 	padding-left: 0px
 	}
 	.frame-content{
 	padding: 10px;
+	border: 0px;
 	}
 
 	
@@ -280,6 +279,14 @@ border-bottom: solid 0.3px #ccc;
 
 
 @media (min-width: $screen-sm-min) {
+	.frame-bar-right{
+	display: block;
+	width: 97%;
+	float: left;
+	background: #FFF;
+	padding-left: 0px
+	}
+
     .header-text{
 	    font-family: "BentonSansBBVA-Book";
         font-size: 14px;
@@ -289,6 +296,13 @@ border-bottom: solid 0.3px #ccc;
 	}
 }
 @media (min-width: $screen-md-min) {
+	.frame-bar-right{
+	display: block;
+	width: 97%;
+	float: left;
+	background: #FFF;
+	padding-left: 0px
+	}
   .header-text{
 	    font-family: "BentonSansBBVA-Book";
         font-size: 17px;
@@ -298,6 +312,13 @@ border-bottom: solid 0.3px #ccc;
 	}
 }
 @media (min-width: $screen-lg-min) {
+	.frame-bar-right{
+	display: block;
+	width: 97%;
+	float: left;
+	background: #FFF;
+	padding-left: 0px
+	}
   .header-text{
 	    font-family: "BentonSansBBVA-Book";
         font-size: 20px;
@@ -559,7 +580,7 @@ border-bottom: solid 0.3px #ccc;
     .small-text-amortizacion{
 	    font-family: StagSans-Book;
         font-size: 15px;
-        line-height: 8px;
+        line-height: 15px;
         color: #363636;
     }	
 }
@@ -651,7 +672,7 @@ border-bottom: solid 0.3px #ccc;
 
 	#tabDestinos2 .nav-pills li.active a {
 		color: #009ee5;
-		font-size: 9px;
+		font-size: 10px;
 		font-weight: 600;
 		border: 2px solid #009ee5;
 		background: #FFFFFF;
@@ -660,7 +681,7 @@ border-bottom: solid 0.3px #ccc;
 	@media (min-width: $screen-sm-min) {
         #tabDestinos2 .nav-pills li.active a {
 		    color: #009ee5;
-		    font-size: 9px;
+		    font-size: 12px;
 		    font-weight: 600;
 		    border: 2px solid #009ee5;
 		    background: #FFFFFF;
@@ -671,7 +692,7 @@ border-bottom: solid 0.3px #ccc;
     @media (min-width: $screen-md-min) {
         #tabDestinos2 .nav-pills li.active a {
 		    color: #009ee5;
-		    font-size: 9px;
+		    font-size: 13px;
 		    font-weight: 600;
 		    border: 2px solid #009ee5;
 		    background: #FFFFFF;
