@@ -187,6 +187,24 @@
 		}
 	}
 	
+	function desplegarRecursos(){
+		if ($("#recursos").is(':hidden')) {
+			$("#recursos").show();
+		
+		}else{
+			$("#recursos").hide();
+		}
+	}
+	
+	function desplegarGastos(){
+		if ($("#gasto").is(':hidden')) {
+			$("#gasto").show();
+		
+		}else{
+			$("#gasto").hide();
+		}
+	}
+	
 	function muestraTablas(){
 		
 		desplegarTabProductos();
@@ -572,7 +590,7 @@
 		console.info("productoPagina"+productoPagina)
 	}
 	$(document).ready(function() {
-		
+		$("#frameTablas").hide();
 		$("#pagina" ).text(productoPagina);
 		
 		$(function () {

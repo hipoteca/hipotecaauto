@@ -224,7 +224,7 @@
 
     <br>
 
-	<div class="frame-nav-tabs" id="seccionTablas">
+	<div class="frame-nav-tabs" id="frameTablas">
 		<div id="tablaProductos" 
 			class="frame-tab row flecha-1 frame-tab-border-1">
 			
@@ -857,9 +857,10 @@
  	                      </div>
  	                 </div>
  	                 <br>
- 	                 <div id="recursos">
- 	             	      <h4>Recursos Bancomer</h4>
- 	                      <div class="row">
+ 	                 <div>
+						<h4 class="visible-xs" onclick="desplegarRecursos()">Recursos Bancomer</h4>
+						<h4 class="hidden-xs">Recursos Bancomer</h4>
+							<div id="recursos" class="row">
  	                           <div class="col-md-3">
  	                                <p style="font-weight:600">Valor de la vivienda:</p>
  	                                <p>xxxxxxxxxx</p>
@@ -875,76 +876,79 @@
  	                      </div>
  	                 </div>
  	                 <br>
- 	                 <div id="gastos">
- 	                      <h4>Gastos de originación</h4>
- 	                      <div class="row">
- 	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Gastos notariales:</p>
- 	                                <div class="row">
- 	                                     <div class="col-md-4">
- 	                                          <p>xxxxxxxxxx</p>
- 	                                     </div>
- 	                                     <div class="col-md-8">
- 	                                          <div class="row">
- 	                                               <div class="col-md-6">
- 	                                                    <select id="selectGastosNota" class="form-control select-hd">
- 	                                                            <option>3%</option>
- 	                                                            <option>4%</option>
- 	                                                            <option>5%</option>
- 	                                                            <option>6%</option>
- 	                                                            <option>7%</option>
- 	                                                            <option>8%</option>
- 	                                                            <option>9%</option>
- 	                                                            <option>10%</option>
- 	                                                    </select>
- 	                                               </div>
- 	                                               <div class="col-md-6"></div>
- 	                                         </div>
- 	                                     </div>
- 	                                </div>
- 	                           </div>
- 	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Honorarios por avaluo:</p>
- 	                                <p>xxxxxxxxxx</p>
- 	                           </div>
- 	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Gastos de investigación:</p>
- 	                                <div class="row">
- 	                                     <div class="col-md-4">
- 	                                          <p>xxxxxxxxxx</p>
- 	                                      </div>
- 	                                      <div class="col-md-8">
- 	                                           <div class="row">
- 	                                                <div class="col-md-6">
- 	                                                    <select id="selectGastosInve" class="form-control form-control-alt">
- 	                                                            <option>una</option>
- 	                                                            <option>dos</option>
- 	                                                    </select>
- 	                                                </div>
- 	                                                <div class="col-md-6"></div>
- 	                                           </div>      
- 	                                      </div>
- 	                                </div>
- 	                           </div>
- 	                            <div class="col-md-3">
- 	                                <p style="font-weight:600">Comisión por apertura:</p>
- 	                                <p>xxxxxxxxxx</p>
- 	                           </div>
- 	                      </div>
- 	                      <div class="row">
- 	                           <div class="col-md-3">
- 	                      	        <p style="font-weight:600">Total de gastos</p>
- 	                      	        <p>xxxxxxxxxx</p>
- 	                           </div>
- 	                           <div class="col-md-3">
- 	                      	        <p style="font-weight:600">Enganche</p>
-       	                      	    <p>xxxxxxxxxx</p>
- 	                           </div>
- 	                           <div class="col-md-6">
- 	                      	        <p style="font-weight:600">Desembolso inicial requerido:</p>
- 	                      	        <p>xxxxxxxxxx</p>
- 	                           </div>
- 	                      </div>
+ 	                 <div>
+						<h4 class="visible-xs" onclick="desplegarGastos()" >Gastos de originación</h4>
+						<h4 class="hidden-xs">Gastos de originación</h4>
+							<div id="gasto">
+								<div class="row">
+								   <div class="col-md-3">
+										<p style="font-weight:600">Gastos notariales:</p>
+										<div class="row">
+											 <div class="col-md-4">
+												  <p>xxxxxxxxxx</p>
+											 </div>
+											 <div class="col-md-8">
+												  <div class="row">
+													   <div class="col-md-6">
+															<select id="selectGastosNota" class="form-control select-hd">
+																	<option>3%</option>
+																	<option>4%</option>
+																	<option>5%</option>
+																	<option>6%</option>
+																	<option>7%</option>
+																	<option>8%</option>
+																	<option>9%</option>
+																	<option>10%</option>
+															</select>
+													   </div>
+													   <div class="col-md-6"></div>
+												 </div>
+											 </div>
+										</div>
+								   </div>
+								   <div class="col-md-3">
+										<p style="font-weight:600">Honorarios por avaluo:</p>
+										<p>xxxxxxxxxx</p>
+								   </div>
+								   <div class="col-md-3">
+										<p style="font-weight:600">Gastos de investigación:</p>
+										<div class="row">
+											 <div class="col-md-4">
+												  <p>xxxxxxxxxx</p>
+											  </div>
+											  <div class="col-md-8">
+												   <div class="row">
+														<div class="col-md-6">
+															<select id="selectGastosInve" class="form-control form-control-alt">
+																	<option>una</option>
+																	<option>dos</option>
+															</select>
+														</div>
+														<div class="col-md-6"></div>
+												   </div>      
+											  </div>
+										</div>
+								   </div>
+									<div class="col-md-3">
+										<p style="font-weight:600">Comisión por apertura:</p>
+										<p>xxxxxxxxxx</p>
+								   </div>
+								</div>
+								<div class="row">
+								   <div class="col-md-3">
+										<p style="font-weight:600">Total de gastos</p>
+										<p>xxxxxxxxxx</p>
+								   </div>
+								   <div class="col-md-3">
+										<p style="font-weight:600">Enganche</p>
+										<p>xxxxxxxxxx</p>
+								   </div>
+								   <div class="col-md-6">
+										<p style="font-weight:600">Desembolso inicial requerido:</p>
+										<p>xxxxxxxxxx</p>
+								   </div>
+								</div>
+							</div>
  	                      <br>
  	                      <p>Para conocer el monto y concepto de las comisiones da click <a href=" https://www.bancomer.com/fbin/FMT_tcm1344-565438.pdf">aqui</a>,
  	                         llama al numero 11020015 opcion 1 agregando (55) desde el interior de la Republica o acude a nuestras sucursales.</p>
