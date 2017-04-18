@@ -35,7 +35,8 @@
 		$("#seccionTablaDatos").hide();
 		$("#btnCalcular").hide();
 		$("#tablaProductos").show();
-		$("#seccionTabla").show();
+		$("#seccionTablaProductos").show();
+		$("#frameTablas").show();
 		muestraTablaProductos();
 		muestraIngresarDatos();
 		ocultaProgramas();
@@ -97,6 +98,7 @@
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
 			$("#CAT").hide();
+			$("#frameTablas").hide();
 			
 		} else {
 			$("#simulador").hide();
@@ -119,6 +121,7 @@
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
 			$("#CAT").hide();
+			$("#frameTablas").hide();
 		} else {
 			$("#productos").hide();
 			
@@ -127,8 +130,8 @@
 	}
 
 	function desplegarTabProductos(){
-		if ($("#seccionTabla").is(':hidden')) {
-			$("#seccionTabla").show();
+		if ($("#seccionTablaProductos").is(':hidden')) {
+			$("#seccionTablaProductos").show();
 	
 			muestraTablaProductos();
 			
@@ -136,7 +139,7 @@
 			$("#tablaDatos").hide();
 
 		} else {
-			$("#seccionTabla").hide();
+			$("#seccionTablaProductos").hide();
 			
 			ocultaTablaProductos();
 		}
@@ -381,6 +384,7 @@
 			$("#CAT").hide();
 			$("#simulador").show();
 			$("#btnCalcular").show();
+			$("#frameTablas").hide();
 			ocultaIngresarDatos();
 			
 
@@ -394,6 +398,7 @@
 			$("#CAT").hide();
 			$("#simulador").show();
 			$("#btnCalcular").show();
+			$("#frameTablas").hide();
 			ocultaIngresarDatos();
 			
 		} 
@@ -587,5 +592,6 @@
 		$("#tablaAmortizacion").hide();
 		$("#tablaDatos").hide();
 		$("#CAT").hide();
+		$("#frameTablas").hide();
 
 	});
