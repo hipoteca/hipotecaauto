@@ -218,8 +218,6 @@ border-bottom: solid 0.3px #ccc;
 	padding: 10px;
 	border: 0px;
 	}
-
-	
 	
 	.encabezadoTabla {
 	  color: #006ec1;
@@ -277,7 +275,12 @@ border-bottom: solid 0.3px #ccc;
    font-size: 10px;
 }
 
-
+#seccionTablaAmort.seccion-amortizacion {
+		padding-left:	10px;
+		padding-right:	10px;
+		padding-top:	10px;
+		padding-bottom: 10px;
+}
 @media (min-width: $screen-sm-min) {
 	.frame-bar-right{
 	display: block;
