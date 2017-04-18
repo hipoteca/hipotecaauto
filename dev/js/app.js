@@ -525,7 +525,19 @@
 	}
 	
 
-	
+	var productoPagina=1;
+	var maxProductoPagina=3;
+	function siguiente(){
+		console.info("productoPagina"+productoPagina)
+		if(productoPagina<maxProductoPagina){
+			$('td.prod-col-'+productoPagina).addClass("hidden-xs")
+			productoPagina++;
+			$('td.prod-col-'+productoPagina).removeClass("hidden-xs")
+			
+
+		}
+		console.info("productoPagina"+productoPagina)
+	}
 	$(document).ready(function() {
 		
 		$(function () {
