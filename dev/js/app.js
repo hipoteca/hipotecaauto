@@ -420,23 +420,23 @@
 			ocultaIngresarDatos();
 			
 		} 
-
+		
 		var arrayCalcularPor = new Array(
 				new Array("COMPRAR_CASA","precioCasa", "Cuánto cuesta la casa que quiero comprar"),
-				new Array("COMPRAR_CASA", "montoCreditoCasa","El monto de credito que necesito"), 
-				new Array("COMPRAR_CASA", "pagoMensualCasa","Cuanto quiero pagar al mes"),
+				new Array("COMPRAR_CASA", "montoCreditoCasa","El monto de crédito que necesito"), 
+				new Array("COMPRAR_CASA", "pagoMensualCasa","Cuánto quiero pagar al mes"),
 				new Array("COMPRAR_TERRENO", "precioTerreno","Cuánto cuesta el terreno que quiero comprar"),
-				new Array("COMPRAR_TERRENO", "montoCreditoTerreno","El monto de credito que necesito"), 
+				new Array("COMPRAR_TERRENO", "montoCreditoTerreno","El monto de crédito que necesito"), 
 				new Array("COMPRAR_TERRENO", "pagoMensualTerreno","Cuánto quiero pagar al mes"),
 
 				new Array("REMODELAR_CASA", "precioCasaRemodelar","Cuánto cuesta la casa que quiero remodelar"),
-				new Array("REMODELAR_CASA", "montoCreditoRemodelar","El monto de credito que necesito"), 
+				new Array("REMODELAR_CASA", "montoCreditoRemodelar","El monto de crédito que necesito"), 
 				new Array("REMODELAR_CASA", "pagoMensualRemodelar","Cuánto quiero pagar al mes"),
 
-				new Array("CAMBIAR_HIPOTECA", "deudaCredito","Cuanto debo de mi credito"),
+				new Array("CAMBIAR_HIPOTECA", "deudaCredito","Cuánto debo de mi crédito"),
 
 				new Array("OBTENER_LIQUIDEZ", "precioCasaLiquidez","Cuánto cuesta la casa que tengo"), 
-				new Array("OBTENER_LIQUIDEZ", "montoCreditoLiquidez","El monto de credito que necesito"), 
+				new Array("OBTENER_LIQUIDEZ", "montoCreditoLiquidez","El monto de crédito que necesito"), 
 				new Array("OBTENER_LIQUIDEZ", "pagoMensualLiquidez","Cuánto quiero pagar al mes"));
 
 		document.getElementById("calcularPor").options.length = 0;
@@ -444,11 +444,15 @@
 			if (arrayCalcularPor[i][0] == valor) {
 				document.getElementById("calcularPor").options[document.getElementById("calcularPor").options.length] = new Option(arrayCalcularPor[i][2], arrayCalcularPor[i][1]);
 
+				if (valor == "CAMBIAR_HIPOTECA"){
+					$("#etiquetaSlider2").text("¿Cuanto vale mi Hipoteca?");
+				}else{
 				var v2 = document.getElementById("calcularPor");
 				var valor2 = v2.options[v2.selectedIndex].value;
 				var tituloSlider2 = v2.options[v2.selectedIndex].text;
 				var tituloSlider2 = "¿" + tituloSlider2 + "?";
 				$("#etiquetaSlider2").text(tituloSlider2);
+				}
 			}
 		}
 

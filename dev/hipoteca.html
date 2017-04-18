@@ -51,16 +51,17 @@
 	 			<div id="simulador" class="frame-content questions-text" >
 	 				<div  class="row">
 						<div class="col-xs-12 col-sm-6 col-md-4">
-							<label for="default">Calcular por<span class="glyphmap24-interrogacion"
+							<label for="default">Calcular por <span class="glyphmap24-interrogacion"
 							data-toggle="tooltip" data-placement="right"
 							title="Indica el valor por el cual deseas realizar tu simulación de crédito."></span> </label>
 							<select   class="form-control select-hd" id='calcularPor' onclick="calculaPor(this.value)"> 
 							</select> 
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
-							<label for="default">A cuantos años<span class="glyphmap24-interrogacion"
+							<label for="default">A cuántos años 
+							<span class="glyphmap24-interrogacion"
 							data-toggle="tooltip" data-placement="right"
-							title="El plazo en que deseas pagar tu crédito."></span> </label>
+							title="El plazo en qué deseas pagar tu crédito."></span> </label>
 							<select  class="form-control select-hd" id='plazo' > 
 							</select> 
 						</div>
@@ -68,7 +69,7 @@
 						     <label id="mensaje" for="default">Mi ingreso bruto mensual
 						            <span class="glyphmap24-interrogacion"
 						             data-toggle="tooltip" data-placement="right"
-						             title="El ingreso total antes de impuestos"></span> 
+						             title="Tu ingreso total antes de impuestos"></span> 
 						     </label>
 						     <input  class="form-control select-hd" id="ingresoMensual"
 						     name="ingresoMensual" >
@@ -76,72 +77,66 @@
 					</div><!-- END line1 -->
 					<br>
 					<div id="barraSilder1" class="row">
-							<div class="col-xs-12 col-sm-6 col-md-4">
-								<label id="etiquetaSlider1"></label>
-								<div class="form-group">
-									<input class="form-control select-hd" id="valBarra1"
-										name="cantidad"
-										onchange="setValueInSlider('barra-1',this.value)" />
-								</div>
+						<div class="col-xs-12 col-sm-6 col-md-12">
+							<label for="default" id="etiquetaSlider1"></label>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="form-group">
+								<input class="form-control select-hd" id="valBarra1" name="cantidad" onchange="setValueInSlider('barra-1',this.value)" />
 							</div>
-							<div class="col-md-8">
-								<div id="wrapper-1">
-									<div class="row">
-										<div class="col-xs-12 col-sm-6 col-md-12 ">
-											<br class="hidden-xs" /> <br /> <input id="barra-1"
-												type="text" data-slider-id="barra-1-Slider"
-												data-slider-tooltip="hide" /> <br /> <br />
-											<div class="row">
-												<div class="col-xs-6 slider-left">
-													<p id="b1-min-amount"></p>
-												</div>
-												<div class="col-xs-6 slider-right">
-													<p id="b1-max-amount"></p>
-												</div>
+						</div>
+						<div class="col-md-8">
+							<div id="wrapper-1">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-12 ">
+										<input id="barra-1" type="text" data-slider-tooltip="hide" /> 
+										<br /> 
+										<br />
+										<div class="row">
+											<div class="col-xs-6 slider-left">
+												<p id="b1-min-amount"></p>
+											</div>
+											<div class="col-xs-6 slider-right">
+												<p id="b1-max-amount"></p>
 											</div>
 										</div>
 									</div>
-
 								</div>
 							</div>
-							<div class="col-md-4"></div>
 						</div>
+					</div>
+					
 						<!-- END line2 -->
 
-
-						<div class="row">
-							<div class="col-md-4">
-								<label id="etiquetaSlider2"></label>
-							</div>
-							<div class="col-md-8">
-								<label id="ccc" for="default"></label>
+					<div id="barraSilder2" class="row">
+						<div class="col-xs-12 col-sm-6 col-md-12">
+							<label for="default" id="etiquetaSlider2"></label>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="form-group">
+								<input class="form-control select-hd" id="valBarra2" name="cantidad" onchange="setValueInSlider('barra-2',this.value)" />
 							</div>
 						</div>
-
-
-						<div id="barraSilder2" class="row">
-							<div class="col-xs-12 col-sm-6 col-md-4">
-
-								<div class="form-group">
-									<input class="form-control select-hd" type="text"
-										id="valBarra2" name="cantidad"
-										onchange="setValueInSlider('barra-2',this.value)" />
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-8">
-
-
-								<input id="barra-2" type="text" data-slider-tooltip="hide" />
+						<div class="col-md-8">
+							<div id="wrapper-2">
 								<div class="row">
-									<div class="col-xs-6 slider-left">
-										<p id="b2-min-amount"></p>
-									</div>
-									<div class="col-xs-6 slider-right">
-										<p id="b2-max-amount"></p>
+									<div class="col-xs-12 col-sm-6 col-md-12" >
+										<input id="barra-2" type="text" data-slider-tooltip="hide" />
+										<br /> 
+										<br />
+										<div class="row">
+											<div class="col-xs-6 slider-left">
+												<p id="b2-min-amount"></p>
+											</div>
+											<div class="col-xs-6 slider-right">
+												<p id="b2-max-amount"></p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 					<!-- END line3 -->
 	 			</div>
  			</section>
@@ -152,7 +147,7 @@
  				<span id="programas-flecha" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-right flecha-2-color" aria-hidden="true" onclick="desplegarProgramas()"></span>
  			</section>
  			<section class="frame-bar-right">
- 				<h4 onclick="desplegarProgramas()" class="header-text">Calcular en combinación con un crédito infonavit o fovissste</h4>
+ 				<h4 onclick="desplegarProgramas()" class="header-text">Calcular en combinación con un crédito Infonavit o Fovissste</h4>
  				<div id="productos" class="frame-content oculto2 questions-text">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-4" >
@@ -163,7 +158,7 @@
 						</select>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4">
-						<label for="default">¿Que programa tienes?</label>
+						<label for="default">¿Qué programa tienes?</label>
 						<select  class="form-control select-hd" id="selectPrograma" name="selectPrograma" onchange="tipoPrograma(this.value)") >
 						</select>
 					</div>
@@ -182,27 +177,28 @@
 					</div>
 				
 					<div id="sueldo" class="col-xs-12 col-sm-6 col-md-4">
-						<label for="default"><span class="number"></span>Sueldo del cliente<span class="glyphmap24-interrogacion"
-						data-toggle="tooltip" data-placement="right"></span> </label>
+						<label for="default"><span class="number"></span>Sueldo del cliente <span class="glyphmap24-interrogacion"
+						data-toggle="tooltip" data-placement="right"
+						title="Es el dinero qué recibes mensualmente."></span> </label>
 						<input  class="form-control select-hd">
 					</div>
 					<div id="monto" class="col-xs-12 col-sm-6 col-md-4">
-						<label for="default"><span class="number"></span>Monto del credito<span class="glyphmap24-interrogacion"
+						<label for="default"><span class="number"></span>Monto del crédito <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="Crédito otorgado por Infonavit o Fovissste."></span> </label>
 						<input  class="form-control select-hd" id="selectCompracasa" name="selectCompracasa" >
 					
 					</div>
 					<div  id="subcuenta" class="col-xs-12 col-sm-6 col-md-4">
-						<label for="default"><span class="number"></span>Saldo de subcuenta de vivienda<span class="glyphmap24-interrogacion"
+						<label for="default"><span class="number"></span>Saldo de subcuenta de vivienda <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
-						title="El dinero que tines ahorrado en tu afore y está compuesto por todas las aportaciones bimestrales que hace tu empresa, y corresponde al 5% de tu salario mensual integrado."></span> </label>
+						title="El dinero qué tines ahorrado en tu afore y está compuesto por todas las aportaciones bimestrales qué hace tu empresa, y corresponde al 5% de tu salario mensual integrado."></span> </label>
 						<input  class="form-control select-hd" id="subcuenta" name="subcuenta" >
 					</div>
 					<div id="gastos" class="col-xs-12 col-sm-6 col-md-4">
-						<label for="default"><span class="number"></span>Gastos infonavit<span class="glyphmap24-interrogacion"
+						<label for="default"><span class="number"></span>Gastos infonavit <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
-						title="Son los gastos iniciales que cubren impuestos y titulación por parte del Infonavit o Fovissste."></span> </label>
+						title="Son los gastos iniciales qué cubren impuestos y titulación por parte del Infonavit o Fovissste."></span> </label>
 						<input disabled class="form-control select-hd" id="gastos" name="gastos" >
 				
 					</div>
@@ -216,7 +212,7 @@
  	
  	<div  id="btnCalcular" class="panel-body">
 		<div class="col-xs-12 col-sm-12 col-md-12" align="right">
-			<button onclick="btnCalcularCredito()" class="btn btn-primary button-text">Calcular mi credito</button>
+			<button onclick="btnCalcularCredito()" class="btn btn-primary button-text">Calcular mi crédito</button>
 		</div>
 	</div>
 
@@ -232,14 +228,14 @@
 					<span id="flechaTabla" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarTabProductos()"></span>
 				</section>
 				<section class="frame-bar-right">
-					<h4 onclick="desplegarTabProductos()" class="header-text">¿Que opciones me convienen?</h4>
+					<h4 onclick="desplegarTabProductos()" class="header-text">¿Qué optiones me convienen?</h4>
 					<div id="seccionTablaProductos" class="frame-content table-responsive">
 					<table class="table table-striped">
 						<tr class="bordeTabla" >
 							<td class="header-table-product">Caracteristicas</td>
-							<td class="header-table-product prod-col-1" >1 Nombre del producto aqui tambien</td>
-							<td class="header-table-product prod-col-2 hidden-xs">2 Nombre del producto aqui tambien</td>
-							<td class="header-table-product prod-col-3  hidden-xs">3 Nombre del producto aqui tambien</td>
+							<td class="header-table-product prod-col-1" >1 Nombre del producto aqui también</td>
+							<td class="header-table-product prod-col-2 hidden-xs">2 Nombre del producto aqui también</td>
+							<td class="header-table-product prod-col-3  hidden-xs">3 Nombre del producto aqui también</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Pagarias al Mes + seguros y comisiones</td>
@@ -260,13 +256,13 @@
 							<td class="prod-col-3 hidden-xs">$00,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
-							<td>La casa que quieres vale</td>
+							<td>La casa qué quieres vale</td>
 							<td class="prod-col-1">$00,000.00</td>
 							<td class="prod-col-2 hidden-xs">$00,000.00</td>
 							<td class="prod-col-3 hidden-xs">$00,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
-							<td>El credito que te prestamos</td>
+							<td>El crédito qué te prestamos</td>
 							<td class="prod-col-1">$10,000.00</td>
 							<td class="prod-col-2 hidden-xs">$20,000.00</td>
 							<td class="prod-col-3 hidden-xs">$30,000.00</td>
@@ -290,12 +286,26 @@
 							<td class="prod-col-3 hidden-xs">$00,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
-							<td>Para este monto de credito de credito
+							<td>Para este monto de crédito
 							necesitas comprobar un ingreso bruto mensual por </td>
 							<td class="prod-col-1">$00,000.00</td>
 							<td class="prod-col-2  hidden-xs">$00,000.00</td>
 							<td class="prod-col-3  hidden-xs">$00,000.00</td>
 						</tr>
+						<tr class="bordeTabla content-table">
+							<td>CAT </td>
+							<td class="prod-col-1 tasa-interes">24%</td>
+							<td class="prod-col-2 tasa-interes hidden-xs">15.23%</td>
+							<td class="prod-col-3 tasa-interes hidden-xs">23.20%</td>
+						</tr>
+						
+						<tr class="bordeTabla content-table">
+							<td></td>
+							<td colspan="4"><p class="small-text-amortizacion">*CAT Sin IVA,para fines informativos y de comparación.Fecha de cálculo 28 de febrero del 2017.</p>
+								<p p class="small-text-amortizacion">Vigencia de la oferta hasta el 28 de abril del 2017.</p></td>
+							
+						</tr>
+						
 						<tr>
 							<td>
 								<div class="row hidden-lg hidden-md hidden-sm">
@@ -385,10 +395,12 @@
 					<div class="col-xs-12 col-sm-8 col-md-4">
 						<label for="default">Reducir tu:</label>
 						<select   class="form-control select-hd" id='' onclick="calculaPor(this.value)">
+							<option>Plazo</option>
+							<option>Mensualidad</option>
 						</select> 
 					</div>
 					<div class="col-xs-12 col-sm-4 col-md-4">
-						 <label for="default">¿Cuanto puedo pagar?</label>
+						 <label for="default">¿Cuánto puedo pagar?</label>
 						  <div class="input-group input-group-inset">
 							<span class="input-group-addon input-group-addon-inset"
 								  style="padding-top:8px;font-size:17px;"> 
@@ -407,32 +419,66 @@
 				
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-4">
-						<label>¿Por cuánto tiempo haré mi pago?</label>
+						<label>¿Cada cuándo haré mi pago?</label>
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-4">
-								 <select class="form-control select-hd" id=""></select>
+								 <select class="form-control select-hd" id="">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								 </select>
 							</div>
 							 
 							<br class="visible-xs" /> <br class="visible-xs"/> 
 							<br class="visible-xs" />
 							  
 							<div class=" col-xs-12 col-sm-6 col-md-8">
-								<select class="form-control select-hd" id=""></select>
+								<select class="form-control select-hd" id="">
+									<option>Meses</option>
+									<option>Años</option>
+								</select>
 							</div>
 						</div>
 					</div>
 					
+					<div class="col-xs-12 col-sm-6 col-md-8">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<label>¿Por cuánto tiempo haré mi pago?</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<input  class="form-control select-hd" id="tiempoPago"
+								name="ingresoMensual" >
+							</div>
+							
+							<br class="visible-xs" /> 
+							<br class="visible-xs"/> 
+							<br class="visible-xs" />
+							
+							<div class="col-xs-12 col-sm-6 col-md-6">
+							 <select   class="form-control select-hd" id=""> 
+								<option>Todo el crédito</option>
+								<option>Años</option>
+								<option>Solo una vez</option>
+							 </select>
+						</div>
+						</div>
+						
+					</div>
+
 					
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<label>¿Por cuánto tiempo haré mi pago?</label>
-						 <select   class="form-control select-hd" id=""> 
-						 </select>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<label>¿Por cuánto tiempo haré mi pago?</label>
-						 <select   class="form-control select-hd" id=""> 
-						 </select>
-					</div>
+					
 				</div>
 				
 				
@@ -466,7 +512,7 @@
 							<td>$7,000,000.00</td>
 							<td class="hidden-xs">$8,000,000.00</td>
 						</tr>
-						<tr class="schedule-panel hidden-md" >
+						<tr class="schedule-panel hidden-md contenidoTabla"" >
 							<td colspan="3">
 								<div><b>Amortización</b><span class="capital-amount">168.22</span>
 								</div>
@@ -777,7 +823,7 @@
 					</table>
 				</div>   
 			   <p class="small-text-amortizacion">Esta información constituye un ejercicio numérico de acuerdo a una simulación
-				  de condiciones de crédito, por lo que el usuraio queda enterado que la información
+				  de condiciones de crédito, por lo qué el usuraio queda enterado qué la información
 				  que obtenga, no constituye una solicitud  de crédito, ni implica obligación
 				  alguna para BBVA Bancomer, S.A.</p>
 			   <input style="float:right;" class="btn btn-primary" type="button" value="Precalificar AHORA">
@@ -919,7 +965,7 @@
 											  <div class="col-md-8">
 												   <div class="row">
 														<div class="col-md-6">
-															<select id="selectGastosInve" class="form-control form-control-alt">
+															<select id="selectGastosInve" class="form-control select-hd">
 																	<option>una</option>
 																	<option>dos</option>
 															</select>
@@ -951,7 +997,7 @@
 							</div>
  	                      <br>
  	                      <p>Para conocer el monto y concepto de las comisiones da click <a href=" https://www.bancomer.com/fbin/FMT_tcm1344-565438.pdf">aqui</a>,
- 	                         llama al numero 11020015 opcion 1 agregando (55) desde el interior de la Republica o acude a nuestras sucursales.</p>
+ 	                         llama al numero 11020015 option 1 agregando (55) desde el interior de la Republica o acude a nuestras sucursales.</p>
  	                      <input style="float:right;" class="btn btn-primary" type="button" value="Precalificar AHORA"> 
  	                        <br>
 							<br> 
@@ -961,10 +1007,11 @@
  	</div>
  	 <br>
      <br>
-    <div id="CAT" class="sombraAmortizacion" style="padding-left:20px">
- 	     <p>*CAT Sin IVA,para fines informativos y de comparació.Fecha de cálculo 28 de febrero del 2017.</p>
- 	     <p>Vigencia de la oferta hasta el 28 de abril del 2017.</p>
- 	</div>
+    <div id="CAT" class="sombraAmortizacion" style="padding-left: 20px">
+		<p>*CAT Sin IVA,para fines informativos y de comparación.Fecha de
+			cálculo 28 de febrero del 2017.</p>
+		<p>Vigencia de la oferta hasta el 28 de abril del 2017.</p>
+	</div>
    <br>
   <br>
 </div> <!-- END container -->
