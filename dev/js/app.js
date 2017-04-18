@@ -445,7 +445,7 @@
 				document.getElementById("calcularPor").options[document.getElementById("calcularPor").options.length] = new Option(arrayCalcularPor[i][2], arrayCalcularPor[i][1]);
 
 				if (valor == "CAMBIAR_HIPOTECA"){
-					$("#etiquetaSlider2").text("¿Cuanto vale mi Hipoteca?");
+					$("#etiquetaSlider2").text("¿Cuánto vale mi Hipoteca?");
 				}else{
 				var v2 = document.getElementById("calcularPor");
 				var valor2 = v2.options[v2.selectedIndex].value;
@@ -508,7 +508,7 @@
 		var arrayProgramas = new Array(
 
 		new Array("INFONAVIT", "cofinavit", "Cofinavit"), 
-		new Array("INFONAVIT", "infonavit", "Apoyo infonavit"),
+		new Array("INFONAVIT", "infonavit", "Apoyo Infonavit"),
 
 		new Array("FOVISSSTE", "alia2", "Alia2"), 
 		new Array("FOVISSSTE","respalda2", "Respalda2"));
