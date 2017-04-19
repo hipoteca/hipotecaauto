@@ -1,5 +1,3 @@
-
-
 	var productoPagina = 1;
 	var maxProductoPagina = 3;
 	var minProductoPagina = 1;

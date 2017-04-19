@@ -72,7 +72,7 @@
 						             title="Tu ingreso total antes de impuestos"></span> 
 						     </label>
 						     <input  class="form-control select-hd" id="ingresoMensual"
-						     name="ingresoMensual" >
+						     name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 						</div>
 					</div><!-- END line1 -->
 					<br>
@@ -82,7 +82,8 @@
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="form-group">
-								<input class="form-control select-hd" id="valBarra1" name="cantidad" onchange="setValueInSlider('barra-1',this.value)" />
+								<input class="form-control select-hd" id="valBarra1" name="cantidad" onchange="setValueInSlider('barra-1',this.value)" 
+								onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"/>
 							</div>
 						</div>
 						<div class="col-md-8">
@@ -114,7 +115,8 @@
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="form-group">
-								<input class="form-control select-hd" id="valBarra2" name="cantidad" onchange="setValueInSlider('barra-2',this.value)" />
+								<input class="form-control select-hd" id="valBarra2" name="cantidad" onchange="setValueInSlider('barra-2',this.value)" 
+								onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"/>
 							</div>
 						</div>
 						<div class="col-md-8">
@@ -186,14 +188,16 @@
 						<label for="default"><span class="number"></span>Monto del crédito <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="Crédito otorgado por Infonavit o Fovissste."></span> </label>
-						<input  class="form-control select-hd" id="selectCompracasa" name="selectCompracasa" >
+						<input  class="form-control select-hd" id="selectCompracasa" name="selectCompracasa" 
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 					
 					</div>
 					<div  id="subcuenta" class="col-xs-12 col-sm-6 col-md-4">
 						<label for="default"><span class="number"></span>Saldo de subcuenta de vivienda <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="El dinero qué tienes ahorrado en tu afore y está compuesto por todas las aportaciones bimestrales qué hace tu empresa, y corresponde al 5% de tu salario mensual integrado."></span> </label>
-						<input  class="form-control select-hd" id="subcuenta" name="subcuenta" >
+						<input  class="form-control select-hd" id="subcuenta" name="subcuenta" 
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 					</div>
 					<div id="gastos" class="col-xs-12 col-sm-6 col-md-4">
 						<label for="default"><span class="number"></span>Gastos Infonavit <span class="glyphmap24-interrogacion"
@@ -407,13 +411,13 @@
 								   <span>$</span>
 							</span>
 							<input  class="form-control select-hd" id="ingresoMensual"
-							 name="ingresoMensual" >
+							 name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 						  </div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4"> 
 					<label id="mensaje" for="default">¿A partir de qué numero de pago?</label>
 					<input  class="form-control select-hd" id="ingresoMensual"
-					name="ingresoMensual" >
+					name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 					</div>
 				</div>
 				
@@ -459,7 +463,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-6">
 								<input  class="form-control select-hd" id="tiempoPago"
-								name="ingresoMensual" >
+								name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 							</div>
 							
 							<br class="visible-xs" /> 
