@@ -1,0 +1,87 @@
+@media (min-width: $screen-lg-min) {
+     .frame-bar-right{
+        display: block;
+        width: 97%;
+        float: left;
+        background: #FFF;
+        padding-left: 0px
+    }
+    
+    .header-text{
+	    font-family: "BentonSansBBVA-Book";
+        font-size: 20px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+	}
+
+	.questions-text label{
+	    font-family: "StagSans-Book";
+        font-size: 17px;
+        color: #141414;
+    }
+
+    .select-hd {
+         font-family: "StagSans-Book";
+         font-size: 16px;
+         line-height: 20px;
+         color: #009ee5; 
+    }
+
+    .button-text{
+         font-family: "StagSans-Book";
+         font-size: 17px;
+         color: #ffffff;
+    }
+
+    .header-table-product{
+        font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #006ec1;	
+    }
+
+    .content-table td{
+	    font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #666666;
+    }
+
+    .link-table-product{
+	    font-family: "StagSans-Book";
+        font-size: 16px;
+        color: #006ec1;
+        text-decoration: underline;
+    }
+
+    .text-amortizacion{
+        font-family: "StagSans-Book";
+        font-size: 17px;
+        line-height: 11px;
+        letter-spacing: -0.1px;
+        color: #363636;
+    }
+    
+    .small-text-amortizacion{
+	    font-family: StagSans-Book;
+        font-size: 15px;
+        line-height: 8px;
+        color: #363636;
+    }
+
+    .menu-text{
+        font-family: "BentonSansBBVA-Book";
+        font-size: 18px;
+        line-height: 1.11;
+        text-align: left;
+        color: #363636;
+    }
+
+    #tabDestinos2 .nav-pills li.active a {
+        color: #009ee5;
+        font-size: 9px;
+        font-weight: 600;
+        border: 2px solid #009ee5;
+        background: #FFFFFF;
+        border-radius: 0px;
+    }
+}
