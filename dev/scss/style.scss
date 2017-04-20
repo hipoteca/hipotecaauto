@@ -1,5 +1,8 @@
 @import "bootstrap/bootstrap";
 @import "_Fonts";
+@import "variables";
+@import "mixins";
+@import "rules";
 
 $border-color: #D3457E;
 
@@ -437,6 +440,22 @@ $border-color: #D3457E;
 .bold-datos h5{
 	font-weight:600;
 }
+
+#simulador .slider-left p,
+#simulador .slider-right p {
+    font-size: 12px;
+    color: #c6c6c6;
+    padding-bottom: 10px
+}
+
+#simulador .slider-left p {
+    text-align: left
+}
+
+#simulador .slider-right p {
+    text-align: right
+}
+
 @import "style_sm";
 @import "style_md";
 @import "style_lg";
