@@ -203,6 +203,8 @@ $border-color: #D3457E;
 	display: block;
 	width: 3%;
 	float: left;
+	padding-left:8px;
+	padding-top: 8px;
 }
 
 .frame-bar-right{
@@ -327,7 +329,7 @@ $border-color: #D3457E;
 .small-text-amortizacion{
 	font-family: StagSans-Book;
 	font-size: 6px;
-	line-height: 8px;
+	line-height: 5px;
 	color: #363636;
 }			
 
@@ -353,15 +355,14 @@ $border-color: #D3457E;
 	border-radius: 0;
 }	
 #tabDestinos1 .nav-tabs li .active{
-
 	border: solid 0.3px #d8d8d8;
 }
 
 #tabDestinos1 .nav-tabs li a {
-	border: 0 none;
-	
+	border: 0 none;	
 	color: #c6c6c6;
-	border-radius: 0
+	border-radius: 0;
+	text-align:center;
 }
 #tabDestinos1 .nav-tabs li a:hover {
 	background: none;
@@ -383,6 +384,9 @@ $border-color: #D3457E;
    		color:black;
    		border: solid 1px #d8d8d8;
    		margin:0px;
+   }
+   a{
+   	text-align: center;
    }
 }
 
@@ -410,7 +414,29 @@ $border-color: #D3457E;
     float: left;
     padding-bottom: 5px;
 }
-
+.blue-text-underline a{
+	color:#009ee5;
+	text-decoration: underline;
+}
+.blue-text-underline img{
+	margin-left:4px;
+}
+.padding-money-sign{
+	padding-top:9px;
+	font-size:17px;
+}
+.align-table{
+	text-align: center;
+}
+.float-right{
+	float:right;
+}
+.padding-datos{
+	padding:10px;
+}
+.bold-datos h5{
+	font-weight:600;
+}
 @import "style_sm";
 @import "style_md";
 @import "style_lg";

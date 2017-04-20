@@ -21,21 +21,21 @@
 	
 	<section id="tabDestinos1" class="hidden-xs hidden-sm " >
   		<ul class="nav nav-tabs">
-    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
-    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
-    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  style="text-align:center;" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
-    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
-   			<li><a class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
+    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
+    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
+    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
+    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
+   			<li><a class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
   		</ul>
     </section> <!--  1 tabDestinos -->
     
     <section id="tabDestinos2" class="hidden-md hidden-lg">
   		<ul class="nav nav-pills nav-stacked">
-    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
-    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
-    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab"  style="text-align:center;" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
-    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
-   			<li><a  class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" style="text-align:center;" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
+    		<li class="active"><a class="menu-text" id="comprarCasa" href="#buyHouse" data-toggle="tab" onclick="cargarSelect('COMPRAR_CASA')">Comprar una casa</a></li>
+    		<li><a class="menu-text" id="comprarTerreno" href="#buyLand" data-toggle="tab" onclick="cargarSelect('COMPRAR_TERRENO')">Comprar un terreno</a></li>
+    		<li><a class="menu-text" id="remodelarCasa" href="#remodelingHouse" data-toggle="tab" onclick="cargarSelect('REMODELAR_CASA')">Remodelar mi casa</a></li>
+    		<li><a class="menu-text" id="cambiarHipoteca" href="#changeHouse" data-toggle="tab" onclick="cargarSelect('CAMBIAR_HIPOTECA')">Cambiar mi hipoteca</a></li>
+   			<li><a  class="menu-text" id="obtenerLiquidez" href="#money" data-toggle="tab" onclick="cargarSelect('OBTENER_LIQUIDEZ')">Obtener liquidez</a></li>
   		</ul>
     </section> <!--  2 tabDestinos -->
     
@@ -43,7 +43,7 @@
 		
  		<div  id="ingresarDatos" class="frame-tab row flecha-1 frame-tab-border-1" > 	
  			<section class="frame-bar-left hidden-xs">
- 				<span id="ingresarDatos-flecha" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarDatos()"></span>
+ 				<span id="ingresarDatos-flecha" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarDatos()"></span>
  			</section>
  			<section class="frame-bar-right">
  				<h4 onclick="desplegarDatos()" class="header-text">Ingresar datos</h4>
@@ -145,7 +145,7 @@
 
  		<div id="programas" class="frame-tab row flecha-2 frame-tab-border-2" >
  			<section class="frame-bar-left hidden-xs"">	
- 				<span id="programas-flecha" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-right flecha-2-color" aria-hidden="true" onclick="desplegarProgramas()"></span>
+ 				<span id="programas-flecha" class="glyphicon glyphicon-menu-right flecha-2-color" aria-hidden="true" onclick="desplegarProgramas()"></span>
  			</section>
  			<section class="frame-bar-right">
  				<h4 onclick="desplegarProgramas()" class="header-text">Calcular en combinación con un crédito Infonavit o Fovissste</h4>
@@ -228,7 +228,7 @@
 			class="frame-tab row flecha-1 frame-tab-border-1">
 			
 				<section class="frame-bar-left hidden-xs">
-					<span id="flechaTabla" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarTabProductos()"></span>
+					<span id="flechaTabla" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarTabProductos()"></span>
 				</section>
 				<section class="frame-bar-right">
 					<h4 onclick="desplegarTabProductos()" class="header-text">¿Qué opciones me convienen?</h4>
@@ -363,11 +363,10 @@
 	
  	<br>
 	
- 	<div id="tablaAmortizacion"class="frame-tab row flecha-1 frame-tab-border-1">
+ 	<div id="tablaAmortizacion" class="frame-tab row flecha-1 frame-tab-border-1">
 		
 		<section class="frame-bar-left hidden-xs">
-			<span id="tabAmort-flecha" 
-			style="padding-left:8px; padding-top: 8px;" 
+			<span id="tabAmort-flecha"
 			class="glyphicon glyphicon-menu-down flecha-1-color" 
 			aria-hidden="true" onclick="desplegarTabAmort()"></span>
 		</section>
@@ -378,13 +377,13 @@
 					<h4 onclick="desplegarTabAmort()" class="header-text">Tabla de amortización</h4>
 				 </div>
 				 <div class="col-xs-12 col-sm-6 col-md-4">
-					  <div class="row">
+					  <div class="row blue-text-underline">
 						   <div class="col-xs-1 col-sm-3 col-md-4"></div>
 						   <div class="col-xs-4 col-sm-4 col-md-4">
-								<a href="#" style="color:#009ee5">Actualizar</a>
+								<a href="#">Actualizar</a>
 						   </div>
 						   <div class="col-xs-6 col-sm-5 col-md-4">
-								<a href="#" style="color:#009ee5">Descargar<img src="img\pdf.png" style="margin-left:4px" height="25" width="20"></a>
+								<a href="#">Descargar<img src="img\pdf.png" height="25" width="20"></a>
 						   </div>
 					  </div>
 				 </div>
@@ -405,8 +404,7 @@
 					<div class="col-xs-12 col-sm-4 col-md-4">
 						 <label for="default">¿Cuánto puedo pagar?</label>
 						  <div class="input-group input-group-inset">
-							<span class="input-group-addon input-group-addon-inset"
-								  style="padding-top:8px;font-size:17px;"> 
+							<span class="input-group-addon input-group-addon-inset padding-money-sign"> 
 								   <span>$</span>
 							</span>
 							<input  class="form-control select-hd" id="ingresoMensual"
@@ -477,20 +475,12 @@
 							 </select>
 						</div>
 						</div>
-						
 					</div>
-
-					
-					
 				</div>
-				
-				
-				
-				
 				<br>
 				<p class="small-text-amortizacion">*Crédito sujeto a cobro de IVA sobre interés real y comisiones de forma mensual.</p>   
 			   <div class="table-responsive">
-					<table class="table table-striped " style="text-align: center">
+					<table class="table table-striped align-table">
 						<tr class="bordeTabla encabezadoTabla">
 							<td class="tamanioCeldasEncabezado">Pago</td>
 							<td class="tamanioCeldasEncabezado">Sueldo insoluto</td>
@@ -829,20 +819,17 @@
 				  de condiciones de crédito, por lo qué el usuaraio queda enterado qué la información
 				  que obtenga, no constituye una solicitud  de crédito, ni implica obligación
 				  alguna para BBVA Bancomer, S.A.</p>
-			   <input style="float:right;" class="btn btn-primary" type="button" value="Precalificar AHORA">
+			   <input class="btn btn-primary float-right" type="button" value="Precalificar AHORA">
 			   <br>
 			   <br>
 			</div>		
  		</section>
  	</div>
  	<br>
-
  	<div id="tablaDatos"
-		 class="frame-tab row flecha-2 frame-tab-border-2">
-		 
+		 class="frame-tab row flecha-2 frame-tab-border-2"> 
  			<section class="frame-bar-left hidden-xs"">
  				<span id="tabDatos-flecha" 
-				style="padding-left:8px; padding-top: 8px;" 
 				class="glyphicon glyphicon-menu-right flecha-2-color" 
 				aria-hidden="true" onclick="desplegarTabDatos()"></span>
  			</section>
@@ -852,55 +839,55 @@
  			             <h4 class="header-text" onclick="desplegarTabDatos()">Datos del producto</h4>
  			         </div>
  	            </div>
- 	            <div id="seccionTablaDatos" style="padding:10px">
+ 	            <div id="seccionTablaDatos padding-datos">
  	                 <div id="datosPro">
- 	                      <div class="row">
+ 	                      <div class="row bold-datos">
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Plazo:</p>
+ 	                                <h5>Plazo:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3 ">
- 	                                <p style="font-weight:600">Tasa Fija Anual:</p>
+ 	                                <h5>Tasa Fija Anual:</h5>
  	                                <p class="tasa-interes">xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Pago por mil:</p>
+ 	                                <h5>Pago por mil:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Com. por aut. diferida:</p>
+ 	                                <h5>Com. por aut. diferida:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                      </div>
- 	                      <div class="row">
+ 	                      <div class="row bold-datos">
                                <div class="col-md-3">
- 	                                <p style="font-weight:600">Factor seguro de vida:</p>
+ 	                                <h5>Factor seguro de vida:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Factor seguro de daños:</p>
+ 	                                <h5>Factor seguro de daños:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">CAT:</p>
+ 	                                <h5>CAT:</h5>
  	                                <p class="tasa-interes">xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Valor destructible:</p>
+ 	                                <h5>Valor destructible:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                      </div>
- 	                      <div class="row">
+ 	                      <div class="row bold-datos">
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Financiamiento máximo:</p>
+ 	                                <h5>Financiamiento máximo:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Factor de incremento anual:</p>
+ 	                                <h5>Factor de incremento anual:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-6">
- 	                                <p style="font-weight:600">Ingreso mensual estimado:</p>
+ 	                                <h5>Ingreso mensual estimado:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                      </div>
@@ -909,17 +896,17 @@
  	                 <div>
 						<h4 class="visible-xs" onclick="desplegarRecursos()">Recursos Bancomer</h4>
 						<h4 class="hidden-xs">Recursos Bancomer</h4>
-							<div id="recursos" class="row">
+							<div id="recursos" class="row bold-datos">
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Valor de la vivienda:</p>
+ 	                                <h5>Valor de la vivienda:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-3">
- 	                                <p style="font-weight:600">Crédito BBVA Bancomer:</p>
+ 	                                <h5>Crédito BBVA Bancomer:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                           <div class="col-md-6">
- 	                                <p style="font-weight:600">Financiamiento real:</p>
+ 	                                <h5>Financiamiento real:</h5>
  	                                <p>xxxxxxxxxx</p>
  	                           </div>
  	                      </div>
@@ -929,9 +916,9 @@
 						<h4 class="visible-xs" onclick="desplegarGastos()" >Gastos de originación</h4>
 						<h4 class="hidden-xs">Gastos de originación</h4>
 							<div id="gasto">
-								<div class="row">
+								<div class="row bold-datos">
 								   <div class="col-md-3">
-										<p style="font-weight:600">Gastos notariales:</p>
+										<h5>Gastos notariales:</h5>
 										<div class="row">
 											 <div class="col-md-4">
 												  <p>xxxxxxxxxx</p>
@@ -956,11 +943,11 @@
 										</div>
 								   </div>
 								   <div class="col-md-3">
-										<p style="font-weight:600">Honorarios por avalúo:</p>
+										<h5>Honorarios por avalúo:</h5>
 										<p>xxxxxxxxxx</p>
 								   </div>
 								   <div class="col-md-3">
-										<p style="font-weight:600">Gastos de investigación:</p>
+										<h5>Gastos de investigación:</h5>
 										<div class="row">
 											 <div class="col-md-4">
 												  <p>xxxxxxxxxx</p>
@@ -979,21 +966,21 @@
 										</div>
 								   </div>
 									<div class="col-md-3">
-										<p style="font-weight:600">Comisión por apertura:</p>
+										<h5>Comisión por apertura:</h5>
 										<p>xxxxxxxxxx</p>
 								   </div>
 								</div>
-								<div class="row">
+								<div class="row bold-datos">
 								   <div class="col-md-3">
-										<p style="font-weight:600">Total de gastos</p>
+										<h5>Total de gastos</h5>
 										<p>xxxxxxxxxx</p>
 								   </div>
 								   <div class="col-md-3">
-										<p style="font-weight:600">Enganche</p>
+										<h5>Enganche</h5>
 										<p>xxxxxxxxxx</p>
 								   </div>
 								   <div class="col-md-6">
-										<p style="font-weight:600">Desembolso inicial requerido:</p>
+										<h5>Desembolso inicial requerido:</h5>
 										<p>xxxxxxxxxx</p>
 								   </div>
 								</div>
@@ -1001,7 +988,7 @@
  	                      <br>
  	                      <p>Para conocer el monto y concepto de las comisiones da click <a href=" https://www.bancomer.com/fbin/FMT_tcm1344-565438.pdf">aquí</a>,
  	                         llama al número 11020015 opción 1 agregando (55) desde el interior de la Republica o acude a nuestras sucursales.</p>
- 	                      <input style="float:right;" class="btn btn-primary" type="button" value="Precalificar AHORA"> 
+ 	                      <input class="btn btn-primary float-right" type="button" value="Precalificar AHORA"> 
  	                        <br>
 							<br> 
  	                 </div>
@@ -1010,7 +997,7 @@
  	</div>
  	 <br>
      <br>
-    <div id="CAT" class="sombraAmortizacion" style="padding-left: 20px">
+    <div id="CAT" class="sombraAmortizacion">
 		<p>*CAT Sin IVA, para fines informativos y de comparación. Fecha de
 			cálculo 28 de febrero del 2017.</p>
 		<p>Vigencia de la oferta hasta el 28 de abril del 2017.</p>
