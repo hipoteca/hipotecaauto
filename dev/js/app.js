@@ -44,7 +44,6 @@
 		$("#tablaAmortizacion").hide();
 		$("#tablaDatos").hide();
 		$("#productos").hide();
-		$("#seccionTablaDatos").hide();
 		$("#tablaProductos").show();
 		$("#seccionTablaProductos").show();
 		$("#frameTablas").show();
@@ -215,6 +214,7 @@
 		desplegarTabProductos();
 		$("#tablaAmortizacion").show();
 		$("#tablaDatos").show();
+		$("#seccionTablaDatos").hide();
 	}
 	
 	/* End Interaciones de para cada seccion */
