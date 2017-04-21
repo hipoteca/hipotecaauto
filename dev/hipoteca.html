@@ -44,10 +44,9 @@
 		
  		<div  id="ingresarDatos" class="frame-tab row flecha-1 frame-tab-border-1" > 	
  			<section class="frame-bar-left hidden-xs">
- 				<span id="ingresarDatos-flecha" style="padding-left:8px;padding-top: 8px;" class="glyphicon glyphicon-menu-down flecha-1-color" aria-hidden="true" onclick="desplegarDatos()"></span>
  			</section>
  			<section class="frame-bar-right">
- 				<h4 onclick="desplegarDatos()" class="header-text">Ingresar datos</h4>
+ 				<h4 class="header-text">Ingresar datos</h4>
 	 			<div id="simulador" class="frame-content questions-text" >
 	 				<div  class="row">
 						<div class="col-xs-12 col-sm-6 col-md-4">
@@ -58,21 +57,24 @@
 							</select> 
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
+							<br class="visible-xs" />
 							<label for="default">A cuántos años 
 							<span class="glyphmap24-interrogacion"
 							data-toggle="tooltip" data-placement="right"
-							title="El plazo en qué deseas pagar tu crédito."></span> </label>
+							title="El plazo en que deseas pagar tu crédito."></span> </label>
 							<select  class="form-control select-hd" id='plazo' > 
 							</select> 
 						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4"> 
-						     <label id="mensaje" for="default">Mi ingreso bruto mensual
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<br class="visible-xs visible-sm" />
+						    <label id="mensaje" for="default">Mi ingreso bruto mensual
 						            <span class="glyphmap24-interrogacion"
 						             data-toggle="tooltip" data-placement="right"
 						             title="Tu ingreso total antes de impuestos"></span> 
-						     </label>
-						     <input  class="form-control select-hd" id="ingresoMensual"
-						     name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
+						    </label>
+						    <input  class="form-control select-hd" id="ingresoMensualBruto"
+						     name="ingresoMensualBruto" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"
+							 onchange="formatoCantidad('ingresoMensualBruto',this.value)">
 						</div>
 					</div><!-- END line1 -->
 					<br>
@@ -82,15 +84,18 @@
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="form-group">
-								<input class="form-control select-hd" id="valBarra1" name="cantidad" onchange="setValueInSlider('barra-1',this.value)" 
+								<input class="form-control select-hd" id="valBarra1" name="cantidad" 
+								onchange="setValueInSlider('barra-1',this.value),formatoCantidad('valBarra1',this.value)" 
 								onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"/>
+								
 							</div>
 						</div>
 						<div class="col-md-8">
 							<div id="wrapper-1">
 								<div class="row">
 									<div class="col-xs-12 col-sm-6 col-md-12 ">
-										<input id="barra-1" type="text" data-slider-tooltip="hide" /> 
+										<input id="barra-1" type="text" data-slider-tooltip="hide" 
+										/> 
 										<br /> 
 										<br />
 										<div class="row">
@@ -116,6 +121,7 @@
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="form-group">
 								<input class="form-control select-hd" id="valBarra2" name="cantidad" onchange="setValueInSlider('barra-2',this.value)" 
+								onchange="setValueInSlider('barra-2',this.value),formatoCantidad('valBarra1',this.value)"
 								onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"/>
 							</div>
 						</div>
@@ -123,7 +129,8 @@
 							<div id="wrapper-2">
 								<div class="row">
 									<div class="col-xs-12 col-sm-6 col-md-12" >
-										<input id="barra-2" type="text" data-slider-tooltip="hide" />
+										<input id="barra-2" type="text" data-slider-tooltip="hide" 
+										onchange="formatoCantidad('barra-2',this.value)"/>
 										<br /> 
 										<br />
 										<div class="row">
@@ -182,22 +189,26 @@
 						<label for="default"><span class="number"></span>Sueldo del cliente <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="Es el dinero qué recibes mensualmente."></span> </label>
-						<input  class="form-control select-hd">
+						<input  class="form-control select-hd"
+						id="sueldoCliente" onchange="formatoCantidad('sueldoCliente',this.value)"
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 					</div>
 					<div id="monto" class="col-xs-12 col-sm-6 col-md-4">
 						<label for="default"><span class="number"></span>Monto del crédito <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="Crédito otorgado por Infonavit o Fovissste."></span> </label>
-						<input  class="form-control select-hd" id="selectCompracasa" name="selectCompracasa" 
-						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
+						<input  class="form-control select-hd" id="montoCredito" name="selectCompracasa" 
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"
+						onchange="formatoCantidad('montoCredito',this.value)">
 					
 					</div>
 					<div  id="subcuenta" class="col-xs-12 col-sm-6 col-md-4">
 						<label for="default"><span class="number"></span>Saldo de subcuenta de vivienda <span class="glyphmap24-interrogacion"
 						data-toggle="tooltip" data-placement="right"
 						title="El dinero qué tienes ahorrado en tu afore y está compuesto por todas las aportaciones bimestrales qué hace tu empresa, y corresponde al 5% de tu salario mensual integrado."></span> </label>
-						<input  class="form-control select-hd" id="subcuenta" name="subcuenta" 
-						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
+						<input  class="form-control select-hd" id="saldoSubcuenta" name="subcuenta" 
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"
+						onchange="formatoCantidad('saldoSubcuenta',this.value)">
 					</div>
 					<div id="gastos" class="col-xs-12 col-sm-6 col-md-4">
 						<label for="default"><span class="number"></span>Gastos Infonavit <span class="glyphmap24-interrogacion"
@@ -233,80 +244,80 @@
 				</section>
 				<section class="frame-bar-right">
 					<h4 onclick="desplegarTabProductos()" class="header-text">¿Qué opciones me convienen?</h4>
-					<div id="seccionTablaProductos" class="frame-content table-responsive">
+				<div id="seccionTablaProductos" class="frame-content table-responsive">
 					<table class="table table-striped">
 						<tr class="bordeTabla" >
 							<td class="header-table-product">Características</td>
-							<td class="header-table-product prod-col-1" >1 Nombre del producto aqui también</td>
-							<td class="header-table-product prod-col-2 hidden-xs">2 Nombre del producto aqui también</td>
-							<td class="header-table-product prod-col-3  hidden-xs">3 Nombre del producto aqui también</td>
+							<td class="header-table-product prod-col-1" >HIPOTECA BANCOMER FIJA</td>
+							<td class="header-table-product prod-col-2 hidden-xs">HIPOTECA BANCOMER CRECIENTE</td>
+							<td class="header-table-product prod-col-3  hidden-xs">HIPOTECA FIJA</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Pagarías al Mes + seguros y comisiones</td>
-							<td class="prod-col-1">$10,000.00</td>
-							<td class="prod-col-2  hidden-xs">$20,000.00</td>
-							<td class="prod-col-3  hidden-xs">$30,000.00</td>
+							<td class="prod-col-1">$ 169,701 MXN</td>
+							<td class="prod-col-2  hidden-xs">$ 149,069 MXN</td>
+							<td class="prod-col-3  hidden-xs">$ 130,600 MXN</td>
 						</tr>
 						<tr class="bordeTabla content-table ">
 							<td >Tu tasa de interés</td>
-							<td class="prod-col-1 tasa-interes">XX.XX %</td>
-							<td class="prod-col-2  hidden-xs tasa-interes">XX.XX %</td>
-							<td class="prod-col-3  hidden-xs tasa-interes">XX.XX %</td>
+							<td class="prod-col-1 tasa-interes">11.80 %</td>
+							<td class="prod-col-2  hidden-xs tasa-interes">11.20% - 12.00% - 12.80 %</td>
+							<td class="prod-col-3  hidden-xs tasa-interes">12.00 %</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Tu tipo de tasa es</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">Tasa fija anual</td>
+							<td class="prod-col-2 hidden-xs">Tasa creciente variable conocida</td>
+							<td class="prod-col-3 hidden-xs">Tasa fija</td>
 						</tr>
 						<tr class="bordeTabla content-table">
-							<td>La casa qué quieres vale</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td>La casa que quieres vale</td>
+							<td class="prod-col-1">$ 18,364,000.00</td>
+							<td class="prod-col-2 hidden-xs">$ 18,364,000.00</td>
+							<td class="prod-col-3 hidden-xs">$ 18,364,000.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
-							<td>El crédito qué te prestamos</td>
-							<td class="prod-col-1">$10,000.00</td>
-							<td class="prod-col-2 hidden-xs">$20,000.00</td>
-							<td class="prod-col-3 hidden-xs">$30,000.00</td>
+							<td>El crédito que te prestamos</td>
+							<td class="prod-col-1">$ 15,609,400.00</td>
+							<td class="prod-col-2 hidden-xs">$ 15,609,400.00</td>
+							<td class="prod-col-3 hidden-xs">$ 15,609,400.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Te financiamos</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">85 %</td>
+							<td class="prod-col-2 hidden-xs">85 %</td>
+							<td class="prod-col-3 hidden-xs">85 %</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Elegiste el plazo</td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">20 Años</td>
+							<td class="prod-col-2 hidden-xs">20 Años</td>
+							<td class="prod-col-3 hidden-xs">20 Años</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Necesitas de enganche</td>
-							<td class="prod-col-1 ">$00,000.00</td>
-							<td class="prod-col-2 hidden-xs">$00,000.00</td>
-							<td class="prod-col-3 hidden-xs">$00,000.00</td>
+							<td class="prod-col-1 ">$ 2,754,600.00</td>
+							<td class="prod-col-2 hidden-xs">$ 2,754,600.00</td>
+							<td class="prod-col-3 hidden-xs">$ 2,754,600.00</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>Para este monto de crédito
 							necesitas comprobar un ingreso bruto mensual por </td>
-							<td class="prod-col-1">$00,000.00</td>
-							<td class="prod-col-2  hidden-xs">$00,000.00</td>
-							<td class="prod-col-3  hidden-xs">$00,000.00</td>
+							<td class="prod-col-1">$ 436,055.40</td>
+							<td class="prod-col-2  hidden-xs">$ 384,476.30</td>
+							<td class="prod-col-3  hidden-xs">$ 355,098.38</td>
 						</tr>
 						<tr class="bordeTabla content-table">
 							<td>CAT </td>
-							<td class="prod-col-1 tasa-interes">24%</td>
-							<td class="prod-col-2 tasa-interes hidden-xs">15.23%</td>
-							<td class="prod-col-3 tasa-interes hidden-xs">23.20%</td>
+							<td class="prod-col-1 tasa-interes">14.1% *</td>
+							<td class="prod-col-2 tasa-interes hidden-xs">14.7% *</td>
+							<td class="prod-col-3 tasa-interes hidden-xs">15.2%</td>
 						</tr>
 						
 						<tr class="bordeTabla content-table">
 							<td></td>
-							<td colspan="4"><p class="small-text-amortizacion">*CAT Sin IVA, para fines informativos y de comparación. Fecha de cálculo 28 de febrero del 2017.</p>
-								<p p class="small-text-amortizacion">Vigencia de la oferta hasta el 28 de abril del 2017.</p></td>
+							<td colspan="4"><p class="small-text-amortizacion">*CAT Sin IVA, para fines informativos y de comparación. Fecha de cálculo 28 de febrero del 2017. Vigencia de la oferta hasta el 28 de abril del 2017.</p>
+							</td>
 							
 						</tr>
 						
@@ -317,17 +328,17 @@
 									<div class="col-xs-12">  
 										<nav aria-label="Page navigation">
 										  <ul class="pagination">
-										    <li>
-										      <a href="#" aria-label="Previous" onclick="antPage()">
-										        <span aria-hidden="true">&laquo;</span>
-										      </a>
-										    </li>
-										    <li><a href="#"><span id="pagina"></span></a></li>
-										    <li>
-										      <a href="#" aria-label="Next" onclick="sigPage()">
-										        <span aria-hidden="true">&raquo;</span>
-										      </a>
-										    </li>
+											<li>
+											  <a href="#" aria-label="Previous" onclick="antPage()">
+												<span aria-hidden="true">&laquo;</span>
+											  </a>
+											</li>
+											<li><a href="#"><span id="pagina"></span></a></li>
+											<li>
+											  <a href="#" aria-label="Next" onclick="sigPage()">
+												<span aria-hidden="true">&raquo;</span>
+											  </a>
+											</li>
 										  </ul>
 										</nav>
 	
@@ -382,7 +393,7 @@
 					  <div class="row">
 						   <div class="col-xs-1 col-sm-3 col-md-4"></div>
 						   <div class="col-xs-4 col-sm-4 col-md-4">
-								<a href="#" style="color:#009ee5">Actualizar</a>
+								<a id="actualizar" href="#" style="color:#009ee5">Actualizar</a>
 						   </div>
 						   <div class="col-xs-6 col-sm-5 col-md-4">
 								<a href="#" style="color:#009ee5">Descargar<img src="img\pdf.png" style="margin-left:4px" height="25" width="20"></a>
@@ -390,7 +401,7 @@
 					  </div>
 				 </div>
 			</div>
-			<div id="seccionTablaAmort" class="questions-text seccion-amortizacion"  >
+			<div id="seccionTablaAmort" class="questions-text seccion-amortizacion frame-content"  >
 				<p class="text-amortizacion">Si tienes ingresos extras puedes realizar pagos anticipados y/o adelantados.</p>      
 				<p class="text-amortizacion">Los pagos anticipados te benefician y podrán reducir el plazo  o la mensualidad en cuyo caso la Tabla de Amortización cambiará.</p>
 				
@@ -403,21 +414,20 @@
 							<option>Mensualidad</option>
 						</select> 
 					</div>
+					
 					<div class="col-xs-12 col-sm-4 col-md-4">
-						 <label for="default">¿Cuánto puedo pagar?</label>
-						  <div class="input-group input-group-inset">
-							<span class="input-group-addon input-group-addon-inset"
-								  style="padding-top:8px;font-size:17px;"> 
-								   <span>$</span>
-							</span>
-							<input  class="form-control select-hd" id="ingresoMensual"
-							 name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
-						  </div>
+						<label for="default">¿Cuanto puedo pagar?</label>
+						 <input class="form-control select-hd" id="cuantoPagar"
+							name="cuantoPagar"
+							onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;"
+							onchange="formatoCantidad('cuantoPagar',this.value)">
 					</div>
+					
 					<div class="col-xs-12 col-sm-6 col-md-4"> 
-					<label id="mensaje" for="default">¿A partir de qué numero de pago?</label>
-					<input  class="form-control select-hd" id="ingresoMensual"
-					name="ingresoMensual" onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
+						<label id="mensaje" for="default">¿A partir de qué número de pago?</label>
+						<input  class="form-control select-hd" id="ingresoMensual"
+						name="ingresoMensual" 
+						onKeypress="if (event.keyCode < 47 || event.keyCode > 57) event.returnValue = false;">
 					</div>
 				</div>
 				
@@ -494,7 +504,7 @@
 					<table class="table table-striped " style="text-align: center">
 						<tr class="bordeTabla encabezadoTabla">
 							<td class="tamanioCeldasEncabezado">Pago</td>
-							<td class="tamanioCeldasEncabezado">Sueldo insoluto</td>
+							<td class="tamanioCeldasEncabezado">Saldo insoluto</td>
 							<td class="tamanioCeldasEncabezado  hidden-xs">Interés</td>
 							<td class="tamanioCeldasEncabezado  hidden-xs">Amortización</td>
 							<td class="tamanioCeldasEncabezado  hidden-xs">Mensualidad (Sin
@@ -507,321 +517,319 @@
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>1</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,307,250.00</td>
+							<td class="hidden-xs">$160,354.62</td>
+							<td class="hidden-xs">$16,933.69</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,390.99</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,756.11</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md contenidoTabla"" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$16,933.69</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$194,756.11</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,390.99</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$160,354.62</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>2</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,290,316.31</td>
+							<td class="hidden-xs">$160,188.11</td>
+							<td class="hidden-xs">$17,100.20</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,384.41</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,749.53</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,100.20</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,384.41</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$160,188.11</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>3</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,273,216.11</td>
+							<td class="hidden-xs">$160,019.96</td>
+							<td class="hidden-xs">$17,268.35</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,377.77</td>
+							<td class="hidden-xs">$4,076.81	</td>
+							<td>$194,742.89</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,268.35</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,377.77</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$194,742.89</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>4</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,255,947.76</td>
+							<td class="hidden-xs">$159,850.15</td>
+							<td class="hidden-xs">$17,438.16</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,371.06</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,736.18</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,438.16</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,371.06</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$159,850.15</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>5</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,238,509.60</td>
+							<td class="hidden-xs">$159,678.68</td>
+							<td class="hidden-xs">$17,609.63</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,364.29</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,729.41</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,609.63</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,364.29</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$159,678.68</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>6</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,220,899.97</td>
+							<td class="hidden-xs">$159,505.52</td>
+							<td class="hidden-xs">$17,782.79</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,357.46</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,722.58</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,782.79</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,357.46</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$159,505.52</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>7</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,203,117.18</td>
+							<td class="hidden-xs">$159,330.65</td>
+							<td class="hidden-xs">$17,957.66</td>
+							<td class="hidden-xs">$177,288.31	</td>
+							<td class="hidden-xs">$13,350.55</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,715.67</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$17,957.66</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,350.55</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$159,330.65</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>8</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,185,159.52</td>
+							<td class="hidden-xs">$159,154.07</td>
+							<td class="hidden-xs">$18,134.24</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,343.58</td>
+							<td class="hidden-xs">$	4,076.81</td>
+							<td>$194,708.70	</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$18,134.24</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,343.58</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$159,154.07</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>9</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,167,025.28</td>
+							<td class="hidden-xs">$158,975.75</td>
+							<td class="hidden-xs">$18,312.56</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,336.54</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,701.66</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$18,312.56</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,336.54</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$158,975.75</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr class="bordeTabla contenidoTabla">
 							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>10</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td>$16,148,712.72</td>
+							<td class="hidden-xs">$158,795.67</td>
+							<td class="hidden-xs">$18,492.64</td>
+							<td class="hidden-xs">$177,288.31</td>
+							<td class="hidden-xs">$13,329.43</td>
+							<td class="hidden-xs">$4,076.81</td>
+							<td>$194,694.55</td>
+							<td class="hidden-xs">$0.00</td>
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$18,492.64</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$177,288.31</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$13,329.43</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$4,076.81</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$158,795.67</span>
 								</div>
 								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
+								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">$0.00</span>
 								</div>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<td>Totales</td>
-							<td>$1,000,000.00</td>
-							<td class="hidden-xs">$2,000,000.00</td>
-							<td class="hidden-xs">$3,000,000.00</td>
-							<td class="hidden-xs">$4,000,000.00</td>
-							<td class="hidden-xs">$5,000,000.00</td>
-							<td class="hidden-xs">$6,000,000.00</td>
-							<td>$7,000,000.00</td>
-							<td class="hidden-xs">$8,000,000.00</td>
+							<td><strong><span class="glyphicon glyphicon-plus cell-expand visible-xs"  onclick="despliegaPanel(this)"></span></strong>Totales</td>
+							<td>$0.00</td>
+							<td class="hidden-xs">$26,241,944.40</td>
+							<td class="hidden-xs">$16,307,250.00</td>
+							<td class="hidden-xs">$42,549,194.40</td>
+							<td class="hidden-xs">$2,730,376.81</td>
+							<td class="hidden-xs">$978,434.400</td>
+							<td>$46,258,005.61</td>
+							<td class="hidden-xs"></td>
+							
 						</tr>
 						<tr class="schedule-panel hidden-md" >
 							<td colspan="3">
-								<div><b>Amortización</b><span class="capital-amount">168.22</span>
+								<div><b>Amortización</b><span class="capital-amount">$16,307,250.00</span>
 								</div>
-								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">1,761.22</span>
+								<div><b>Mensualidad <br>(Sin accesorios)</b><span class="monthly-net">$42,549,194.40</span>
 								</div>
-								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">129.13</span>
+								<div><b>Seguros de vida y<br>daños</b><span class="monthly-insurance">$2,730,376.81</span>
 								</div>
-								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">40.50</span>
+								<div><b>Comisión Aut. Dif.</b><span class="amount-deferred">$978,434.400</span>
 								</div>
-								<div><b>Interés</b><span class="interest-amount">1,593.00</span>
+								<div><b>Interés</b><span class="interest-amount">$26,241,944.40</span>
 								</div>
-								<div><b>Pagos anticipados</b>
-								<div class="prepayment-wrapper"><span onclick="editField(this)" class="prepayment-amount">0.00</span>
-								</div>
-								</div>
+								
 							</td>
 						</tr>
 					</table>
@@ -1011,11 +1019,6 @@
  	</div>
  	 <br>
      <br>
-    <div id="CAT" class="sombraAmortizacion" style="padding-left: 20px">
-		<p>*CAT Sin IVA, para fines informativos y de comparación. Fecha de
-			cálculo 28 de febrero del 2017.</p>
-		<p>Vigencia de la oferta hasta el 28 de abril del 2017.</p>
-	</div>
    <br>
   <br>
 </div> <!-- END container -->
