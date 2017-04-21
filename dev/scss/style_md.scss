@@ -9,7 +9,7 @@
 
 	.header-text{
 	    font-family: "BentonSansBBVA-Book";
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.11;
         text-align: left;
         color: #363636;
@@ -17,46 +17,52 @@
 
 	.questions-text label{
 	    font-family: "StagSans-Book";
-        font-size: 14px;
+        font-size: 15px;
         color: #141414;
     }
 
     .select-hd {
          font-family: "StagSans-Book";
-         font-size: 13px;
+         font-size: 15px;
          line-height: 20px;
          color: #009ee5; 
     }
 
     .button-text{
          font-family: "StagSans-Book";
-         font-size: 14px;
+         font-size: 16px;
          color: #ffffff;
     }
 
     .header-table-product{
         font-family: "StagSans-Book";
-        font-size: 13px;
+        font-size: 15px;
         color: #006ec1;	
     }
 
     .content-table td{
 	    font-family: "StagSans-Book";
-        font-size: 13px;
+        font-size: 14px;
         color: #666666;
     }
 
     .link-table-product{
 	    font-family: "StagSans-Book";
-        font-size: 13px;
+        font-size: 14px;
         color: #006ec1;
         text-decoration: underline;
+    }
+
+    .cat-text p{
+        font-family: "StagSans-Book";
+        font-size: 14px;
+        line-height: 14px;
     }
 
     .text-amortizacion{
         font-family: "StagSans-Book";
         font-size: 14px;
-        line-height: 11px;
+        line-height: 14px;
         letter-spacing: -0.1px;
         color: #363636;
     }
@@ -70,18 +76,38 @@
 
     .menu-text{
         font-family: "BentonSansBBVA-Book";
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.11;
         text-align: left;
         color: #363636;
     }
+    #tabDestinos1 .nav-tabs li.active a {
+        color: #009ee5;
+        font-size: 14px;
+        font-weight: 600;
+        border-top: 5px solid #009ee5;
+        border-left: 1px solid #d8d8d8;
+        background: #FFFFFF;
+    }
 
     #tabDestinos2 .nav-pills li.active a {
         color: #009ee5;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
         border: 2px solid #009ee5;
         background: #FFFFFF;
         border-radius: 0px;
     }
+
+    [class^=glyphmap24-] {
+        background: transparent url(../img/tooltipsmmd.png) no-repeat 0 0;
+        display:inline-block;
+        vertical-align: middle;
+        height: 25.6px;
+        width: 25.6px;
+    }
+
+    .glyphmap24-interrogacion {
+    background-position: 3px;
+}
 }
