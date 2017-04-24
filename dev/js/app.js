@@ -1,11 +1,31 @@
+	function setEditedValue(editedField) {
+		prepaymentsArray = [] 
+		
+		var editedValue = $(editedField).next("input").val() || $(editedField).val()
+		
+		$(editedField).parent().toggleClass("hidden") 
+		
+		if(!editedValue || editedValue == 0){
+		  $(editedField).parent().siblings().toggleClass("hidden").html("$ 0.00")
+		} else {
+		  $(editedField).parent().siblings().toggleClass("hidden").html("$ "+editedValue+".00")
+		}
+		
+		
+	}
+
+	function editField(selectedField){
+	  $(selectedField).toggleClass("hidden");
+	  $(selectedField).next().toggleClass("hidden")
+	}
+	
+	
 	function formatoCantidad(idInput,valor){
 		var valor=valor;
-		console.log("a"+valor);
 		valor = valor.split("$");
 		valor= valor.toString().replace(/,/g, "");
 		valor = valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		console.log("b"+valor);
-		$("#"+idInput).val("$"+valor);
+		$("#"+idInput).val("$ "+valor);
 
 		parseFloat(valor)
 	console.log("c"+valor);
