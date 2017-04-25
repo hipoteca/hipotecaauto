@@ -8,6 +8,6 @@ $dark-blue:#006ec1;
 $soft-grey:#d8d8d8;
 $dark-grey:#666666;
 
-/*fuentes*/
+/*variables de fuentes*/
 $encabezados:BentonSansBBVA-Book;
 $texto:StagSans-Book;
