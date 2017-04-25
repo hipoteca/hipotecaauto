@@ -1,0 +1,93 @@
+{"getProductSimulation":
+	{
+	"products": [
+		{
+		"loanBase": {
+			"loan": {
+				"awardedAmount": {
+					"amount": "5,436,600.00"
+				},
+				"loanProduct": {
+					"interestRate": "11.80"
+				},
+				"installments": {
+					"installmentAmount": {
+						"amount": "59,105.30"
+					}
+				}
+			},
+			"iLoanDetail": {
+				"mortgageCredit": {
+					"apartmentValue": {
+						"amount": "6,396,000.00"
+					},
+					"financedPercent": "85%",
+					"subProductDescription": "HIPOTECA BANCOMER FIJA",
+					"promoterCode": "00000000",
+					"termDescription": "020\u0000AH30",
+					"additionalFinancingProgram": {
+						"financialCondition": {
+							"referenceNumber": "0000088385",
+							"stageSet": "00"
+						},
+						"programTypeId": {
+							"id": "SF"
+						},
+						"supportType": {
+							"id": "SF"
+						}
+					},
+					"subProductBenefits": "<li>Nuestra tasa de interés es fija.</li><li>Tus pagos mensuales serán fijos (capital + intereses) durante todo el plazo de tu crédito</li><li>Te podemos financiar hasta el 90% de la casa que quieres comprar</li><li>Te podemos dar un crédito mínimo de 50,000.00</li><li>No te cobramos comisión por apertura</li><li>Tienes la oportunidad de hacer pagos anticipados sin penalización, que pueden reducir el plazo o la mensualidad de tu crédito</li>"
+				}
+			}
+		}
+		}, 
+		{
+		"loanBase": {
+			"loan": {
+				"awardedAmount": {
+					"amount": "5,436,600.00"
+				},
+				"loanProduct": {
+					"interestRate": "11.20"
+				},
+				"installments": {
+					"installmentAmount": {
+						"amount": "51,919.53"
+					}
+				}
+			},
+			"iLoanDetail": {
+				"mortgageCredit": {
+					"apartmentValue": {
+						"amount": "6,396,000.00"
+					},
+					"financedPercent": "85%",
+					"subProductDescription": "HIPOTECA BANCOMER CRECIENTE",
+					"promoterCode": "00000000",
+					"termDescription": "020\u0000AH54",
+					"additionalFinancingProgram": {
+						"financialCondition": {
+							"referenceNumber": "0000086587",
+							"stageSet": "00"
+						},
+						"programTypeId": {
+							"id": "SF"
+						},
+						"supportType": {
+							"id": "SF"
+						}
+					},
+					"subProductBenefits": "<li>Nuestra tasa de interés es fija.</li><li>El esquema de pagos crecientes es dónde el pago inicial es bajo y va creciendo de manera anual.</li><li>Tiene un factor inicial de pago bajo, lo cual permite un financiamiento mayor</li><li>No te cobramos comisión por apertura</li><li>Te podemos financiar hasta el 90% de la casa que quieres comprar</li><li>Te podemos dar un crédito mínimo de  $100,000.00</li><li>Tienes la oportunidad de hacer pagos anticipados sin penalización, que pueden reducir el plazo o la mensualidad de tu crédito</li>"
+				}
+			}
+		}
+	}],
+	"pagination": {
+		"start": "001",
+		"end": "003",
+		"previousPaginationKey": "N",
+		"nextPaginationKey": "N"
+	}
+}
+}

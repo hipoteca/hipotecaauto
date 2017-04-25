@@ -1,99 +1,66 @@
 @import "bootstrap/bootstrap";
 @import "_Fonts";
-$border-color: #D3457E;
+@import "variables";
+@import "variables-hd";
+@import "mixins";
+@import "rules";
 
 
 
-	.input-group-addon-inset {
-    background-color: transparent !important;
-    border: 0 none;
-	color: #009EE5;
-    height: 32px;
-    left: 1px;
-    padding: 2px 0;
-    position: absolute;
-    top: 1px;
-    width: 32px;
-    z-index: 9;
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    filter: grayscale(1)
-	}
+#simulador .slider-handle {
+	width: 34px;
+	height: 36px;
+	top: -10px;
+	margin-left: -8px !important;
+	padding: 0px 0;
+	background-color: transparent;
+	box-shadow: inset 0 0px 0 transparent;
+	background-image: url(../img/Drag.png) !important;
+	background-repeat: repeat-x
+}
 
-	.input-group-addon-inset+.form-control {
-    padding-left: 32px
-	}
+#simulador .slider.slider-horizontal {
+	width: 100%
+}
+#simulador .slider.slider-horizontal .slider-track {
+	height: 5px
+}
+#simulador .slider-track {
+	background: $grey;
+	box-shadow: none
+}
+#simulador .slider-selection {
+	background: none
+}
 
-	#simulador .slider-handle {
-		width: 34px;
-		height: 36px;
-		top: -10px;
-		margin-left: -8px !important;
-		padding: 0px 0;
-		background-color: transparent;
-		box-shadow: inset 0 0px 0 transparent;
-		background-image: url(../img/Drag.png) !important;
-		background-repeat: repeat-x
-	}
+#simulador .slider-handle.round {
+	border-radius: 5px
+}
 
-	#simulador .slider.slider-horizontal {
-		width: 100%
-	}
-	#simulador .slider.slider-horizontal .slider-track {
-		height: 5px
-	}
-	#simulador .slider-track {
-		background: #cccccc;
-		box-shadow: none
-	}
-	#simulador .slider-selection {
-		background: none
-	}
-	#simulador .slider-handle.round {
-		border-radius: 5px
-	}
-	
-	#simulador .slider-handle:after {
-		color: #fff;
-		font-size: 20px;
-		font-family: Open Sans
-	}
-	
-	
-	
-	
-	#simulador {
-		background-color: #FFF;
-		padding-bottom: 0px
-	}
-	
-	#simulador .slider-selection {
-	
-		background-color : #52BCEC;
-	}
-	
-	#contenedor {
-		color: #ff0000;
-		border: 1px #solid #ff0000;
-		display: none;
-	}
+#simulador {
+	background-color: $white;
+	padding-bottom: 0px
+}
 
-	.slider.slider-horizontal .slider-selection,
-	.slider.slider-horizontal .slider-track-high,
-	.slider.slider-horizontal .slider-track-low {
-		height: 100%;
-		top: 0;
-		bottom: 0
+#simulador .slider-selection {
+	background-color : $blue;
+}
+
+.slider.slider-horizontal .slider-selection,
+.slider.slider-horizontal .slider-track-high,
+.slider.slider-horizontal .slider-track-low {
+	height: 100%;
+	top: 0;
+	bottom: 0
+}
+
+#tablaAmortizacion{
+	#seccionTabla- {
+	padding:10px;
 	}
-	
-	#tablaAmortizacion{
-		#seccionTabla- {
-		padding:10px;
-		}
-	}
-	#tablaProductos{
+}
+
+#tablaProductos{
 	table{
 		td{
 			white-space: normal !important;
@@ -102,97 +69,63 @@ $border-color: #D3457E;
 			margin: 0px !important;
 		}
 	}
-	}
+}
+
+.select-hd{	 
+	font-family: $texto;
+	font-size: 13px; 
+	line-height: 20px;
+    color: $blue;
+}
+
+.flechaDesplegado{
+	background-image: url(../img/select-down.png);
+}
+
+.flechaCerrado{
+	background-image: url(../img/select-right.png);
+}
 	
-	.mostrar{
-		height:100%;
-		/*padding-left:10px;*/
-		/*padding-right:10px*/
-		}
-	.select-hd{	
-		height: 36px; 
-		font-family: Open Sans, sans-serif; 
-		font-size: 15px ; 
-		color:#009ee5
-	}	
-	.oculto{
-		max-height:0;
-		overflow:hidden;
-		}
-	.seccion{
-		border-style: solid;
-		border-width: 1px;
-		border-color: #52bcec;
-		/*overflow:auto;*/
-		height:100%;
-		background-image:url(../img/barra.png);
-		background-repeat: repeat-y;
-		background-size: 32px;
-	}
-	.flechaDesplegado{
-		background-image: url(../img/select-down.png);
-		}
-	.flechaCerrado{
-		background-image: url(../img/select-right.png);
-		}
-		
-		
-	.flecha-1{
-		background-size: 32px;
-	}
-	.flecha-1-color{
-		color:#fff;
-		
-	}
-	
-	.flecha-2{
-		background-size: 3px;
-	}
-	.flecha-2-color{
-		color:#006ec1;
-	}
-	
-	
-	.bordeIzquierdo{
-		border-left-style: solid;
-		border-left-color: #dddddd;
-		border-width: 1px
-	}
-	.bordeDerecho{
-		border-right-style: solid;
-		border-right-color: #dddddd;
-		border-width: 1px
-	}
-	
+.flecha-1{
+	background-size: 32px;
+}
+
+.flecha-1-color{
+	color:$white;	
+}
+
+.flecha-2{
+	background-size: 3px;
+}
+
+.flecha-2-color{
+	color:$dark-blue;
+}
+
 .frame-nav-tabs{
-	border: solid 0.3px #d8d8d8;
-	background-color: #fff;
+	border: solid 0.3px $soft-grey;
+	background-color: $white;
 }
 
 .frame-tab-border-1{
-border: solid 0.3px #006ec1;
+	border: solid 0.3px $dark-blue;
 }
+
 .frame-tab-border-2{
-border-top: 0px;
-border-left: 0px;
-border-right: 0px;
-border-bottom: solid 0.3px #ccc;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid 0.3px $grey;
 }
+
 .frame-tab{
 	margin: 5px;
-	
-	background-color: #fff;
+	background-color: $white;
 	display: block;
-	
-	
-	
-	    background-image: url(../img/barra.png);
-    background-repeat: repeat-y;
-    /*background-size: 32px;*/
-	
-	
+	background-image: url(../img/barra.png);
+	background-repeat: repeat-y;
 	h4 {
-		background-color: #f9f9f9;
+		background-color: $white;
 		margin: 0px;
 		padding-top: 10px;
 		padding-right: 0px;
@@ -201,516 +134,271 @@ border-bottom: solid 0.3px #ccc;
 	}
 }
 
-
-	.frame-bar-left{
+.frame-bar-left{
 	display: block;
 	width: 3%;
 	float: left;
-	}
-	.frame-bar-right{
+	padding-left:8px;
+	padding-top: 8px;
+}
+
+.frame-bar-right{
 	display: block;
 	width: 100%;
 	float: left;
-	background: #FFF;
+	background: $white;
 	padding-left: 0px
-	}
-	.frame-content{
+}
+
+.frame-content{
 	padding: 10px;
 	border: 0px;
-	}
-	
-	.encabezadoTabla {
-	  color: #006ec1;
-	}
-	.tamanioCeldasEncabezado{
-		table-layout: fixed;
-		width: 110px;
-		vertical-align: middle !important;
-	}
-	.contenidoTabla{
-	  color:#666666;
-	}
+}
 
-	.bordeTabla{
-		border: solid 0.5px #cccccc;
-	}
-	.sombraAmortizacion{
-		background-color: #f9f9f9;
-		margin: 0px;
-		padding-top: 10px;
-		padding-right: 0px;
-		padding-bottom: 0px;
-		padding-left: 10px;
-	}
+.encabezadoTabla {
+  	color: $dark-blue;
+}
 
-	.header-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 14px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
+.tamanioCeldasEncabezado{
+	table-layout: fixed;
+	width: 110px;
+	vertical-align: middle !important;
+}
 
-	.questions-text label{
-	font-family: "StagSans-Book";
-    font-size: 12px;
-    color: #141414;
-	}
+.contenidoTabla{
+  	color:$dark-grey;
+}
 
-	.tasa-interes{
-		color: #009ee5 !important;
-	}
+.bordeTabla{
+	border: solid 0.5px $grey;
+}
 
+.header-text{
+    font-family: $encabezados;
+    font-size: 14px;
+    line-height: 1.11;
+    text-align: left;
+    color: $black-text;
+}
+
+.questions-text label{
+	font-family: $texto;
+	font-size: 13px;
+	color: $black-question;
+	padding-top: 7px;
+}
+
+.tasa-interes{
+	color: $blue !important;
+}
 
 .cell-expand {
-   width: 20px;
-   height: 20px;
-   border-radius: 20px;
-   border: 1px solid #52bcec;
-   padding-top: 4px;
-   padding-left: 1px;
-   display: block;
-   float: left;
-   cursor: pointer;
-   font-size: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	border: 1px solid $blue;
+	padding-top: 4px;
+	padding-left: 1px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	font-size: 10px;
 }
 
 #seccionTablaAmort.seccion-amortizacion {
-		padding-left:	10px;
-		padding-right:	10px;
-		padding-top:	10px;
-		padding-bottom: 10px;
-}
-@media (min-width: $screen-sm-min) {
-	.frame-bar-right{
-	display: block;
-	width: 97%;
-	float: left;
-	background: #FFF;
-	padding-left: 0px
-	}
-
-    .header-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 14px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
-}
-@media (min-width: $screen-md-min) {
-	.frame-bar-right{
-	display: block;
-	width: 97%;
-	float: left;
-	background: #FFF;
-	padding-left: 0px
-	}
-  .header-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 17px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
-}
-@media (min-width: $screen-lg-min) {
-	.frame-bar-right{
-	display: block;
-	width: 97%;
-	float: left;
-	background: #FFF;
-	padding-left: 0px
-	}
-  .header-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 20px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
-}
-
-
-@media (min-width: $screen-sm-min) {
-   .questions-text label{
-	    font-family: "StagSans-Book";
-        font-size: 11px;
-        color: #141414;
-    }   
-}
-
-@media (min-width: $screen-md-min) {
-   .questions-text label{
-	    font-family: "StagSans-Book";
-        font-size: 14px;
-        color: #141414;
-    }   
-  
-}
-
-@media (min-width: $screen-lg-min) {
-   .questions-text label{
-	    font-family: "StagSans-Book";
-        font-size: 17px;
-        color: #141414;
-    }   
-  
-}
-
-.select-hd {
-          font-family: "StagSans-Book";
-          font-size: 7px;
-          line-height: 20px;
-          color: #009ee5;
-}
-
-@media (min-width: $screen-sm-min) {
-    .select-hd {
-         font-family: "StagSans-Book";
-         font-size: 10px;
-         line-height: 20px;
-         color: #009ee5; 
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .select-hd {
-         font-family: "StagSans-Book";
-         font-size: 13px;
-         line-height: 20px;
-         color: #009ee5; 
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .select-hd {
-         font-family: "StagSans-Book";
-         font-size: 16px;
-         line-height: 20px;
-         color: #009ee5; 
-    }
+	padding-left:	10px;
+	padding-right:	10px;
+	padding-top:	10px;
+	padding-bottom: 10px;
 }
 
 .button-text{
-     font-family: "StagSans-Book";
-     font-size: 8px;
-     color: #ffffff;
+ 	font-family: $texto;
+	font-size: 14px;
+ 	color: $white;
 }
 
-@media (min-width: $screen-sm-min) {
-    .button-text{
-         font-family: "StagSans-Book";
-         font-size: 11px;
-         color: #ffffff;
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .button-text{
-         font-family: "StagSans-Book";
-         font-size: 14px;
-         color: #ffffff;
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .button-text{
-         font-family: "StagSans-Book";
-         font-size: 17px;
-         color: #ffffff;
-    }
-}
 
 .header-table-product{
-      font-family: "StagSans-Book";
-      font-size: 7px;
-      color: #006ec1;	
-}
-
-@media (min-width: $screen-sm-min) {
-    .header-table-product{
-        font-family: "StagSans-Book";
-        font-size: 10px;
-        color: #006ec1;	
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .header-table-product{
-        font-family: "StagSans-Book";
-        font-size: 13px;
-        color: #006ec1;	
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .header-table-product{
-        font-family: "StagSans-Book";
-        font-size: 16px;
-        color: #006ec1;	
-    }
+  	font-family: $texto;
+  	font-size: 12px;
+  	color: $dark-blue;	
 }
 
 .content-table td{
-	font-family: "StagSans-Book";
-    font-size: 7px;
-    color: #666666;
-}
-
-@media (min-width: $screen-sm-min) {
-    .content-table td{
-	    font-family: "StagSans-Book";
-        font-size: 10px;
-        color: #666666;
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .content-table td{
-	    font-family: "StagSans-Book";
-        font-size: 13px;
-        color: #666666;
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .content-table td{
-	    font-family: "StagSans-Book";
-        font-size: 16px;
-        color: #666666;
-    }
+	font-family: $texto;
+	font-size: 12px;
+	color: $dark-grey;
 }
 
 .link-table-product{
-	font-family: "StagSans-Book";
-    font-size: 7px;
-    color: #006ec1;
-    text-decoration: underline;
+	font-family: $texto;
+	font-size: 12px;
+	color: $dark-blue;
+	text-decoration: underline;
 }
 
-@media (min-width: $screen-sm-min) {
-    .link-table-product{
-	    font-family: "StagSans-Book";
-        font-size: 10px;
-        color: #006ec1;
-        text-decoration: underline;
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .link-table-product{
-	    font-family: "StagSans-Book";
-        font-size: 13px;
-        color: #006ec1;
-        text-decoration: underline;
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .link-table-product{
-	    font-family: "StagSans-Book";
-        font-size: 16px;
-        color: #006ec1;
-        text-decoration: underline;
-    }
+.cat-text p{
+	font-family: $texto;
+	font-size: 12px;
+	line-height: 14px;
 }
 
 .text-amortizacion{
-    font-family: "StagSans-Book";
-    font-size: 8px;
-    line-height: 11px;
-    letter-spacing: -0.1px;
-    color: #363636;
-}
-
-@media (min-width: $screen-sm-min) {
-    .text-amortizacion{
-        font-family: "StagSans-Book";
-        font-size: 11px;
-        line-height: 11px;
-        letter-spacing: -0.1px;
-        color: #363636;
-    }	
-}
-
-@media (min-width: $screen-md-min) {
-    .text-amortizacion{
-        font-family: "StagSans-Book";
-        font-size: 14px;
-        line-height: 11px;
-        letter-spacing: -0.1px;
-        color: #363636;
-    }	
-}
-
-@media (min-width: $screen-lg-min) {
-    .text-amortizacion{
-        font-family: "StagSans-Book";
-        font-size: 17px;
-        line-height: 11px;
-        letter-spacing: -0.1px;
-        color: #363636;
-    }	
+	font-family: $texto;
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: -0.1px;
+	color: $black-text;
 }
 
 .small-text-amortizacion{
-	font-family: StagSans-Book;
-    font-size: 6px;
-    line-height: 8px;
-    color: #363636;
+	font-family: $texto;
+	font-size: 6px;
+	line-height: 5px;
+	color: $black-text;
 }			
 
-@media (min-width: $screen-sm-min) {
-    .small-text-amortizacion{
-	    font-family: StagSans-Book;
-        font-size: 9px;
-        line-height: 8px;
-        color: #363636;
-    }				
-}
-
-@media (min-width: $screen-md-min) {
-    .small-text-amortizacion{
-	    font-family: StagSans-Book;
-        font-size: 12px;
-        line-height: 8px;
-        color: #363636;
-    }	
-}
-
-@media (min-width: $screen-lg-min) {
-    .small-text-amortizacion{
-	    font-family: StagSans-Book;
-        font-size: 15px;
-        line-height: 15px;
-        color: #363636;
-    }	
-}
-
 .menu-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 9px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
-
-@media (min-width: $screen-sm-min) {
-    .menu-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 12px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}	
-}
-
-@media (min-width: $screen-md-min) {
-    .menu-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 15px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
-}
-
-@media (min-width: $screen-lg-min) {
-    .menu-text{
-	    font-family: "BentonSansBBVA-Book";
-        font-size: 18px;
-        line-height: 1.11;
-        text-align: left;
-        color: #363636;
-	}
+    font-family: $encabezados;
+    font-size: 12px;
+    line-height: 1.11;
+    text-align: left;
+    color: $black-text;
 }
 
 #tabDestinos1 {
-    background-color: #f4f4f4;
+	background-color: $white;
 }
 #tabDestinos1 .nav-tabs {
-		border: none;
-		font-family: Open Sans, sans-serif;
-		font-size: 15px
+	border: none;
+	font-family: $texto;
+	font-size: 15px
 }
-	#tabDestinos1 .nav-tabs li {
-		width: 20% ; 
-		float: left;
-		border-radius: 0;
-	}	
-	#tabDestinos1 .nav-tabs li .active{
-	
-		border: solid 0.3px #d8d8d8;
-	}
-	
-	#tabDestinos1 .nav-tabs li a {
-		border: 0 none;
-		
-		color: #c6c6c6;
-		border-radius: 0
-	}
-	#tabDestinos1 .nav-tabs li a:hover {
-		background: none;
-		color: #094fa4
-	}
+#tabDestinos1 .nav-tabs li {
+	width: 20% ; 
+	float: left;
+	border-radius: 0;
+}	
+#tabDestinos1 .nav-tabs li .active{
+	border: solid 0.3px $soft-grey;
+}
 
-	#tabDestinos1 .nav-tabs li.active a {
-		color: #009ee5;
-		font-size: 15px;
-		font-weight: 600;
-		border-top: 5px solid #009ee5;
-		border-left: 1px solid #d8d8d8;
-		background: #FFFFFF;
-	}
+#tabDestinos1 .nav-tabs li a {
+	border: 0 none;	
+	color: $dark-grey;
+	border-radius: 0;
+	text-align:center;
+}
+#tabDestinos1 .nav-tabs li a:hover {
+	background: none;
+	color: $dark-blue;
+}
 
-	#tabDestinos2{
-       li{
-       	background-color: white;
-       	color:black;
-       	border: solid 1px #d8d8d8;
-       	margin:0px;
-       }
-	}
+#tabDestinos1 .nav-tabs li.active a {
+	color: $blue;
+	font-size: 12px;
+	font-weight: 600;
+	border-top: 5px solid $blue;
+	border-left: 1px solid $soft-grey;
+	border-right:1px solid $soft-grey;
+	background: $white;
+}
 
-	#tabDestinos2 .nav-pills li.active a {
-		color: #009ee5;
-		font-size: 10px;
-		font-weight: 600;
-		border: 2px solid #009ee5;
-		background: #FFFFFF;
-		border-radius: 0px;
-	}
-	@media (min-width: $screen-sm-min) {
-        #tabDestinos2 .nav-pills li.active a {
-		    color: #009ee5;
-		    font-size: 12px;
-		    font-weight: 600;
-		    border: 2px solid #009ee5;
-		    background: #FFFFFF;
-		    border-radius: 0px;
-	    }
-    }
+#tabDestinos2{
+   li{
+   		background-color: white;
+   		color:black;
+   		border: solid 1px $soft-grey;
+   		margin:0px;
+   }
+   a{
+   	text-align: center;
+   }
+}
 
-    @media (min-width: $screen-md-min) {
-        #tabDestinos2 .nav-pills li.active a {
-		    color: #009ee5;
-		    font-size: 13px;
-		    font-weight: 600;
-		    border: 2px solid #009ee5;
-		    background: #FFFFFF;
-		    border-radius: 0px;
-	    }
-    }
+#tabDestinos2 .nav-pills li.active a {
+	color: $blue;
+	font-size: 12px;
+	font-weight: 600;
+	border: 2px solid $blue;
+	background: $white;
+	border-radius: 0px;
+}
 
-    @media (min-width: $screen-lg-min) {
-        #tabDestinos2 .nav-pills li.active a {
-		    color: #009ee5;
-		    font-size: 9px;
-		    font-weight: 600;
-		    border: 2px solid #009ee5;
-		    background: #FFFFFF;
-		    border-radius: 0px;
-	    }
-    }
+.schedule-panel{
+    display: none;
+}
+.schedule-panel td{
+    background: $white !important;
+    text-align:left;
+    border-bottom: 1px solid $soft-grey !important 
+}
+.schedule-panel div{
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 100%;
+    float: left;
+    padding-bottom: 5px;
+}
+.blue-text-underline a{
+	color:$blue;
+	text-decoration: underline;
+}
+.blue-text-underline img{
+	margin-left:4px;
+}
+.padding-money-sign{
+	padding-top:9px;
+	font-size:17px;
+}
+.align-table{
+	text-align: center;
+}
+.float-right{
+	float:right;
+}
+.padding-datos{
+	padding:10px;
+}
+.bold-datos h5{
+	font-weight:600;
+}
 
+#simulador .slider-left p,
+#simulador .slider-right p {
+    font-size: 12px;
+    color: $grey;
+    padding-bottom: 10px
+}
+
+#simulador .slider-left p {
+    text-align: left
+}
+
+#simulador .slider-right p {
+    text-align: right
+}
+[class^=glyphmap24-] {
+    background: transparent url(../img/tooltipsmmd.png) no-repeat 0 0;
+    display:inline-block;
+    vertical-align: middle;
+    height: 25.6px;
+    width: 25.6px;
+}
+.glyphmap24-interrogacion {
+    background-position: 3px;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    background-image: url(../img/select-down.png)!important;
+    background-repeat: no-repeat!important;
+    background-position: right 2px!important
+}
+
+@import "style_sm";
+@import "style_md";
+@import "style_lg";

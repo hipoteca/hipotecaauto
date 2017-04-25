@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+<body>
+	<div class="container">
+
+	<br/>
+ 
+	<section class="tabDestinos" id="simulador2" >
+  	<ul class="nav nav-tabs  nav-justified">
+    	<li class="active">
+    		<a id="comprarCasa" href="#buyHouse" data-toggle="tab"  >Comprar una casa</a>
+    	</li>
+    	<li>
+    		<a id="comprarTerreno" href="#buyLand" data-toggle="tab"  >Comprar un terreno</a>
+    	</li>
+    	<li>
+    		<a id="remodelarCasa" href="#remodelingHouse" data-toggle="tab" >Remodelar mi casa</a>
+    	</li>
+    	<li>
+    		<a id="cambiarHipoteca" href="#changeHouse" data-toggle="tab"	>Cambiar mi hipoteca</a>
+    	</li>
+   		<li>
+   			<a id="obtenerLiquidez" href="#money" data-toggle="tab" >Obtener liquidez</a>
+   		</li>
+  	</ul>
+  </section> <!--  END tabDestinos -->
+
+	<div class="frame-nav-tabs">
+   	<div  id="ingresarDatos" class="frame-tab row flecha-1 frame-tab-border-1" > 	
+ 			<section class="frame-bar-left hidden-xs">
+ 				<span id ="datosIconMenu" class="glyphicon glyphicon-menu-down " aria-hidden="true"  style="padding-left:8px;padding-top: 8px;"></span>
+ 			</section>
+ 			<section class="frame-bar-right">
+ 				<h4 id="datosHeader" class="header-text">Ingresar datos</h4>
+ 				<div id="simulador" class="frame-content questions-text" >
+	 				<div  class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<label for="default">Calcular por <span class="glyphmap24-interrogacion"
+							data-toggle="tooltip" data-placement="right"
+							title="Indica el valor por el cual deseas realizar tu simulación de crédito."></span> 
+							</label>
+							<select  class="form-control select-hd" id='calcularPor' "> 
+							</select>
+						</div><!-- END calcular pot -->
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<label for="default">A cuántos años 
+								<span class="glyphmap24-interrogacion" data-toggle="tooltip" data-placement="right" title="El plazo en qué deseas pagar tu crédito."></span> 
+							</label>
+							<select  class="form-control select-hd" id='plazo' > </select> 
+						</div><!-- END a cuantos años-->
+						<div class="col-xs-12 col-sm-6 col-md-4"> 
+							<label id="mensaje" for="default">Mi ingreso bruto mensual
+						  	<span class="glyphmap24-interrogacion" data-toggle="tooltip" data-placement="right" title="Tu ingreso total antes de impuestos"></span> 
+						  </label>
+						  <input  class="form-control select-hd" id="ingresoMensual" name="ingresoMensual" >
+						</div><!-- Ingreso bruto Mensual -->
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-12">
+						<label for="default" id="etiquetaSlider1"></label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="form-group">
+								<input class="form-control select-hd" id="valBarra1" name="cantidad" />
+						</div>
+					</div>
+					<div class="col-md-8">
+							<div id="wrapper-1">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-12 ">
+										<input id="barra-1" type="text" data-slider-tooltip="hide" /> 
+										<br /> 
+										<br />
+										<div class="row">
+											<div class="col-xs-6 slider-left">
+												<p id="b1-min-amount"></p>
+											</div>
+											<div class="col-xs-6 slider-right">
+												<p id="b1-max-amount"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+				
+				</div>
+ 			</section><!-- END  frame-bar-right-->
+   	</div><!-- END ingresar datos -->
+
+   	<div id="programas" class="frame-tab row flecha-1 frame-tab-border-1" >
+ 			<section class="frame-bar-left hidden-xs"">	
+ 				<span  class="glyphicon glyphicon-menu-down " aria-hidden="true" style="padding-left:8px;padding-top: 8px;"></span>
+ 			</section>
+ 			<section class="frame-bar-right">
+ 				<h4  class="header-text">Calcular en combinación con un crédito infonavit o fovissste</h4>
+ 				<div id="productos" class="frame-content  questions-text">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4" >
+						++
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- END programas-->
+
+		<div  id="btnCalcular" class="panel-body">
+			<div class="col-xs-12 col-sm-12 col-md-12" align="right">
+				<button id="calcularCredito" class="btn btn-primary button-text">Calcular mi crédito</button>
+			</div>
+		</div>
+  </div><!-- END frame-nav-tabs -->
+<br/>
+	<div class="frame-nav-tabs" id="frameTablas">
+		<div id="tablaProductos" class="frame-tab row flecha-1 frame-tab-border-1" >
+			
+			<section class="frame-bar-left hidden-xs">
+				<span style="padding-left: 8px; padding-top: 8px;" class="glyphicon glyphicon-menu-down" aria-hidden="true">
+					
+				</span>
+			</section>
+			
+			<section class="frame-bar-right">
+ 				<h4 class="header-text">¿Qué opciones me convienen?</h4>
+ 				<div id="simulador" class="frame-content questions-text" >
+	 				<div  class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>columna 1</th><th>columna 2</th><th>olumna 3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Fila 1</td><td>Fila 1</td><td>Fila 1</td>
+									</tr>
+									<tr>
+										<td>Fila 2</td><td>Fila 2</td><td>Fila 2</td>
+									</tr>
+									<tr>
+										<td>Fila 3</td><td>Fila 3</td><td>Fila 3</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td> </td>
+										<td> <a id="tablaAmortizacion1" href="#" >Tabla de amortizacion</a> </td>
+										<td> <a id="tablaAmortizacion2" href="#" >Tabla de amortizacion</a> </td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+ 			</section><!-- END  frame-bar-right-->
+		</div><!-- END  tablaProductos-->
+
+		<div id="tablaAmortizacion" class="frame-tab row flecha-1 frame-tab-border-1">
+			<section class="frame-bar-left hidden-xs">
+				<span style="padding-left:8px; padding-top: 8px;" class="glyphicon glyphicon-menu-down " 
+				aria-hidden="true" ></span>
+			</section>
+			<section class="frame-bar-right">
+				<h4  class="header-text">Tabla de amortización</h4>
+				<div id="simulador" class="frame-content questions-text" >
+		 			<div  class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							**
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- end tablaAmortizacion  -->
+
+		<div id="tablaDatos" class="frame-tab row flecha-1 frame-tab-border-1">
+ 			<section class="frame-bar-left hidden-xs"">
+ 				<span style="padding-left:8px; padding-top: 8px;"  class="glyphicon glyphicon-menu-down" 
+				aria-hidden="true" ></span>
+ 			</section>
+ 	    <section class="frame-bar-right">
+				<h4  class="header-text">Datos del producto</h4>
+				<div id="simulador" class="frame-content questions-text" >
+		 			<div  class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							**
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- END tablaDatos -->
+
+	</div><!-- END frame-nav-tabs -->
+
+		
+	</div>
+	
+	<script type="text/javascript" src="js/app2.js" ></script>
+</body>
+</html>

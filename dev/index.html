@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guia de Estilos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+
+<body>
+
+<div class="container">
+	<h1>Guia de estilos</h1>
+	<h2>Navegacion</h2>
+	<div class="row">
+		<div class="col-md-12">
+
+			<nav aria-label="Page navigation">
+			  <ul class="pagination">
+			  </ul>
+			</nav>
+
+
+		</div>
+	</div>		
+
+
+	<h2>Nav Tabs</h4>
+
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#option1" data-toggle="tab" >Option 1</a>
+		</li> 
+		<li >
+			<a href="#option1" data-toggle="tab" >Option 1</a>
+		</li> 
+	</ul>
+	<!-- END  Nav Tabs-->
+
+	<h2>Panels</h4>
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="frame-nav-tabs">
+				<div id="ingresarDatos" class="frame-tab row flecha-1 frame-tab-border-1 ">
+					<section class="frame-bar-left hidden-xs">
+						<span id="ingresarDatos-flecha" style="padding-left: 8px; padding-top: 8px;"
+							class="glyphicon glyphicon-menu-down flecha-1-color"
+							aria-hidden="true" onclick="desplegarDatos()"></span>
+					</section>
+					<section class="frame-bar-right ">
+						<h4 >Titulo</h4>
+						<div class="frame-content">
+							<div class="row">
+								<div class="col-md-12">Contenido</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div> <!-- end frame-nav-tabs -->
+
+		</div><!-- end col -->
+	</div><!-- end row -->
+
+	<h2>Forms</h2>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<label id="etiquetaSlider2" for="valBarra2">Etiqueta</label>	
+				<input class="form-control select-hd" type="text" id="valBarra2" name="cantidad" value="Datos" />
+			</div>
+		</div><!-- end col -->
+		<div class="col-md-4">
+			<div class="form-group">
+				<label id="etiquetaSlider2" for="valBarra2">Etiqueta</label>	
+				<select class="form-control select-hd" id="selectApoyo" name="selectApoyo" >
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+				</select>
+			</div>
+		</div><!-- end col -->
+
+	</div><!-- end row -->
+
+
+	<h2>Botones</h2>
+	<div class="row">
+		<div class="col-md-12">
+
+			<div id="btnCalcular" class="panel-body">
+				<div class="col-xs-12 col-sm-12 col-md-12" align="right">
+					<button onclick="btnCalcularCredito()" class="btn btn-primary"
+						style="background-color: #094FA4">Boton - Right</button>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12" align="left">
+					<button onclick="btnCalcularCredito()" class="btn btn-primary"
+						style="background-color: #094FA4">Boton - Left</button>
+				</div>
+			</div>
+		</div><!-- end col -->
+	</div><!-- end row -->
+	<!-- END Botones-->
+
+
+
+ 
+</div><!-- END container -->
+
+</body>
+</html>
