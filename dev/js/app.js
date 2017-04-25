@@ -1,3 +1,16 @@
+	function formatoCantidad(idInput,valor){
+		var valor=valor;
+		console.log("a"+valor);
+		valor = valor.split("$");
+		valor= valor.toString().replace(/,/g, "");
+		valor = valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		console.log("b"+valor);
+		$("#"+idInput).val("$"+valor);
+
+		parseFloat(valor)
+	console.log("c"+valor);
+	}
+	
 	var productoPagina = 1;
 	var maxProductoPagina = 3;
 	var minProductoPagina = 1;
@@ -28,10 +41,9 @@
 	/* Interaciones de para cada seccion */
 	
 	function btnCalcularCredito() {
-		$("#simulador").hide();
+		$("#tablaAmortizacion").hide();
+		$("#tablaDatos").hide();
 		$("#productos").hide();
-		$("#seccionTablaDatos").hide();
-		$("#btnCalcular").hide();
 		$("#tablaProductos").show();
 		$("#seccionTablaProductos").show();
 		$("#frameTablas").show();
@@ -91,11 +103,9 @@
 			
 			ocultaIngresarDatos();
 
-			$("#btnCalcular").show();
 			$("#tablaProductos").hide();
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
-			$("#CAT").hide();
 			$("#frameTablas").hide();
 			
 		} else {
@@ -114,11 +124,9 @@
 			$("#programas").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#programas").removeClass("flecha-2").addClass("flecha-1");
 
-			$("#btnCalcular").show();
 			$("#tablaProductos").hide();
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
-			$("#CAT").hide();
 			$("#frameTablas").hide();
 		} else {
 			$("#productos").hide();
@@ -146,7 +154,7 @@
 	function desplegarTabAmort(){
 		if ($("#seccionTablaAmort").is(':hidden')) {
 			$("#seccionTablaAmort").show();
-			
+			$("#actualizar").show();
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#tabAmort-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
 			$("#tablaAmorizacion").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
@@ -154,7 +162,7 @@
 			
 		} else {
 			$("#seccionTablaAmort").hide();
-			
+			$("#actualizar").hide();
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabAmort-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
 			$("#tablaAmortizacion").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
@@ -171,7 +179,6 @@
 			$("#tablaDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 			$("#tablaDatos").removeClass("flecha-2").addClass("flecha-1");
 			
-			$("#CAT").show();
 			
 		} else {
 			$("#seccionTablaDatos").hide();
@@ -181,7 +188,6 @@
 			$("#tablaDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
 			$("#tablaDatos").removeClass("flecha-1").addClass("flecha-2");
 
-			$("#CAT").hide();
 		}
 	}
 	
@@ -208,6 +214,7 @@
 		desplegarTabProductos();
 		$("#tablaAmortizacion").show();
 		$("#tablaDatos").show();
+		$("#seccionTablaDatos").hide();
 	}
 	
 	/* End Interaciones de para cada seccion */
@@ -397,9 +404,7 @@
 			$("#tablaProductos").hide();
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
-			$("#CAT").hide();
 			$("#simulador").show();
-			$("#btnCalcular").show();
 			$("#frameTablas").hide();
 			ocultaIngresarDatos();
 			
@@ -411,9 +416,7 @@
 			$("#tablaAmortizacion").hide();
 			$("#tablaDatos").hide();
 			$("#programas").hide();
-			$("#CAT").hide();
 			$("#simulador").show();
-			$("#btnCalcular").show();
 			$("#frameTablas").hide();
 			ocultaIngresarDatos();
 			
@@ -592,6 +595,14 @@
 		console.info("productoPagina"+productoPagina)
 	}
 	$(document).ready(function() {
+		
+		$("#ingresoMensualBruto").val("$");
+		$("#sueldoCliente").val("$");
+		$("#montoCredito").val("$");
+		$("#saldoSubcuenta").val("$");
+		$("#cuantoPagar").val("$");
+
+	
 		$("#frameTablas").hide();
 		$("#pagina" ).text(productoPagina);
 		
@@ -623,7 +634,6 @@
 		$("#productos").hide();
 		$("#tablaAmortizacion").hide();
 		$("#tablaDatos").hide();
-		$("#CAT").hide();
 		$("#frameTablas").hide();
 
 	});

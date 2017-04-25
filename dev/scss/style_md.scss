@@ -3,99 +3,100 @@
         display: block;
         width: 97%;
         float: left;
-        background: #FFF;
+        background: $white;
         padding-left: 0px
     }
 
 	.header-text{
-	    font-family: "BentonSansBBVA-Book";
+	    font-family: $encabezados;
         font-size: 16px;
         line-height: 1.11;
         text-align: left;
-        color: #363636;
+        color: $black-text;
 	}
 
 	.questions-text label{
-	    font-family: "StagSans-Book";
+	    font-family: $texto;
         font-size: 15px;
-        color: #141414;
+        color: $black-question;
     }
 
     .select-hd {
-         font-family: "StagSans-Book";
+         font-family: $texto;
          font-size: 15px;
          line-height: 20px;
-         color: #009ee5; 
+         color: $blue;
     }
 
     .button-text{
-         font-family: "StagSans-Book";
+         font-family: $texto;
          font-size: 16px;
-         color: #ffffff;
+         color: $white;
     }
 
     .header-table-product{
-        font-family: "StagSans-Book";
-        font-size: 15px;
-        color: #006ec1;	
+        font-family: $texto;
+        font-size: 14px;
+        color: $dark-blue;	
     }
 
     .content-table td{
-	    font-family: "StagSans-Book";
+	    font-family: $texto;
         font-size: 14px;
-        color: #666666;
+        color: $dark-grey;
     }
 
     .link-table-product{
-	    font-family: "StagSans-Book";
+	    font-family: $texto;
         font-size: 14px;
-        color: #006ec1;
+        color: $dark-blue;
         text-decoration: underline;
     }
 
     .cat-text p{
-        font-family: "StagSans-Book";
+        font-family: $texto;
         font-size: 14px;
         line-height: 14px;
     }
 
     .text-amortizacion{
-        font-family: "StagSans-Book";
+        font-family: $texto;
         font-size: 14px;
         line-height: 14px;
         letter-spacing: -0.1px;
-        color: #363636;
+        color: $black-text;
     }
     
     .small-text-amortizacion{
-	    font-family: StagSans-Book;
+	    font-family: $texto;
         font-size: 12px;
         line-height: 11px;
-        color: #363636;
+        color: $black-text;
     }
 
     .menu-text{
-        font-family: "BentonSansBBVA-Book";
+        font-family: $encabezados;
         font-size: 14px;
         line-height: 1.11;
         text-align: left;
-        color: #363636;
+        color: $black-text;
     }
     #tabDestinos1 .nav-tabs li.active a {
-        color: #009ee5;
+        color: $blue;
         font-size: 14px;
         font-weight: 600;
-        border-top: 5px solid #009ee5;
-        border-left: 1px solid #d8d8d8;
-        background: #FFFFFF;
+        border-top: 5px solid $blue;
+        border-left: 1px solid $soft-grey;
+        border-right:1px solid $soft-grey;
+        background: $white;
     }
 
     #tabDestinos2 .nav-pills li.active a {
-        color: #009ee5;
+        color: $blue;
         font-size: 14px;
         font-weight: 600;
-        border: 2px solid #009ee5;
-        background: #FFFFFF;
+        border: 2px solid $blue;
+        background: $white;
         border-radius: 0px;
     }
 

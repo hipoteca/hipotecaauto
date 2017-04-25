@@ -1,32 +1,9 @@
 @import "bootstrap/bootstrap";
 @import "_Fonts";
 @import "variables";
+@import "variables-hd";
 @import "mixins";
 @import "rules";
-
-$border-color: #D3457E;
-
-.input-group-addon-inset {
-	background-color: transparent !important;
-	border: 0 none;
-	color: #009EE5;
-	height: 32px;
-	left: 1px;
-	padding: 2px 0;
-	position: absolute;
-	top: 1px;
-	width: 32px;
-	z-index: 9;
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    filter: grayscale(1)
-}
-
-.input-group-addon-inset+.form-control {
-	padding-left: 32px
-}
 
 #simulador .slider-handle {
 	width: 34px;
@@ -47,36 +24,24 @@ $border-color: #D3457E;
 	height: 5px
 }
 #simulador .slider-track {
-	background: #cccccc;
+	background: $grey;
 	box-shadow: none
 }
 #simulador .slider-selection {
 	background: none
 }
+
 #simulador .slider-handle.round {
 	border-radius: 5px
 }
 
-#simulador .slider-handle:after {
-	color: #fff;
-	font-size: 20px;
-	font-family: Open Sans
-}
-
 #simulador {
-	background-color: #FFF;
+	background-color: $white;
 	padding-bottom: 0px
 }
 
 #simulador .slider-selection {
-
-	background-color : #52BCEC;
-}
-
-#contenedor {
-	color: #ff0000;
-	border: 1px #solid #ff0000;
-	display: none;
+	background-color : $blue;
 }
 
 .slider.slider-horizontal .slider-selection,
@@ -104,33 +69,11 @@ $border-color: #D3457E;
 	}
 }
 
-.mostrar{
-	height:100%;
-	/*padding-left:10px;*/
-	/*padding-right:10px*/
-}
-
-.select-hd{	
-	height: 36px; 
-	font-family: Open Sans, sans-serif; 
-	font-size: 15px ; 
-	color:#009ee5
-}
-
-.oculto{
-	max-height:0;
-	overflow:hidden;
-}
-
-.seccion{
-	border-style: solid;
-	border-width: 1px;
-	border-color: #52bcec;
-	/*overflow:auto;*/
-	height:100%;
-	background-image:url(../img/barra.png);
-	background-repeat: repeat-y;
-	background-size: 32px;
+.select-hd{	 
+	font-family: $texto;
+	font-size: 13px; 
+	line-height: 20px;
+    color: $blue;
 }
 
 .flechaDesplegado{
@@ -146,7 +89,7 @@ $border-color: #D3457E;
 }
 
 .flecha-1-color{
-	color:#fff;	
+	color:$white;	
 }
 
 .flecha-2{
@@ -154,46 +97,33 @@ $border-color: #D3457E;
 }
 
 .flecha-2-color{
-	color:#006ec1;
-}
-
-.bordeIzquierdo{
-	border-left-style: solid;
-	border-left-color: #dddddd;
-	border-width: 1px
-}
-
-.bordeDerecho{
-	border-right-style: solid;
-	border-right-color: #dddddd;
-	border-width: 1px
+	color:$dark-blue;
 }
 
 .frame-nav-tabs{
-	border: solid 0.3px #d8d8d8;
-	background-color: #fff;
+	border: solid 0.3px $soft-grey;
+	background-color: $white;
 }
 
 .frame-tab-border-1{
-	border: solid 0.3px #006ec1;
+	border: solid 0.3px $dark-blue;
 }
 
 .frame-tab-border-2{
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
-	border-bottom: solid 0.3px #ccc;
+	border-bottom: solid 0.3px $grey;
 }
 
 .frame-tab{
 	margin: 5px;
-	background-color: #fff;
+	background-color: $white;
 	display: block;
 	background-image: url(../img/barra.png);
 	background-repeat: repeat-y;
-	/*background-size: 32px;*/
 	h4 {
-		background-color: #f9f9f9;
+		background-color: $white;
 		margin: 0px;
 		padding-top: 10px;
 		padding-right: 0px;
@@ -214,7 +144,7 @@ $border-color: #D3457E;
 	display: block;
 	width: 100%;
 	float: left;
-	background: #FFF;
+	background: $white;
 	padding-left: 0px
 }
 
@@ -224,7 +154,7 @@ $border-color: #D3457E;
 }
 
 .encabezadoTabla {
-  	color: #006ec1;
+  	color: $dark-blue;
 }
 
 .tamanioCeldasEncabezado{
@@ -234,45 +164,37 @@ $border-color: #D3457E;
 }
 
 .contenidoTabla{
-  	color:#666666;
+  	color:$dark-grey;
 }
 
 .bordeTabla{
-	border: solid 0.5px #cccccc;
-}
-
-.sombraAmortizacion{
-	background-color: #f9f9f9;
-	margin: 0px;
-	padding-top: 10px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 10px;
+	border: solid 0.5px $grey;
 }
 
 .header-text{
-    font-family: "BentonSansBBVA-Book";
+    font-family: $encabezados;
     font-size: 14px;
     line-height: 1.11;
     text-align: left;
-    color: #363636;
+    color: $black-text;
 }
 
 .questions-text label{
-	font-family: "StagSans-Book";
+	font-family: $texto;
 	font-size: 13px;
-	color: #141414;
+	color: $black-question;
+	padding-top: 7px;
 }
 
 .tasa-interes{
-	color: #009ee5 !important;
+	color: $blue !important;
 }
 
 .cell-expand {
 	width: 20px;
 	height: 20px;
 	border-radius: 20px;
-	border: 1px solid #52bcec;
+	border: 1px solid $blue;
 	padding-top: 4px;
 	padding-left: 1px;
 	display: block;
@@ -288,74 +210,67 @@ $border-color: #D3457E;
 	padding-bottom: 10px;
 }
 
-.select-hd {
-    font-family: "StagSans-Book";
-    font-size: 13px;
-    line-height: 20px;
-    color: #009ee5;
-}
-
 .button-text{
- 	font-family: "StagSans-Book";
+ 	font-family: $texto;
 	font-size: 14px;
- 	color: #ffffff;
+ 	color: $white;
 }
 
 
 .header-table-product{
-  	font-family: "StagSans-Book";
-  	font-size: 13px;
-  	color: #006ec1;	
+  	font-family: $texto;
+  	font-size: 12px;
+  	color: $dark-blue;	
 }
 
 .content-table td{
-	font-family: "StagSans-Book";
+	font-family: $texto;
 	font-size: 12px;
-	color: #666666;
+	color: $dark-grey;
 }
 
 .link-table-product{
-	font-family: "StagSans-Book";
+	font-family: $texto;
 	font-size: 12px;
-	color: #006ec1;
+	color: $dark-blue;
 	text-decoration: underline;
 }
 
 .cat-text p{
-	font-family: "StagSans-Book";
+	font-family: $texto;
 	font-size: 12px;
 	line-height: 14px;
 }
 
 .text-amortizacion{
-	font-family: "StagSans-Book";
+	font-family: $texto;
 	font-size: 12px;
 	line-height: 14px;
 	letter-spacing: -0.1px;
-	color: #363636;
+	color: $black-text;
 }
 
 .small-text-amortizacion{
-	font-family: StagSans-Book;
+	font-family: $texto;
 	font-size: 6px;
 	line-height: 5px;
-	color: #363636;
+	color: $black-text;
 }			
 
 .menu-text{
-    font-family: "BentonSansBBVA-Book";
+    font-family: $encabezados;
     font-size: 12px;
     line-height: 1.11;
     text-align: left;
-    color: #363636;
+    color: $black-text;
 }
 
 #tabDestinos1 {
-	background-color: #f4f4f4;
+	background-color: $white;
 }
 #tabDestinos1 .nav-tabs {
 	border: none;
-	font-family: Open Sans, sans-serif;
+	font-family: $texto;
 	font-size: 15px
 }
 #tabDestinos1 .nav-tabs li {
@@ -364,34 +279,35 @@ $border-color: #D3457E;
 	border-radius: 0;
 }	
 #tabDestinos1 .nav-tabs li .active{
-	border: solid 0.3px #d8d8d8;
+	border: solid 0.3px $soft-grey;
 }
 
 #tabDestinos1 .nav-tabs li a {
 	border: 0 none;	
-	color: #c6c6c6;
+	color: $dark-grey;
 	border-radius: 0;
 	text-align:center;
 }
 #tabDestinos1 .nav-tabs li a:hover {
 	background: none;
-	color: #094fa4
+	color: $dark-blue;
 }
 
 #tabDestinos1 .nav-tabs li.active a {
-	color: #009ee5;
+	color: $blue;
 	font-size: 12px;
 	font-weight: 600;
-	border-top: 5px solid #009ee5;
-	border-left: 1px solid #d8d8d8;
-	background: #FFFFFF;
+	border-top: 5px solid $blue;
+	border-left: 1px solid $soft-grey;
+	border-right:1px solid $soft-grey;
+	background: $white;
 }
 
 #tabDestinos2{
    li{
    		background-color: white;
    		color:black;
-   		border: solid 1px #d8d8d8;
+   		border: solid 1px $soft-grey;
    		margin:0px;
    }
    a{
@@ -400,11 +316,11 @@ $border-color: #D3457E;
 }
 
 #tabDestinos2 .nav-pills li.active a {
-	color: #009ee5;
+	color: $blue;
 	font-size: 12px;
 	font-weight: 600;
-	border: 2px solid #009ee5;
-	background: #FFFFFF;
+	border: 2px solid $blue;
+	background: $white;
 	border-radius: 0px;
 }
 
@@ -412,9 +328,9 @@ $border-color: #D3457E;
     display: none;
 }
 .schedule-panel td{
-    background: #f7f7f7 !important;
+    background: $white !important;
     text-align:left;
-    border-bottom: 1px solid #dadada !important 
+    border-bottom: 1px solid $soft-grey !important 
 }
 .schedule-panel div{
     padding-left: 10px;
@@ -424,7 +340,7 @@ $border-color: #D3457E;
     padding-bottom: 5px;
 }
 .blue-text-underline a{
-	color:#009ee5;
+	color:$blue;
 	text-decoration: underline;
 }
 .blue-text-underline img{
@@ -450,7 +366,7 @@ $border-color: #D3457E;
 #simulador .slider-left p,
 #simulador .slider-right p {
     font-size: 12px;
-    color: #c6c6c6;
+    color: $grey;
     padding-bottom: 10px
 }
 
