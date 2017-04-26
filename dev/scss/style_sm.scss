@@ -23,6 +23,7 @@
 
     .select-hd {
          font-family: $texto;
+         padding-right: 30px;
          font-size: 14px;
          line-height: 20px;
          color: $blue; 
@@ -43,12 +44,12 @@
     .content-table td{
 	    font-family: $texto;
         font-size: 13px;
-        color: dark-grey;
+        color: $dark-grey;
     }
 
     .link-table-product{
 	    font-family: $texto;
-        font-size: 13px;
+        font-size: 14px;
         color: $dark-blue;
         text-decoration: underline;
     }
@@ -92,6 +93,14 @@
         background: $white;
     }
 
+    .blue-text-underline a{
+        color:$blue;
+        text-decoration: underline;
+        float: right;
+        padding-right: 30px;
+        font-size:13px;
+    }
+
     #tabDestinos2 .nav-pills li.active a {
         color: $blue;
         font-size: 13px;
@@ -111,5 +120,13 @@
 
     .glyphmap24-interrogacion {
     background-position: 3px;
+    }
+
+    .frame-bar-left{
+    display: block;
+    width: 3%;
+    float: left;
+    padding-left:4px;
+    padding-top: 4px;
 }
 }

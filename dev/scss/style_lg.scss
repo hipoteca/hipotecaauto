@@ -23,6 +23,7 @@
 
     .select-hd {
          font-family: $texto;
+         padding-right: 30px;
          font-size: 16px;
          line-height: 20px;
          color: $blue; 
@@ -48,7 +49,7 @@
 
     .link-table-product{
 	    font-family: $texto;
-        font-size: 15px;
+        font-size: 16px;
         color: $dark-blue;
         text-decoration: underline;
     }
@@ -92,6 +93,14 @@
         background: $white;
     }
 
+    .blue-text-underline a{
+        color:$blue;
+        text-decoration: underline;
+        float: right;
+        padding-right: 30px;
+        font-size:15px;
+    }
+
     #tabDestinos2 .nav-pills li.active a {
         color: $blue;
         font-size: 15px;
@@ -107,5 +116,12 @@
         vertical-align: middle;
         height: 25.6px;
         width: 25.6px;
+    }
+    .frame-bar-left{
+    display: block;
+    width: 3%;
+    float: left;
+    padding-left:8px;
+    padding-top: 8px;
     }
 }

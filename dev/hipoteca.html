@@ -72,9 +72,12 @@
 
 			<div id="ingresarDatos"
 				class="frame-tab row flecha-1 frame-tab-border-1">
-				<section></section>
-				<section class="frame-bar-right">
-					<h4 class="header-text">Ingresar datos</h4>
+				<section>
+				    <div class="row">
+				        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						 	<h4 class="shadding header-text">Ingresar datos</h4>
+						</div>
+					</div>
 					<div id="simulador" class="frame-content questions-text">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-4">
@@ -187,8 +190,12 @@
 						aria-hidden="true" onclick="desplegarProgramas()"></span>
 				</section>
 				<section class="frame-bar-right">
-					<h4 onclick="desplegarProgramas()" class="header-text">Calcular
-						en combinación con un crédito Infonavit o Fovissste</h4>
+				    <div class="row">
+				        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4 id="headerProgramas" onclick="desplegarProgramas()" class="header-text">Calcular
+							en combinación con un crédito Infonavit o Fovissste</h4>
+					    </div>
+					</div>
 					<div id="productos" class="frame-content questions-text">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-4">
@@ -288,8 +295,12 @@
 						aria-hidden="true" onclick="desplegarTabProductos()"></span>
 				</section>
 				<section class="frame-bar-right">
-					<h4 onclick="desplegarTabProductos()" class="header-text">¿Qué
-						opciones me convienen?</h4>
+					<div class="row">
+				        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4 id="headerProductos" onclick="desplegarTabProductos()" class=" shadding header-text">¿Qué
+							opciones me convienen?</h4>
+						</div>
+					</div>
 					<div id="seccionTablaProductos"
 						class="frame-content table-responsive">
 						<table class="table table-striped">
@@ -367,12 +378,10 @@
 							</tr>
 							<tr class="bordeTabla cat-text">
 								<td></td>
-								<td colspan="4"><p class="small-text-amortizacion">*CAT
+								<td colspan="3"><p class="small-text-amortizacion">*CAT
 										Sin IVA, para fines informativos y de comparación. Fecha de
 										cálculo 28 de febrero del 2017. Vigencia de la oferta hasta el
 										28 de abril del 2017.</p></td>
-
-
 							</tr>
 							<tr>
 								<td>
@@ -393,7 +402,6 @@
 											</nav>
 
 										</div>
-
 									</div></td>
 								<td class="prod-col-1"><a href="javascript:muestraTablas()"
 									class="link-table-product" role="button">Tabla de
@@ -415,36 +423,30 @@
 					</div>
 				</section>
 			</div>
-
-
 			<br>
-
 			<div id="tablaAmortizacion"
 				class="frame-tab row flecha-1 frame-tab-border-1">
-
 				<section class="frame-bar-left hidden-xs">
 					<span id="tabAmort-flecha"
 						class="glyphicon glyphicon-menu-down flecha-1-color"
 						aria-hidden="true" onclick="desplegarTabAmort()"></span>
 				</section>
-
 				<section class="frame-bar-right">
-					<div class="row">
+     				<div id="headerDivAmortizacion" class="row shadding margin-cero">
 						<div class="col-xs-12 col-sm-6 col-md-8">
-							<h4 onclick="desplegarTabAmort()" class="header-text">Tabla
+							<h4 id="headerAmortizacion" onclick="desplegarTabAmort()" class=" shadding header-text">Tabla
 								de amortización</h4>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="row blue-text-underline">
-								<div class="col-xs-1 col-sm-3 col-md-4"></div>
-								<div class="col-xs-4 col-sm-4 col-md-4">
+								<div class="col-xs-1 col-sm-3 col-md-3 col-lg-3"></div>
+								<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 
 									<a id="actualizar" href="#">Actualizar</a>
 
 								</div>
-								<div class="col-xs-6 col-sm-5 col-md-4">
-									<a href="#">Descargar<img src="img\pdf.png" height="25"
-										width="20">
+								<div class="col-xs-6 col-sm-7 col-md-7 col-lg-7">
+									<a href="#">Descargar<img src="img\pdfMd.png">
 									</a>
 								</div>
 							</div>
@@ -1149,7 +1151,7 @@
 				<section class="frame-bar-right">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12">
-							<h4 class="header-text" onclick="desplegarTabDatos()">Datos
+							<h4 id="headerDatosProductos" class="header-text" onclick="desplegarTabDatos()">Datos
 								del producto</h4>
 						</div>
 					</div>

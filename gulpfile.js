@@ -7,7 +7,7 @@ var browserify  = require('gulp-browserify');
 
 
 //gulp.task('default',['server','watch']);
-gulp.task('default',['html','sass','js','fonts','img','assets','server','watch']);
+gulp.task('default',['html','sass','js','fonts','img','server','watch']);
 
 gulp.task('server', function() {
   connect.server({
@@ -46,21 +46,12 @@ gulp.task('img',function(){
    .pipe(connect.reload());
 });
 
-
-gulp.task('assets',function(){
-  gulp.src('./dev/assets/**/**.**')
-  .pipe(gulp.dest('./public/'))
-});
-
-
-
 gulp.task('js',function(){
   gulp.src('./dev/js/app.js')
   //.pipe(browserify())
   .pipe(gulp.dest('./public/js'))
   .pipe(connect.reload());
 });
-
 
 gulp.task('js2',function(){
   gulp.src('./dev/js/app2.js')

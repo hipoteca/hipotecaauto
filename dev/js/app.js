@@ -86,7 +86,7 @@
 		$("#ingresarDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 		$("#ingresarDatos-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
 		$("#ingresarDatos").removeClass("flecha-1").addClass("flecha-2");
-		$("#ingresarDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
+		$("#ingresarDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 	}
 	
 	function ocultaIngresarDatos(){
@@ -101,6 +101,7 @@
 		$("#programas-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
 		$("#programas").removeClass("flecha-1").addClass("flecha-2");
 		$("#programas").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
+		$("#headerProgramas").removeClass("shadding");
 	}
 
 	function muestraTablaProductos(){
@@ -108,6 +109,7 @@
 		$("#flechaTabla").removeClass("flecha-2-color").addClass("flecha-1-color");
 		$("#tablaProductos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
 		$("#tablaProductos").removeClass("flecha-2").addClass("flecha-1");
+		$("#headerProductos").addClass("shadding");
 	}
 	
 	function ocultaTablaProductos(){
@@ -138,6 +140,7 @@
 	function desplegarProgramas() {
 		if ($("#productos").is(':hidden')) {
 			$("#productos").show();
+			$("#headerProgramas").addClass("shadding");
 			
 			$("#programas-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#programas-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
@@ -150,6 +153,7 @@
 			$("#frameTablas").hide();
 		} else {
 			$("#productos").hide();
+			$("#headerProgramas").removeClass("shadding");
 			
 			ocultaProgramas();
 		}
@@ -158,7 +162,7 @@
 	function desplegarTabProductos(){
 		if ($("#seccionTablaProductos").is(':hidden')) {
 			$("#seccionTablaProductos").show();
-	
+			$("#headerProductos").addClass("shadding");
 			muestraTablaProductos();
 			
 			$("#tablaAmortizacion").hide();
@@ -166,7 +170,7 @@
 
 		} else {
 			$("#seccionTablaProductos").hide();
-			
+			$("#headerProductos").removeClass("shadding");
 			ocultaTablaProductos();
 		}
 	}
@@ -175,6 +179,8 @@
 		if ($("#seccionTablaAmort").is(':hidden')) {
 			$("#seccionTablaAmort").show();
 			$("#actualizar").show();
+			$("#headerAmortizacion").addClass("shadding");
+			$("#headerDivAmortizacion").addClass("shadding");
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#tabAmort-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
 			$("#tablaAmorizacion").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
@@ -183,6 +189,8 @@
 		} else {
 			$("#seccionTablaAmort").hide();
 			$("#actualizar").hide();
+			$("#headerAmortizacion").removeClass("shadding");
+			$("#headerDivAmortizacion").removeClass("shadding");
 			$("#tabAmort-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabAmort-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
 			$("#tablaAmortizacion").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");
@@ -193,7 +201,7 @@
 	function desplegarTabDatos(){
 		if ($("#seccionTablaDatos").is(':hidden')) {
 			$("#seccionTablaDatos").show();
-			
+			$("#headerDatosProductos").addClass("shadding");
 			$("#tabDatos-flecha").removeClass("glyphicon glyphicon-menu-right").addClass("glyphicon glyphicon-menu-down");
 			$("#tabDatos-flecha").removeClass("flecha-2-color").addClass("flecha-1-color");
 			$("#tablaDatos").removeClass("frame-tab-border-2").addClass("frame-tab-border-1");
@@ -202,7 +210,7 @@
 			
 		} else {
 			$("#seccionTablaDatos").hide();
-		
+			$("#headerDatosProductos").removeClass("shadding");
 			$("#tabDatos-flecha").removeClass("glyphicon glyphicon-menu-down").addClass("glyphicon glyphicon-menu-right");
 			$("#tabDatos-flecha").removeClass("flecha-1-color").addClass("flecha-2-color");
 			$("#tablaDatos").removeClass("frame-tab-border-1").addClass("frame-tab-border-2");

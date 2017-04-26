@@ -23,6 +23,7 @@
 
     .select-hd {
          font-family: $texto;
+         padding-right: 30px;
          font-size: 15px;
          line-height: 20px;
          color: $blue;
@@ -48,7 +49,7 @@
 
     .link-table-product{
 	    font-family: $texto;
-        font-size: 14px;
+        font-size: 15px;
         color: $dark-blue;
         text-decoration: underline;
     }
@@ -91,6 +92,14 @@
         background: $white;
     }
 
+    .blue-text-underline a{
+        color:$blue;
+        text-decoration: underline;
+        float: right;
+        padding-right: 30px;
+        font-size:14px;
+    }
+
     #tabDestinos2 .nav-pills li.active a {
         color: $blue;
         font-size: 14px;
@@ -110,5 +119,12 @@
 
     .glyphmap24-interrogacion {
     background-position: 3px;
-}
+    }
+    .frame-bar-left{
+    display: block;
+    width: 3%;
+    float: left;
+    padding-left:8px;
+    padding-top: 8px;
+    }
 }
