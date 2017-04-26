@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Guia de Estilos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+
+<body>
+
+<div class="container">
+	<h1>Guia de estilos</h1>
+	<h2>Navegacion</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<nav aria-label="Page navigation">
+			  <ul class="pagination">
+			  </ul>
+			</nav>
+		</div>
+	</div>		
+
+
+	<h2>Nav Tabs</h4>
+	<section id="tabDestinos1" class="hidden-xs hidden-sm ">
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a href="#option1" data-toggle="tab" >Option 1</a>
+			</li> 
+			<li >
+				<a href="#option2" data-toggle="tab" >Option 2</a>
+			</li>
+			<li >
+				<a href="#option3" data-toggle="tab" >Option 3</a>
+			</li> 
+		</ul>
+		<div class="tab-content">
+    		<div id="option1" class="tab-pane fade in active ">
+      			<h3>option1</h3> 
+      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    		</div>
+		    <div id="option2" class="tab-pane fade">
+		      <h3>Option 2</h3>
+		      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		    </div>
+		    <div id="option3" class="tab-pane fade">
+		      <h3>Option 3</h3>
+		      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+		    </div>
+	  	</div>
+	</section>
+	<!-- END  Nav Tabs-->
+
+	<hr/>
+	<h2>Panels</h4>
+	<div class="frame-nav-tabs">
+		<div id="programas" class="frame-tab row flecha-1 frame-tab-border-1">
+			<section class="frame-bar-left hidden-xs"">
+				<span id="programas-flecha" class="glyphicon glyphicon-menu-right flecha-1-color" aria-hidden="true" ></span>
+			</section>
+			<section class="frame-bar-right">
+				<h4 class="header-text">Titulo</h4>
+				<div id="productos" class="frame-content questions-text">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<hr />
+	<div class="frame-nav-tabs">
+		<div id="programas" class="frame-tab row flecha-2 frame-tab-border-2">
+			<section class="frame-bar-left hidden-xs"">
+				<span id="programas-flecha" class="glyphicon glyphicon-menu-right flecha-2-color" aria-hidden="true" ></span>
+			</section>
+			<section class="frame-bar-right">
+				<h4 class="header-text">Titulo</h4>
+				<div id="productos" class="frame-content questions-text">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<hr/>
+
+	<h2>Forms</h2>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<label id="etiquetaSlider2" for="valBarra2">Etiqueta</label>	
+				<input class="form-control select-hd" type="text" id="valBarra2" name="cantidad" value="Datos" />
+			</div>
+		</div><!-- end col -->
+		<div class="col-md-4">
+			<div class="form-group">
+				<label id="etiquetaSlider2" for="valBarra2">Etiqueta</label>	
+				<select class="form-control select-hd" id="selectApoyo" name="selectApoyo" >
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+				</select>
+			</div>
+		</div><!-- end col -->
+
+	</div><!-- end row -->
+
+
+	<h2>Botones</h2>
+	<div class="row">
+		<div class="col-md-12">
+
+			<div id="btnCalcular" class="panel-body">
+				<div class="col-xs-12 col-sm-12 col-md-12" align="right">
+					<button onclick="btnCalcularCredito()" class="btn btn-primary button-text">Boton - Right</button>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12" align="left">
+					<button onclick="btnCalcularCredito()" class="btn btn-primary button-text">Boton - Left</button>
+				</div>
+			</div>
+		</div><!-- end col -->
+	</div><!-- end row -->
+	<!-- END Botones-->
+	<hr/>
+
+	<h2>Tabla</h2>		
+						
+	<table class="table table-striped">
+		<tr class="bordeTabla">
+			<td class="header-table-product">Columna 1</td>
+			<td class="header-table-product prod-col-1">Columna 2</td>
+			<td class="header-table-product prod-col-2 hidden-xs">Columna 3</td>
+			
+		</tr>
+			<tr class="bordeTabla content-table">
+				<td>Dato</td>
+				<td class="prod-col-1">Dato</td>
+				<td class="prod-col-3  hidden-xs">Dato</td>
+			</tr>
+			<tr class="bordeTabla content-table ">
+				<td>Dato</td>
+				<td class="prod-col-1 tasa-interes">00.00 %</td>
+				<td class="prod-col-2  hidden-xs tasa-interes">00.00% </td>
+			</tr>
+			<tr class="bordeTabla content-table">
+				<td>dato</td>
+				<td class="prod-col-1">00</td>
+				<td class="prod-col-2 hidden-xs">00</td>
+			</tr>
+</table>
+ 
+</div><!-- END container -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	console.info('');
+</script>
+</body>
+</html>
