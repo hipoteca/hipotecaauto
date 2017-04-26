@@ -5,10 +5,11 @@ var Model  							= require('./model');
 var SelectComponent  		= require('./selectComponent');
 var InputNumberText  		= require('./inputNumberText');
 var Slider  						= require('./slider');
+var Label 							= require('./label');
 
 var Simulador = function(){
 	
-	this.selector={
+	this.selector = {
 		datos					:"#ingresarDatos",
 		programas 		:"#programas",
 		productos 		:"#tablaProductos",
@@ -29,20 +30,26 @@ var Simulador = function(){
 	this.productos 		= new Contenedor(this.selector.productos);
 	this.amortizacion 	= new Contenedor(this.selector.amortizacion);
 	this.datosProducto 	= new Contenedor(this.selector.datosProducto);
-	//---------------------------------------------
+	//--
 	this.calculaPor = new SelectComponent("#calcularPor");
 
 	this.plazo = new SelectComponent("#plazo");
 
 	this.ingresoBruto = new InputNumberText('#ingresoMensual');
 
-	this.sliderInput = new InputNumberText('#valBarra1');
+	this.sliderInput1 = new InputNumberText('#valBarra1');
 
-	this.slider1= new Slider("#barra-1",this.model.slider.valorCasa.comprarCasa.cuantoCuesta);
-	
-	this.slider1.addInput(this.sliderInput);
-	this.sliderInput.addSlider(this.slider1);
+	this.sliderLabel1 = new Label('etiquetaSlider1');
+
+	this.slider1 = new Slider("#barra-1",this.model.slider.valorCasa.comprarCasa.cuantoCuesta);
+	this.slider1.addLeftLabel('#b1-min-amount');
+	this.slider1.addRightLabel('#b1-max-amount');
+
+	this.slider1.addInput(this.sliderInput1);
+
+	this.sliderInput1.addSlider(this.slider1);
   
+
 	//--Eventos
 	var self =this;
 
@@ -68,7 +75,8 @@ var Simulador = function(){
 	document.querySelector(this.selector.datosProducto+' .header-text').addEventListener( "click", this.collapseDatosProducto.bind(this));
 	//--Select 
 
-	document.querySelector(this.calculaPor.selector ).addEventListener( "change",this.changeCalculaPor.bind(this)); 
+	//document.querySelector(this.calculaPor.selector ).addEventListener( "change",this.changeCalculaPor.bind(this)); 
+	this.calculaPor.element.addEventListener( "change",this.changeCalculaPor.bind(this)); 
 	document.querySelector(this.plazo.selector      ).addEventListener( "change", this.changePlazo.bind(this) );
 	
 	//--Calcular credito
@@ -91,6 +99,7 @@ var Simulador = function(){
 Simulador.prototype.changeCalculaPor =function(event) {
 	console.debug('method(changeCalculaPor) for '+this.calculaPor.element.value);
 	this.model.data.calculaPor = this.calculaPor.element.value;
+	this.sliderLabel1.setValue(this.calculaPor.selectedText());
 	console.info('implementar... ');
 }
 Simulador.prototype.changePlazo =function(event) {

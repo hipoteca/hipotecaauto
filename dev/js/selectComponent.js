@@ -18,6 +18,9 @@ SelectComponent.prototype.fill = function(collection){
 	this.element.value=collection[0].value;
 	this.element.dispatchEvent(new Event('change'));
 }
+SelectComponent.prototype.selectedText = function(){
+	return this.element.options[this.element.selectedIndex].text;
+}
 SelectComponent.prototype.clean = function(){
 	while(this.element.length>0 ){
 		this.element.remove(0);

@@ -13,6 +13,8 @@ var Slider = function(selectorById,params){
 	this.params = $.extend( this.params, params );
 	this.sliderInput = null;
 	this.enabledSliderInput=false;
+	this.leftLabel=null;
+	this.rightLabel=null;
 
 	//--add slider 
 	$(this.selector).slider(this.params);
@@ -28,12 +30,14 @@ Slider.prototype.addInput = function(sliderInput){
 	this.sliderInput.setValue( this.params.min );
 }
 
-Slider.prototype.addLeftLabel = function(){
-	
+Slider.prototype.addLeftLabel = function(selectorById){
+	this.leftLabel=document.getElementById(selectorById.replace('#',''));
+	$(this.leftLabel).text('Mínimo ' + numeral(this.params.min).format(' $ 0,0') );
 }
-
-Slider.prototype.addRightLabel = function(){
-	
+ 
+Slider.prototype.addRightLabel = function(selectorById){
+	this.rightLabel=document.getElementById(selectorById.replace('#',''));
+	$(this.rightLabel).text( 'Máximo '+numeral(this.params.max).format(' $ 0,0') );
 }
 
 Slider.prototype.setValue = function(value){
