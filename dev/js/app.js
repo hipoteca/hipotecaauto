@@ -15,6 +15,7 @@
 	}
 
 	function editField(selectedField){
+
 	  $(selectedField).toggleClass("hidden");
 	  $(selectedField).next().toggleClass("hidden")
 	}
@@ -25,7 +26,7 @@
 		valor = valor.split("$");
 		valor= valor.toString().replace(/,/g, "");
 		valor = valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		$("#"+idInput).val("$ "+valor);
+		$("#"+idInput).val("$"+valor);
 
 		parseFloat(valor)
 	console.log("c"+valor);
