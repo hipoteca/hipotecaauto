@@ -76,19 +76,74 @@ module.exports = {
 		valorCasa:{
 			comprarCasa:{
 				cuantoCuesta:{
-					min : 50000,
-					max : 18000000,
+					min : 180000,
+					max : 20000000,
 					step : 1000 },
 				montoCredito:{
 					min : 50000,
-					max : 18000000,
+					max : 180000,
 					step : 1000},
 				pagoMensual:{
-					min : 50000,
-					max : 18000000,
+					min : 2000,
+					max : 50000,
 					step : 1000}
 			},
-			comprarTerreno:{}
+			comprarTerreno:{
+				cuantoCuesta:{
+					min : 300000,
+					max : 3000000,
+					step : 1000 },
+				montoCredito:{
+					min : 150000,
+					max : 21000000,
+					step : 1000},
+				pagoMensual:{
+					min : 2000,
+					max : 50000,
+					step : 1000}
+			},
+			remodelarCasa:{
+				cuantoCuesta:{
+					min : 180000,
+					max : 20000000,
+					step : 1000 },
+				montoCredito:{
+					min : 50000,
+					max : 8000000,
+					step : 1000},
+				pagoMensual:{
+					min : 2000,
+					max : 50000,
+					step : 1000}
+			},
+			cambiarHipoteca:{
+				cuantoCuesta:{
+					min : 180000,
+					max : 20000000,
+					step : 1000 },
+				montoCredito:{
+					min : 50000,
+					max : 8000000,
+					step : 1000},
+				pagoMensual:{
+					min : 2000,
+					max : 50000,
+					step : 1000}
+			},
+			obtenerLiquidez:{
+				cuantoCuesta:{
+					min : 180000,
+					max : 10000000,
+					step : 1000 },
+				montoCredito:{
+					min : 85000,
+					max : 7500000,
+					step : 1000},
+				pagoMensual:{
+					min : 2000,
+					max : 50000,
+					step : 1000}
+			}
 		},
 		valorNecesito:{}
 	}

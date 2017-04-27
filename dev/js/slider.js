@@ -51,5 +51,16 @@ Slider.prototype.changeSlide = function(event){
 		this.sliderInput.setValue(this.element.value);
 	}
 }
+Slider.prototype.updateParams = function(params){
+	console.debug('Slider:: updateParams(setValue) for ' + this.selector);
+	console.info(params)
+	this.params = $.extend( this.params, params );
+	$(this.selector).slider(this.params);
+	$(this.leftLabel).text('Mínimo ' + numeral(this.params.min).format(' $ 0,0') );
+	$(this.rightLabel).text( 'Máximo '+numeral(this.params.max).format(' $ 0,0') );
+	this.sliderInput.setValue(this.element.value);
+	//---
+}
+
 
 module.exports=Slider;
